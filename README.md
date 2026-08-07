@@ -1,6 +1,6 @@
-# Tiendanovamovil V2
+# Tiendanovamovil
 
-Proyecto Next.js preparado para Vercel.
+Tienda de tecnología desarrollada con Next.js 15 y preparada para Vercel.
 
 ## Incluye
 
@@ -11,8 +11,11 @@ Proyecto Next.js preparado para Vercel.
 - Etiqueta de Google Ads `AW-18345503163`.
 - Eventos `whatsapp_click` y `purchase_form_submit`.
 - Diseño responsive.
+- SEO técnico, sitemap y datos estructurados.
+- Accesibilidad y estados de catálogo.
+- Encabezados básicos de seguridad.
 
 ## Publicación
 
-Sube todo el contenido de esta carpeta a la raíz del repositorio de GitHub.
-Vercel detectará Next.js automáticamente y desplegará la nueva versión.
+Conecta este repositorio con Vercel. La plataforma detectará Next.js y ejecutará
+automáticamente `npm run build` en cada actualización de la rama principal.
