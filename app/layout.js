@@ -2,6 +2,7 @@ import './globals.css';
 import './v3.css';
 import './v3-extra.css';
 import './hero-products.css';
+import MarketingTracker from '../components/MarketingTracker';
 
 export const metadata = {
   title: {
@@ -43,16 +44,26 @@ export default function RootLayout({ children }) {
   return (
     <html lang="es-PE">
       <head>
-        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18345503163"></script>
         <script dangerouslySetInnerHTML={{ __html: `
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
+          gtag('consent', 'default', {
+            analytics_storage: 'denied',
+            ad_storage: 'denied',
+            ad_user_data: 'denied',
+            ad_personalization: 'denied',
+            wait_for_update: 500
+          });
           gtag('js', new Date());
-          gtag('config', 'AW-18345503163');
+          gtag('config', 'AW-18345503163', { allow_enhanced_conversions: true });
         ` }} />
+        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18345503163"></script>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} />
       </head>
-      <body>{children}</body>
+      <body>
+        <MarketingTracker />
+        {children}
+      </body>
     </html>
   );
 }
