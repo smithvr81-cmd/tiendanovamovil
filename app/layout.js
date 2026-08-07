@@ -1,4 +1,5 @@
 import './globals.css';
+import './v3.css';
 
 export const metadata = {
   title: {
@@ -41,16 +42,12 @@ export default function RootLayout({ children }) {
     <html lang="es-PE">
       <head>
         <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18345503163"></script>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'AW-18345503163');
-            `
-          }}
-        />
+        <script dangerouslySetInnerHTML={{ __html: `
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'AW-18345503163');
+        ` }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} />
       </head>
       <body>{children}</body>
