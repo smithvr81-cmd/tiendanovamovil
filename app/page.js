@@ -5,7 +5,7 @@ import { products } from '../data/products';
 import ReviewsSection from '../components/ReviewsSection';
 import AnalyticsConsent from '../components/AnalyticsConsent';
 
-const WHATSAPP = '51916599383';
+const WHATSAPP = '51953587927';
 const categories = ['Todos', 'Celulares', 'Laptops', 'Accesorios'];
 
 function currency(value) {
@@ -95,7 +95,7 @@ export default function Home() {
 
       <ReviewsSection />
 
-      <section id="contacto" className="contact"><div><span className="eyebrow">ASESORÍA PERSONALIZADA</span><h2>¿No sabes cuál elegir?</h2><p>Déjanos tus datos y abriremos WhatsApp con una solicitud lista para enviar.</p><div className="contactNote"><WhatsAppIcon /><div><strong>Atención directa</strong><span>WhatsApp: +51 916 599 383</span></div></div></div><form onSubmit={submitLead}><label>Nombre<input name="name" required /></label><label>Teléfono<input name="phone" type="tel" required /></label><label>Producto de interés<input name="interest" required /></label><label>Presupuesto<select name="budget" defaultValue="Hasta S/ 1,000"><option>Hasta S/ 1,000</option><option>S/ 1,000 a S/ 2,000</option><option>S/ 2,000 a S/ 3,500</option><option>Más de S/ 3,500</option></select></label><button type="submit">Solicitar recomendación <span>→</span></button><small>Usaremos estos datos únicamente para responder tu solicitud.</small></form></section>
+      <section id="contacto" className="contact"><div><span className="eyebrow">ASESORÍA PERSONALIZADA</span><h2>¿No sabes cuál elegir?</h2><p>Déjanos tus datos y abriremos WhatsApp con una solicitud lista para enviar.</p><div className="contactNote"><WhatsAppIcon /><div><strong>Atención directa</strong><span>WhatsApp: +51 953 587 927</span></div></div></div><form onSubmit={submitLead}><label>Nombre<input name="name" required /></label><label>Teléfono<input name="phone" type="tel" required /></label><label>Producto de interés<input name="interest" required /></label><label>Presupuesto<select name="budget" defaultValue="Hasta S/ 1,000"><option>Hasta S/ 1,000</option><option>S/ 1,000 a S/ 2,000</option><option>S/ 2,000 a S/ 3,500</option><option>Más de S/ 3,500</option></select></label><button type="submit">Solicitar recomendación <span>→</span></button><small>Usaremos estos datos únicamente para responder tu solicitud.</small></form></section>
     </main>
 
     {selected && <div className="modalBackdrop" onClick={() => setSelected(null)}><div className="productModal" onClick={(e) => e.stopPropagation()}><button className="modalClose" onClick={() => setSelected(null)}>×</button><img src={selected.image} alt={selected.name} /><div><span className="eyebrow">{selected.brand}</span><h2>{selected.name}</h2><p>{selected.condition} · {selected.stock ? 'Disponible' : 'Sin stock'}</p><ul>{selected.specs.map((spec) => <li key={spec}>{spec}</li>)}</ul><strong className="modalPrice">{currency(selected.price)}</strong><button className="buyButton" onClick={() => openWhatsApp(selected)}><WhatsAppIcon /> Consultar disponibilidad</button></div></div></div>}
