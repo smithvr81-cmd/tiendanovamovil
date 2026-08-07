@@ -1,4 +1,6 @@
 import './globals.css';
+import './v3.css';
+import './v3-extra.css';
 
 export const metadata = {
   title: {
@@ -31,9 +33,9 @@ const organizationSchema = {
   name: 'Tiendanovamovil Perú',
   url: 'https://www.tiendanovamovil.com',
   logo: 'https://www.tiendanovamovil.com/logo-tiendanovamovil.png',
-  telephone: '+51 953 587 927',
+  telephone: '+51 916 599 383',
   areaServed: 'PE',
-  contactPoint: { '@type': 'ContactPoint', telephone: '+51 953 587 927', contactType: 'sales', availableLanguage: 'Spanish' }
+  contactPoint: { '@type': 'ContactPoint', telephone: '+51 916 599 383', contactType: 'sales', availableLanguage: 'Spanish' }
 };
 
 export default function RootLayout({ children }) {
@@ -41,16 +43,12 @@ export default function RootLayout({ children }) {
     <html lang="es-PE">
       <head>
         <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18345503163"></script>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'AW-18345503163');
-            `
-          }}
-        />
+        <script dangerouslySetInnerHTML={{ __html: `
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'AW-18345503163');
+        ` }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} />
       </head>
       <body>{children}</body>
