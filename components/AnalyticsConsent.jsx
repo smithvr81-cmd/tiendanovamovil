@@ -31,12 +31,14 @@ export default function AnalyticsConsent() {
   const accept = () => {
     localStorage.setItem('tnm_analytics_consent', 'accepted');
     setVisible(false);
+    window.dispatchEvent(new CustomEvent('tnm-consent-changed', { detail: 'accepted' }));
     sendVisit();
   };
 
   const reject = () => {
     localStorage.setItem('tnm_analytics_consent', 'rejected');
     setVisible(false);
+    window.dispatchEvent(new CustomEvent('tnm-consent-changed', { detail: 'rejected' }));
   };
 
   if (!visible) return null;
@@ -45,7 +47,7 @@ export default function AnalyticsConsent() {
     <div className="consentBanner" role="dialog" aria-label="Preferencias de privacidad">
       <div>
         <strong>Privacidad y estadísticas</strong>
-        <p>Con tu permiso recopilamos estadísticas anónimas de navegación para mejorar la tienda. No vendemos tus datos ni registramos información sensible.</p>
+        <p>Con tu permiso recopilamos estadísticas de navegación y campañas para medir visitas, clics en WhatsApp y mejorar la publicidad. No vendemos tus datos ni registramos información sensible.</p>
       </div>
       <div className="consentActions">
         <button onClick={reject} className="consentSecondary">Solo necesarias</button>
