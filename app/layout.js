@@ -1,6 +1,7 @@
 import './globals.css';
 import './v3.css';
 import './v3-extra.css';
+import './hero-products.css';
 
 export const metadata = {
   title: {
