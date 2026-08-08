@@ -1,16 +1,13 @@
 import { NextResponse } from 'next/server';
 
-const WEBHOOK_URL = process.env.GOOGLE_SHEETS_WEBHOOK_URL || '';
+const DEFAULT_WEBHOOK_URL = 'https://script.google.com/macros/s/AKfycby8ux-ew9-c_HAmRhCr9HL4LpMdbg3qO7HOW15EJY6zsZ4tgyaHuDSSyW6B3N-_jYgDhg/exec';
+const WEBHOOK_URL = process.env.GOOGLE_SHEETS_WEBHOOK_URL || DEFAULT_WEBHOOK_URL;
 
 function clean(value, max = 250) {
   return String(value || '').trim().slice(0, max);
 }
 
 export async function POST(request) {
-  if (!WEBHOOK_URL) {
-    return NextResponse.json({ ok: false, configured: false }, { status: 503 });
-  }
-
   try {
     const body = await request.json();
     const lead = {
@@ -49,6 +46,18 @@ export async function POST(request) {
 
     if (!response.ok) {
       return NextResponse.json({ ok: false, error: 'sheets_webhook_failed' }, { status: 502 });
+    }
+
+    const text = await response.text();
+    let result = null;
+    try {
+      result = JSON.parse(text);
+    } catch {
+      result = { ok: true };
+    }
+
+    if (result && result.ok === false) {
+      return NextResponse.json({ ok: false, error: result.error || 'sheets_webhook_failed' }, { status: 502 });
     }
 
     return NextResponse.json({ ok: true });
