@@ -4,6 +4,7 @@ import './v3-extra.css';
 import './hero-products.css';
 import MarketingTracker from '../components/MarketingTracker';
 import LeadCapture from '../components/LeadCapture';
+import WhatsAppLeadGate from '../components/WhatsAppLeadGate';
 
 export const metadata = {
   title: {
@@ -64,6 +65,7 @@ export default function RootLayout({ children }) {
       <body>
         <MarketingTracker />
         <LeadCapture />
+        <WhatsAppLeadGate />
         {children}
       </body>
     </html>
