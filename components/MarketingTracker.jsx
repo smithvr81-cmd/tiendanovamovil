@@ -6,7 +6,7 @@ const GA4_ID = process.env.NEXT_PUBLIC_GA4_ID || '';
 const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID || '';
 const META_PIXEL_ID = process.env.NEXT_PUBLIC_META_PIXEL_ID || '';
 const ADS_ID = process.env.NEXT_PUBLIC_GOOGLE_ADS_ID || 'AW-18345503163';
-const ADS_WHATSAPP_LABEL = process.env.NEXT_PUBLIC_GOOGLE_ADS_WHATSAPP_LABEL || '';
+const ADS_WHATSAPP_LABEL = process.env.NEXT_PUBLIC_GOOGLE_ADS_WHATSAPP_LABEL || 'KUGKCN7NrN4cELvT6KtE';
 const ADS_LEAD_LABEL = process.env.NEXT_PUBLIC_GOOGLE_ADS_LEAD_LABEL || '';
 
 const UTM_KEYS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'gclid', 'gbraid', 'wbraid', 'fbclid'];
