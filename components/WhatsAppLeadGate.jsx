@@ -15,6 +15,24 @@ function getAttribution() {
   }
 }
 
+function normalizePeruPhone(value) {
+  const raw = String(value || '').trim();
+  if (!raw) return '';
+  const digits = raw.replace(/\D/g, '');
+  if (raw.startsWith('+') && digits.length >= 11 && digits.length <= 15) return `+${digits}`;
+  if (digits.startsWith('51') && digits.length === 11) return `+${digits}`;
+  if (digits.length === 9) return `+51${digits}`;
+  return '';
+}
+
+function setGoogleUserData(phone) {
+  const phoneNumber = normalizePeruPhone(phone);
+  if (!phoneNumber || typeof window.gtag !== 'function') return;
+  window.gtag('set', 'user_data', { phone_number: phoneNumber });
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({ event: 'user_data_ready', user_data: { phone_number: phoneNumber } });
+}
+
 function parseWhatsappMessage(url) {
   try {
     const parsed = new URL(url, window.location.href);
@@ -91,6 +109,13 @@ export default function WhatsAppLeadGate() {
     const phone = String(data.get('phone') || '').trim();
     if (!name || !phone) return;
 
+    const normalizedPhone = normalizePeruPhone(phone);
+    if (!normalizedPhone) {
+      setStatus('error');
+      setError('Ingresa un teléfono peruano válido de 9 dígitos.');
+      return;
+    }
+
     const message = parseWhatsappMessage(pendingUrl);
     const attrs = getAttribution();
     const payload = {
@@ -115,6 +140,8 @@ export default function WhatsAppLeadGate() {
       });
       const result = await response.json().catch(() => ({}));
       if (!response.ok || result.ok !== true) throw new Error('save_failed');
+
+      setGoogleUserData(normalizedPhone);
 
       if (typeof window.gtag === 'function') {
         window.gtag('event', 'purchase_form_submit', {
@@ -149,7 +176,7 @@ export default function WhatsAppLeadGate() {
           <label>Teléfono<input name="phone" type="tel" inputMode="tel" autoComplete="tel" required maxLength="40" placeholder="Ej. 999 999 999" /></label>
           {error && <div className="leadGateError" role="alert">{error}</div>}
           <button type="submit" disabled={status === 'saving'}>{status === 'saving' ? 'Guardando...' : 'Continuar a WhatsApp'}</button>
-          <small>Usaremos tus datos únicamente para responder tu solicitud comercial.</small>
+          <small>Usaremos tus datos únicamente para responder tu solicitud comercial y medir conversiones publicitarias conforme a tu consentimiento.</small>
         </form>
       </div>
       <style jsx>{`
