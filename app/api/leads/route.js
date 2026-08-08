@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 
-const DEFAULT_WEBHOOK_URL = 'https://script.google.com/macros/s/AKfycby8ux-ew9-c_HAmRhCr9HL4LpMdbg3qO7HOW15EJY6zsZ4tgyaHuDSSyW6B3N-_jYgDhg/exec';
+const DEFAULT_WEBHOOK_URL = 'https://script.google.com/macros/s/AKfycbyZVUmxALFciDz3HQIeKFRXVeO-FRMt1oGgYscmWghmMhkHhpfI3S-B3uLaw8JxwXv54A/exec';
 const WEBHOOK_URL = process.env.GOOGLE_SHEETS_WEBHOOK_URL || DEFAULT_WEBHOOK_URL;
 
 function clean(value, max = 250) {
