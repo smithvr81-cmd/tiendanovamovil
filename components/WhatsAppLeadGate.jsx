@@ -2,6 +2,8 @@
 
 import { useEffect, useRef, useState } from 'react';
 
+const PENDING_KEY = 'tnm_pending_leads';
+
 function isWhatsAppUrl(value) {
   const href = String(value || '');
   return href.includes('wa.me/') || href.includes('whatsapp.com/');
@@ -42,6 +44,48 @@ function parseWhatsappMessage(url) {
   }
 }
 
+function getPendingLeads() {
+  try {
+    const value = JSON.parse(localStorage.getItem(PENDING_KEY) || '[]');
+    return Array.isArray(value) ? value : [];
+  } catch {
+    return [];
+  }
+}
+
+function queuePendingLead(payload) {
+  try {
+    const pending = getPendingLeads();
+    pending.push({ ...payload, submitted_at: payload.submitted_at || new Date().toISOString() });
+    localStorage.setItem(PENDING_KEY, JSON.stringify(pending.slice(-20)));
+  } catch {}
+}
+
+async function flushPendingLeads() {
+  const pending = getPendingLeads();
+  if (!pending.length) return;
+
+  const remaining = [];
+  for (const lead of pending) {
+    try {
+      const response = await fetch('/api/leads', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(lead)
+      });
+      const result = await response.json().catch(() => ({}));
+      if (!response.ok || result.ok !== true || result.saved !== true) remaining.push(lead);
+    } catch {
+      remaining.push(lead);
+    }
+  }
+
+  try {
+    if (remaining.length) localStorage.setItem(PENDING_KEY, JSON.stringify(remaining.slice(-20)));
+    else localStorage.removeItem(PENDING_KEY);
+  } catch {}
+}
+
 export default function WhatsAppLeadGate() {
   const [pendingUrl, setPendingUrl] = useState('');
   const [status, setStatus] = useState('idle');
@@ -50,6 +94,8 @@ export default function WhatsAppLeadGate() {
   const allowUntilRef = useRef(0);
 
   useEffect(() => {
+    flushPendingLeads().catch(() => {});
+
     const originalOpen = window.open.bind(window);
     originalOpenRef.current = originalOpen;
 
@@ -100,6 +146,23 @@ export default function WhatsAppLeadGate() {
     setStatus('idle');
   };
 
+  const continueToWhatsApp = (url, normalizedPhone) => {
+    setGoogleUserData(normalizedPhone);
+
+    if (typeof window.gtag === 'function') {
+      window.gtag('event', 'purchase_form_submit', {
+        event_category: 'conversion',
+        event_label: 'whatsapp_lead_gate',
+        method: 'WhatsApp'
+      });
+    }
+
+    allowUntilRef.current = Date.now() + 3000;
+    setStatus('saved');
+    setPendingUrl('');
+    originalOpenRef.current?.(url, '_blank', 'noopener,noreferrer');
+  };
+
   const submit = async (event) => {
     event.preventDefault();
     if (!pendingUrl || status === 'saving') return;
@@ -126,9 +189,11 @@ export default function WhatsAppLeadGate() {
       source: 'whatsapp_gate',
       page_url: window.location.href,
       referrer: document.referrer,
+      submitted_at: new Date().toISOString(),
       ...attrs
     };
 
+    const url = pendingUrl;
     setStatus('saving');
     setError('');
 
@@ -139,26 +204,15 @@ export default function WhatsAppLeadGate() {
         body: JSON.stringify(payload)
       });
       const result = await response.json().catch(() => ({}));
-      if (!response.ok || result.ok !== true) throw new Error('save_failed');
 
-      setGoogleUserData(normalizedPhone);
-
-      if (typeof window.gtag === 'function') {
-        window.gtag('event', 'purchase_form_submit', {
-          event_category: 'conversion',
-          event_label: 'whatsapp_lead_gate',
-          method: 'WhatsApp'
-        });
+      if (!response.ok || result.ok !== true || result.saved !== true) {
+        queuePendingLead(payload);
       }
 
-      allowUntilRef.current = Date.now() + 3000;
-      const url = pendingUrl;
-      setStatus('saved');
-      setPendingUrl('');
-      originalOpenRef.current?.(url, '_blank', 'noopener,noreferrer');
+      continueToWhatsApp(url, normalizedPhone);
     } catch {
-      setStatus('error');
-      setError('No pudimos guardar tus datos. Intenta nuevamente para continuar a WhatsApp.');
+      queuePendingLead(payload);
+      continueToWhatsApp(url, normalizedPhone);
     }
   };
 
