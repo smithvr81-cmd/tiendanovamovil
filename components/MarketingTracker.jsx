@@ -7,6 +7,7 @@ const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID || '';
 const META_PIXEL_ID = process.env.NEXT_PUBLIC_META_PIXEL_ID || '';
 const ADS_ID = process.env.NEXT_PUBLIC_GOOGLE_ADS_ID || 'AW-18345503163';
 const ADS_WHATSAPP_LABEL = process.env.NEXT_PUBLIC_GOOGLE_ADS_WHATSAPP_LABEL || '';
+const ADS_LEAD_LABEL = process.env.NEXT_PUBLIC_GOOGLE_ADS_LEAD_LABEL || '';
 
 const UTM_KEYS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'gclid', 'gbraid', 'wbraid', 'fbclid'];
 
@@ -110,15 +111,25 @@ export default function MarketingTracker() {
     const originalOpen = window.open.bind(window);
     let lastWhatsappAt = 0;
 
+    const fireAdsConversion = (label, details = {}) => {
+      if (!originalGtag || !ADS_ID || !label) return;
+      originalGtag('event', 'conversion', {
+        send_to: `${ADS_ID}/${label}`,
+        value: Number(details.value || 1),
+        currency: details.currency || 'PEN'
+      });
+    };
+
     const fireWhatsappConversion = (details = {}) => {
-      const now = Date.now();
-      lastWhatsappAt = now;
+      lastWhatsappAt = Date.now();
       const attrs = getAttribution();
       const payload = {
         event_category: 'conversion',
         event_label: details.event_label || details.label || details.source || 'whatsapp',
         link_url: details.link_url || '',
         page_location: window.location.href,
+        value: Number(details.value || 1),
+        currency: details.currency || 'PEN',
         ...attrs
       };
 
@@ -126,39 +137,87 @@ export default function MarketingTracker() {
 
       if (originalGtag) {
         originalGtag('event', 'whatsapp_click', payload);
-        if (ADS_ID && ADS_WHATSAPP_LABEL) {
-          originalGtag('event', 'conversion', {
-            send_to: `${ADS_ID}/${ADS_WHATSAPP_LABEL}`,
-            value: Number(details.value || 1),
-            currency: details.currency || 'PEN'
-          });
-        }
+        originalGtag('event', 'contact', {
+          method: 'WhatsApp',
+          value: payload.value,
+          currency: payload.currency,
+          ...attrs
+        });
+        fireAdsConversion(ADS_WHATSAPP_LABEL, payload);
       }
 
       if (typeof window.fbq === 'function') {
         window.fbq('track', 'Contact', {
           content_name: payload.event_label,
-          currency: details.currency || 'PEN',
+          currency: payload.currency,
           value: Number(details.value || 0)
+        });
+      }
+    };
+
+    const fireLeadConversion = (details = {}) => {
+      const attrs = getAttribution();
+      const payload = {
+        event_category: 'conversion',
+        event_label: details.event_label || 'purchase_form_submit',
+        page_location: window.location.href,
+        value: Number(details.value || 1),
+        currency: details.currency || 'PEN',
+        ...attrs
+      };
+
+      window.dataLayer.push({ event: 'purchase_form_submit', ...payload });
+
+      if (originalGtag) {
+        originalGtag('event', 'generate_lead', payload);
+        fireAdsConversion(ADS_LEAD_LABEL, payload);
+      }
+
+      if (typeof window.fbq === 'function') {
+        window.fbq('track', 'Lead', {
+          content_name: payload.event_label,
+          currency: payload.currency,
+          value: payload.value
         });
       }
     };
 
     if (originalGtag) {
       window.gtag = function wrappedGtag(...args) {
-        if (args[0] === 'event' && args[1] === 'whatsapp_click') {
+        if (args[0] === 'event') {
+          const eventName = args[1];
           const details = args[2] || {};
-          lastWhatsappAt = Date.now();
-          window.dataLayer.push({ event: 'whatsapp_click', ...details, ...getAttribution() });
-          if (ADS_ID && ADS_WHATSAPP_LABEL) {
-            originalGtag('event', 'conversion', {
-              send_to: `${ADS_ID}/${ADS_WHATSAPP_LABEL}`,
+
+          if (eventName === 'whatsapp_click') {
+            lastWhatsappAt = Date.now();
+            const payload = { ...details, ...getAttribution() };
+            window.dataLayer.push({ event: 'whatsapp_click', ...payload });
+            originalGtag('event', 'contact', {
+              method: 'WhatsApp',
               value: Number(details.value || 1),
-              currency: details.currency || 'PEN'
+              currency: details.currency || 'PEN',
+              ...getAttribution()
             });
+            fireAdsConversion(ADS_WHATSAPP_LABEL, details);
+            if (typeof window.fbq === 'function') window.fbq('track', 'Contact');
           }
-          if (typeof window.fbq === 'function') window.fbq('track', 'Contact');
+
+          if (eventName === 'purchase_form_submit') {
+            fireLeadConversion(details);
+          }
+
+          if (eventName === 'add_to_cart') {
+            window.dataLayer.push({ event: 'add_to_cart', ...details, ...getAttribution() });
+            if (typeof window.fbq === 'function') {
+              window.fbq('track', 'AddToCart', {
+                content_name: details.item_name || '',
+                currency: details.currency || 'PEN',
+                value: Number(details.value || 0)
+              });
+            }
+          }
         }
+
         return originalGtag(...args);
       };
     }
@@ -166,7 +225,11 @@ export default function MarketingTracker() {
     const onClick = (event) => {
       const link = event.target.closest?.('a[href*="wa.me"],a[href*="whatsapp.com"]');
       if (!link) return;
-      fireWhatsappConversion({ source: link.getAttribute('aria-label') || link.textContent?.trim() || 'whatsapp_link', link_url: link.href });
+      if (Date.now() - lastWhatsappAt < 800) return;
+      fireWhatsappConversion({
+        source: link.getAttribute('aria-label') || link.textContent?.trim() || 'whatsapp_link',
+        link_url: link.href
+      });
     };
 
     document.addEventListener('click', onClick, true);
