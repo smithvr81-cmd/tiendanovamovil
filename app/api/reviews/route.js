@@ -37,7 +37,7 @@ export async function GET() {
 export async function POST(request) {
   if (!configured()) {
     return NextResponse.json(
-      { error: 'El sistema de reseñas todavía no está conectado a la base de datos.' },
+      { error: 'El sistema de reseñas todavía no está conectado a la base de datos.', configured: false },
       { status: 503 }
     );
   }
@@ -58,7 +58,7 @@ export async function POST(request) {
 
     const response = await fetch(`${SUPABASE_URL}/rest/v1/reviews`, {
       method: 'POST',
-      headers: { ...headers(), Prefer: 'return=minimal' },
+      headers: { ...headers(), Prefer: 'return=representation' },
       body: JSON.stringify({
         name,
         email,
@@ -67,12 +67,27 @@ export async function POST(request) {
         rating,
         comment,
         consent,
-        approved: false
+        approved: true
       })
     });
 
     if (!response.ok) throw new Error('No se pudo registrar la reseña');
-    return NextResponse.json({ ok: true, message: 'Reseña recibida. Se publicará después de ser revisada.' });
+    const created = await response.json();
+    const review = Array.isArray(created) ? created[0] : created;
+
+    return NextResponse.json({
+      ok: true,
+      review: review ? {
+        id: review.id,
+        name: review.name,
+        social_network: review.social_network,
+        social_handle: review.social_handle,
+        rating: review.rating,
+        comment: review.comment,
+        created_at: review.created_at
+      } : null,
+      message: '¡Gracias! Tu opinión ya está publicada.'
+    });
   } catch {
     return NextResponse.json({ error: 'No pudimos guardar tu reseña. Intenta nuevamente.' }, { status: 500 });
   }
