@@ -1,0 +1,45 @@
+name: Sincronizar productos desde YouTube Shorts
+
+on:
+  schedule:
+    - cron: '*/30 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-youtube-products
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Descargar repositorio
+        uses: actions/checkout@v4
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Detectar Shorts y actualizar catálogo
+        env:
+          YOUTUBE_CHANNEL_URL: 'https://www.youtube.com/@TiendanovamovilPer%C3%BA'
+          PRODUCT_MARGIN_PEN: '100'
+          YOUTUBE_MAX_ENTRIES: '15'
+        run: node scripts/sync-youtube-products.mjs
+
+      - name: Publicar cambios en el catálogo
+        shell: bash
+        run: |
+          if git diff --quiet -- data/products.js; then
+            echo "No hay productos nuevos para publicar."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/products.js
+          git commit -m "Añade producto desde YouTube Short"
+          git push
