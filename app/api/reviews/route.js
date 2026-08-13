@@ -1,7 +1,8 @@
 import { NextResponse } from 'next/server';
 
-const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL || process.env.SUPABASE_URL;
-const SUPABASE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY;
+// Valores públicos de Supabase. La seguridad real está en las políticas RLS.
+const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL || process.env.SUPABASE_URL || 'https://mgvmdqvmhzkauxvbzknn.supabase.co';
+const SUPABASE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1ndm1kcXZtaHprYXV4dmJ6a25uIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODY2NDk2MzcsImV4cCI6MjEwMjIyNTYzN30.DArkbZtHN4jGhtf0Nl5iPR3sxaYqvhP6jx2A8PHMKk8';
 
 function headers() {
   return {
@@ -11,15 +12,7 @@ function headers() {
   };
 }
 
-function configured() {
-  return Boolean(SUPABASE_URL && SUPABASE_KEY);
-}
-
 export async function GET() {
-  if (!configured()) {
-    return NextResponse.json({ reviews: [], configured: false }, { status: 200 });
-  }
-
   try {
     const response = await fetch(
       `${SUPABASE_URL}/rest/v1/reviews?approved=eq.true&select=id,name,social_network,social_handle,rating,comment,created_at&order=created_at.desc&limit=50`,
@@ -35,13 +28,6 @@ export async function GET() {
 }
 
 export async function POST(request) {
-  if (!configured()) {
-    return NextResponse.json(
-      { error: 'El sistema de reseñas todavía no está conectado a la base de datos.', configured: false },
-      { status: 503 }
-    );
-  }
-
   try {
     const body = await request.json();
     const name = String(body.name || '').trim().slice(0, 80);
@@ -71,7 +57,12 @@ export async function POST(request) {
       })
     });
 
-    if (!response.ok) throw new Error('No se pudo registrar la reseña');
+    if (!response.ok) {
+      const details = await response.text();
+      console.error('Supabase review insert failed', response.status, details);
+      throw new Error('No se pudo registrar la reseña');
+    }
+
     const created = await response.json();
     const review = Array.isArray(created) ? created[0] : created;
 
