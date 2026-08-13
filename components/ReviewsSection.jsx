@@ -26,15 +26,26 @@ export default function ReviewsSection() {
     event.preventDefault();
     setLoading(true);
     setStatus('');
+
     try {
       const res = await fetch('/api/reviews', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(form)
       });
+
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || 'No se pudo guardar la reseña.');
-      setStatus(data.message || 'Reseña enviada correctamente.');
+
+      if (data.review) {
+        setReviews((current) => [data.review, ...current.filter((review) => review.id !== data.review.id)]);
+      } else {
+        const refreshed = await fetch('/api/reviews', { cache: 'no-store' });
+        const refreshedData = await refreshed.json();
+        setReviews(refreshedData.reviews || []);
+      }
+
+      setStatus(data.message || '¡Gracias! Tu opinión ya está publicada.');
       setForm(initialForm);
     } catch (error) {
       setStatus(error.message);
@@ -49,7 +60,7 @@ export default function ReviewsSection() {
         <div>
           <span className="eyebrow">OPINIONES DE CLIENTES</span>
           <h2>Experiencias que ayudan a decidir</h2>
-          <p>Las reseñas son revisadas antes de publicarse. El correo electrónico nunca se muestra públicamente.</p>
+          <p>Las opiniones enviadas se publican en esta sección. El correo electrónico nunca se muestra públicamente.</p>
         </div>
         <div className="ratingSummary">
           <strong>{average}</strong>
