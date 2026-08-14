@@ -168,7 +168,13 @@ async function resolveChannelId() {
   });
   if (!response.ok) throw new Error(`No se pudo abrir el canal (${response.status})`);
   const html = await response.text();
-  const id = html.match(/"channelId":"(UC[^"]+)"/)?.[1]
+  // YouTube no siempre incluye `channelId` en las páginas de canales con handle.
+  // Actualmente suele exponer el identificador como `externalId`, `browseId`
+  // o dentro de la URL canónica /channel/UC..., por lo que admitimos todos.
+  const id = html.match(/"channelId":"(UC[A-Za-z0-9_-]+)"/)?.[1]
+    || html.match(/"externalId":"(UC[A-Za-z0-9_-]+)"/)?.[1]
+    || html.match(/"browseId":"(UC[A-Za-z0-9_-]+)"/)?.[1]
+    || html.match(/youtube\.com\/channel\/(UC[A-Za-z0-9_-]+)/i)?.[1]
     || html.match(/<meta[^>]+itemprop=["']channelId["'][^>]+content=["'](UC[^"']+)["']/i)?.[1];
   if (!id) throw new Error('No se pudo identificar el channelId de YouTube.');
   return id;
@@ -252,14 +258,3 @@ async function main() {
   }
 
   const marker = /\n\];\s*$/;
-  if (!marker.test(source)) throw new Error('No se encontró el cierre del arreglo products.');
-  const separator = source.match(/\n\s*\{[\s\S]*\n\s*\}\s*\n\];\s*$/) ? ',\n' : '\n';
-  source = source.replace(marker, `${separator}${additions.join(',\n')}\n];\n`);
-  await fs.writeFile(PRODUCTS_FILE, source, 'utf8');
-  console.log(`Publicados ${additions.length} producto(s) nuevo(s) desde YouTube.`);
-}
-
-main().catch((error) => {
-  console.error(error);
-  process.exitCode = 1;
-});
