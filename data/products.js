@@ -182,5 +182,22 @@ export const products = [
     price: 3699, oldPrice: 4099, badge: 'Pantalla táctil',
     image: 'https://media.falabella.com/falabellaPE/155946143_01/w=800,h=800,fit=contain',
     specs: ['Intel Core i7-1355U', '16GB RAM · SSD 512GB', 'Pantalla 15.6” FHD Touch'], stock: true
+  },
+  {
+    id: 11786642818,
+    name: 'Xiaomi 15T Pro',
+    category: 'Celulares',
+    brand: 'Xiaomi',
+    condition: 'Nuevo',
+    price: 1300,
+    oldPrice: 1400,
+    badge: 'Visto en YouTube',
+    image: 'https://i2.ytimg.com/vi/5Huv_2D7Rss/hqdefault.jpg',
+    specs: ['Publicado desde YouTube Shorts', 'Precio incluye S/ 100 de margen', 'Stock sujeto a confirmación'],
+    stock: true,
+    youtubeVideoId: '5Huv_2D7Rss',
+    youtubeUrl: 'https://www.youtube.com/shorts/5Huv_2D7Rss',
+    sourceUrl: '',
+    publishedAt: '2026-08-13T17:40:18+00:00'
   }
 ];
