@@ -199,5 +199,22 @@ export const products = [
     youtubeUrl: 'https://www.youtube.com/shorts/5Huv_2D7Rss',
     sourceUrl: '',
     publishedAt: '2026-08-13T17:40:18+00:00'
+  },
+  {
+    id: 2026081701,
+    name: 'HONOR 400 Lite 12GB + 256GB',
+    category: 'Celulares',
+    brand: 'HONOR',
+    condition: 'Nuevo',
+    price: 1080,
+    oldPrice: 1399,
+    badge: 'Visto en YouTube',
+    image: 'https://media.falabella.com/falabellaPE/144040576_04/w%3D1500%2Ch%3D1500%2Cfit%3Dcover',
+    specs: ['Pantalla AMOLED 6.7” a 120Hz', 'MediaTek Dimensity 7025-Ultra · 12GB RAM · 256GB', 'Cámara principal 108MP · batería 5230mAh · 5G'],
+    stock: true,
+    youtubeVideoId: '',
+    youtubeUrl: '',
+    sourceUrl: 'https://simple.ripley.com.pe/celular-honor-400-lite-256gb-2065359253345p',
+    publishedAt: '2026-08-17T19:43:00+00:00'
   }
 ];
