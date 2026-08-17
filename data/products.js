@@ -216,5 +216,22 @@ export const products = [
     youtubeUrl: '',
     sourceUrl: 'https://simple.ripley.com.pe/celular-honor-400-lite-256gb-2065359253345p',
     publishedAt: '2026-08-17T19:43:00+00:00'
+  },
+  {
+    id: 11786989308,
+    name: 'HONOR 400 Lite: diseño increíble al mejor',
+    category: 'Celulares',
+    brand: 'HONOR',
+    condition: 'Nuevo',
+    price: 1080,
+    oldPrice: 1180,
+    badge: 'Visto en YouTube',
+    image: 'https://media.falabella.com/falabellaPE/144040576_04/w%3D1500%2Ch%3D1500%2Cfit%3Dcover',
+    specs: ['Publicado automáticamente desde YouTube', 'Precio incluye S/ 100 de margen', 'Stock sujeto a confirmación'],
+    stock: true,
+    youtubeVideoId: 'u35tzqe46Rg',
+    youtubeUrl: 'https://www.youtube.com/shorts/u35tzqe46Rg',
+    sourceUrl: '',
+    publishedAt: '2026-08-17T17:55:08+00:00'
   }
 ];
