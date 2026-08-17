@@ -233,5 +233,22 @@ export const products = [
     youtubeUrl: 'https://www.youtube.com/shorts/u35tzqe46Rg',
     sourceUrl: '',
     publishedAt: '2026-08-17T17:55:08+00:00'
+  },
+  {
+    id: 11787006394,
+    name: 'Compartir en Whatsapp',
+    category: 'Celulares',
+    brand: 'Tecnología',
+    condition: 'Nuevo',
+    price: 104,
+    oldPrice: 204,
+    badge: 'Visto en YouTube',
+    image: 'https://static.whatsapp.net/rsrc.php/v4/yO/r/rukeqTVNJDY.png',
+    specs: ['Publicado automáticamente desde YouTube', 'Precio incluye S/ 100 de margen', 'Stock sujeto a confirmación'],
+    stock: true,
+    youtubeVideoId: 'pmLStl2rA-s',
+    youtubeUrl: 'https://www.youtube.com/shorts/pmLStl2rA-s',
+    sourceUrl: 'https://wa.me/51953587927?text=Hola%2C%20vi%20el%20video%20del%20OPPO%20K15%20y%20quiero%20más%20información',
+    publishedAt: '2026-08-17T22:39:54+00:00'
   }
 ];
