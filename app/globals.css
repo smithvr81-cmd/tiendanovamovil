@@ -9,3 +9,27 @@
 
 /* Fotografías del catálogo */
 .productImage img{position:relative;z-index:2;width:100%;height:100%;padding:22px;object-fit:contain;background:#fff;transition:transform .3s ease}.card:hover .productImage img{transform:scale(1.035)}
+
+/* Carrusel superior de videos */
+.videoShowcase{padding:52px max(5vw,24px) 42px;background:linear-gradient(180deg,#f8fafc,#fff);color:var(--ink);overflow:hidden}
+.videoShowcaseHeader{max-width:1180px;margin:0 auto 24px;display:flex;align-items:end;justify-content:space-between;gap:24px}
+.videoKicker{color:#e7580b;font-size:11px;font-weight:900;letter-spacing:.16em}
+.videoShowcase h2{margin:8px 0 0;font-size:clamp(28px,4vw,44px);letter-spacing:-.04em}
+.videoControls{display:flex;gap:9px}
+.videoControls button{width:44px;height:44px;border:1px solid #dce2e9;border-radius:50%;background:#fff;color:#101828;font-size:29px;line-height:1;cursor:pointer;box-shadow:0 7px 20px rgba(15,23,42,.08)}
+.videoControls button:hover{background:var(--orange);border-color:var(--orange);color:#fff;transform:translateY(-2px)}
+.videoTrack{max-width:1180px;margin:auto;display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding:8px 4px 22px}
+.videoTrack::-webkit-scrollbar{display:none}
+.videoCard{position:relative;flex:0 0 235px;aspect-ratio:9/16;overflow:hidden;border-radius:20px;background:#111827;scroll-snap-align:center;cursor:pointer;box-shadow:0 12px 30px rgba(15,23,42,.15);opacity:.78;transform:scale(.96);transition:opacity .25s,transform .25s,box-shadow .25s}
+.videoCard.isActive{opacity:1;transform:scale(1);box-shadow:0 18px 42px rgba(15,23,42,.28),0 0 0 3px var(--orange)}
+.videoCard video{width:100%;height:100%;object-fit:cover;display:block}
+.videoShade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.18),transparent 45%,rgba(0,0,0,.78));pointer-events:none}
+.videoLabel{position:absolute;top:14px;left:14px;padding:7px 9px;border-radius:999px;background:rgba(7,17,31,.72);backdrop-filter:blur(8px);color:#fff;font-size:9px;font-weight:900;letter-spacing:.08em}
+.videoMeta{position:absolute;left:15px;right:15px;bottom:17px;display:grid;gap:5px;color:#fff;pointer-events:none}
+.videoMeta strong{font-size:15px;line-height:1.25}.videoMeta span{font-size:10px;color:#dbe3ec}
+.soundToggle{position:absolute;top:14px;right:12px;padding:7px 9px;border:0;border-radius:999px;background:rgba(255,255,255,.9);color:#111827;font-size:9px;font-weight:800;cursor:pointer}
+.videoDots{display:flex;justify-content:center;gap:7px;margin-top:2px}
+.videoDots button{width:7px;height:7px;padding:0;border:0;border-radius:99px;background:#c9d0da;cursor:pointer;transition:width .2s,background .2s}
+.videoDots button.active{width:25px;background:var(--orange)}
+@media(max-width:800px){.videoShowcase{padding:38px 0 32px}.videoShowcaseHeader{padding:0 20px;margin-bottom:18px}.videoControls{display:none}.videoTrack{padding-inline:calc((100% - 218px)/2);gap:12px}.videoCard{flex-basis:218px;border-radius:17px}.videoShowcase h2{font-size:30px}}
+@media(prefers-reduced-motion:reduce){.videoTrack{scroll-behavior:auto}.videoCard{transform:none}}
