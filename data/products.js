@@ -192,7 +192,7 @@ export const products = [
     price: 1300,
     oldPrice: 1400,
     badge: 'Visto en YouTube',
-    image: 'https://i2.ytimg.com/vi/5Huv_2D7Rss/hqdefault.jpg',
+    image: 'https://d.scdn.gr/images/sku_main_images/063282/63282897/20251001093505_xiaomi_15t_pro_5g_dual_sim_12gb_1tb_mocha_gold.jpeg',
     specs: ['Publicado desde YouTube Shorts', 'Precio incluye S/ 100 de margen', 'Stock sujeto a confirmación'],
     stock: true,
     youtubeVideoId: '5Huv_2D7Rss',
