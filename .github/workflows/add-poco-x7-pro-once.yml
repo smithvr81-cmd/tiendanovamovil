@@ -1,0 +1,68 @@
+name: Add POCO X7 Pro once
+
+on:
+  push:
+    paths:
+      - '.github/workflows/add-poco-x7-pro-once.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  update-catalog:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Update products catalog
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import re
+
+          path = Path('data/products.js')
+          text = path.read_text(encoding='utf-8')
+
+          # Remove malformed auto-generated WhatsApp entries if they reappeared.
+          text = re.sub(r"\n  \{\n    id: 11787006394,.*?\n  \},", "", text, flags=re.S)
+          text = re.sub(r"\n  \{\n    id: 11787170024,.*?\n  \},", "", text, flags=re.S)
+
+          # Remove any previous manually-added POCO X7 Pro entry from this workflow.
+          text = re.sub(r"\n  \{\n    id: 2026091202,.*?\n  \},", "", text, flags=re.S)
+
+          product = """
+  {
+    id: 2026091202,
+    name: 'POCO X7 Pro 5G 12GB + 512GB',
+    category: 'Celulares',
+    brand: 'Xiaomi',
+    condition: 'Nuevo',
+    price: 1479,
+    oldPrice: 1579,
+    badge: 'Recomendado',
+    image: 'https://media.falabella.com/falabellaPE/128304459_01/public',
+    specs: ['Pantalla CrystalRes AMOLED 6.67” 1.5K a 120Hz', 'Dimensity 8400-Ultra · 12GB RAM · 512GB UFS 4.0', 'Cámara principal 50MP con OIS · batería 6000mAh · carga 90W · IP68'],
+    stock: true,
+    youtubeVideoId: '4y-vnP8lg0s',
+    youtubeUrl: 'https://www.youtube.com/shorts/4y-vnP8lg0s',
+    sourceUrl: 'https://www.mercadolibre.com.pe/poco-x7-pro-5g-global-dual-sim-512-gb-negro-12-gb-de-ram/p/MPE78821013',
+    publishedAt: '2026-09-12T16:37:14-05:00'
+  }
+"""
+
+          marker = '\n];'
+          if marker not in text:
+              raise SystemExit('No se encontró el cierre del catálogo')
+          text = text.replace(marker, ',\n' + product + marker, 1)
+          text = text.replace('  },,\n', '  },\n')
+          path.write_text(text, encoding='utf-8')
+          PY
+      - name: Commit catalog update
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/products.js
+          git diff --cached --quiet && exit 0
+          git commit -m "feat: add POCO X7 Pro to catalog"
+          git push origin main
