@@ -235,40 +235,6 @@ export const products = [
     publishedAt: '2026-08-17T17:55:08+00:00'
   },
   {
-    id: 11787006394,
-    name: 'Compartir en Whatsapp',
-    category: 'Celulares',
-    brand: 'Tecnología',
-    condition: 'Nuevo',
-    price: 104,
-    oldPrice: 204,
-    badge: 'Visto en YouTube',
-    image: 'https://static.whatsapp.net/rsrc.php/v4/yO/r/rukeqTVNJDY.png',
-    specs: ['Publicado automáticamente desde YouTube', 'Precio incluye S/ 100 de margen', 'Stock sujeto a confirmación'],
-    stock: true,
-    youtubeVideoId: 'pmLStl2rA-s',
-    youtubeUrl: 'https://www.youtube.com/shorts/pmLStl2rA-s',
-    sourceUrl: 'https://wa.me/51953587927?text=Hola%2C%20vi%20el%20video%20del%20OPPO%20K15%20y%20quiero%20más%20información',
-    publishedAt: '2026-08-17T22:39:54+00:00'
-  },
-  {
-    id: 11787170024,
-    name: 'Compartir en Whatsapp',
-    category: 'Celulares',
-    brand: 'Tecnología',
-    condition: 'Nuevo',
-    price: 104,
-    oldPrice: 204,
-    badge: 'Visto en YouTube',
-    image: 'https://static.whatsapp.net/rsrc.php/v4/yO/r/rukeqTVNJDY.png',
-    specs: ['Publicado automáticamente desde YouTube', 'Precio incluye S/ 100 de margen', 'Stock sujeto a confirmación'],
-    stock: true,
-    youtubeVideoId: 'EXCTk1zJ5jA',
-    youtubeUrl: 'https://www.youtube.com/shorts/EXCTk1zJ5jA',
-    sourceUrl: 'https://wa.me/51953587927',
-    publishedAt: '2026-08-19T20:07:04+00:00'
-  },
-  {
     id: 11788885371,
     name: 'iPhone 17 Pro Max 256GB Tiendanovamovil',
     category: 'Celulares',
@@ -284,5 +250,22 @@ export const products = [
     youtubeUrl: 'https://www.youtube.com/shorts/L1AvenaKUQQ',
     sourceUrl: '',
     publishedAt: '2026-09-08T16:36:11+00:00'
+  },
+  {
+    id: 2026091201,
+    name: 'iPhone Air 256GB',
+    category: 'Celulares',
+    brand: 'Apple',
+    condition: 'Nuevo',
+    price: 3804.05,
+    oldPrice: 3904.05,
+    badge: 'Nuevo',
+    image: 'https://f.fcdn.app/imgs/1ca824/www.alemaniacell.com/acelpy/1d03/original/catalogo/27939_27939_3/1500-1500/iphone-air-256gb-sky-blue-mg1d4ll-a-iphone-air-256gb-sky-blue-mg1d4ll-a.jpg',
+    specs: ['Pantalla Super Retina XDR OLED de 6.5” con ProMotion hasta 120Hz', 'Chip A19 Pro · 256GB · 5G · eSIM', 'Cámara Fusion de 48MP · diseño de titanio de 5.64 mm'],
+    stock: true,
+    youtubeVideoId: '-GVgB0YiNMY',
+    youtubeUrl: 'https://www.youtube.com/shorts/-GVgB0YiNMY',
+    sourceUrl: 'https://www.mercadolibre.com.pe/iphone-air-256gb-apple--negro/up/MPEU3910127316',
+    publishedAt: '2026-09-11T20:28:01-05:00'
   }
 ];
