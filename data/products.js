@@ -318,5 +318,22 @@ export const products = [
     youtubeUrl: 'https://www.youtube.com/shorts/EXCTk1zJ5jA',
     sourceUrl: 'https://wa.me/51953587927',
     publishedAt: '2026-08-19T20:07:04+00:00'
+  },
+  {
+    id: 11789327260,
+    name: 'iPhone Air Tiendanovamovil',
+    category: 'Celulares',
+    brand: 'Apple',
+    condition: 'Nuevo',
+    price: 4099,
+    oldPrice: 4199,
+    badge: 'Visto en YouTube',
+    image: 'https://media.falabella.com/falabellaPE/21283538_01/w=800,h=800,fit=contain',
+    specs: ['Publicado automáticamente desde YouTube', 'Precio incluye S/ 100 de margen', 'Stock sujeto a confirmación'],
+    stock: true,
+    youtubeVideoId: 'AOxRz-8RKPs',
+    youtubeUrl: 'https://www.youtube.com/shorts/AOxRz-8RKPs',
+    sourceUrl: '',
+    publishedAt: '2026-09-13T19:21:00+00:00'
   }
 ];
