@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from 'react';
 
 const videos = [
+  { src: '/videos/vivo-x300-fe.mp4', title: 'Vivo X300 FE 5G · Olive Green', label: 'VIVO · NUEVO' },
   { src: '/videos/iphone-duo-concept.mp4', title: 'iPhone Duo · concepto plegable', label: 'CONCEPTO' },
   { src: '/videos/nova-honor-400-lite.mp4', title: 'Nova presenta Honor 400 Lite', label: 'NOVA · DESTACADO' },
   { src: '/videos/vivo-v50e-5g.mp4', title: 'Vivo V50e 5G', label: 'VIVO' },
