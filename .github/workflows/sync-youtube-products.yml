@@ -32,7 +32,7 @@ jobs:
 
       - name: Detectar Shorts y actualizar catálogo
         env:
-          YOUTUBE_CHANNEL_URL: 'https://www.youtube.com/@TiendanovamovilPer%C3%BA'
+          YOUTUBE_CHANNEL_URL: 'https://www.youtube.com/@tiendanovamovilperu'
           PRODUCT_MARGIN_PEN: '100'
           YOUTUBE_MAX_ENTRIES: '15'
         run: node scripts/sync-youtube-products.mjs
