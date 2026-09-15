@@ -335,5 +335,22 @@ export const products = [
     youtubeUrl: 'https://www.youtube.com/shorts/AOxRz-8RKPs',
     sourceUrl: '',
     publishedAt: '2026-09-13T19:21:00+00:00'
+  },
+  {
+    id: 2026091501,
+    name: 'Vivo X300 FE 5G 12GB + 256GB',
+    category: 'Celulares',
+    brand: 'Vivo',
+    condition: 'Nuevo',
+    price: 2958.47,
+    oldPrice: 3058.47,
+    badge: 'Visto en YouTube',
+    image: '/vivo-x300-fe-product.jpg',
+    specs: ['Pantalla compacta de 6.31 pulgadas', 'Snapdragon 8 Gen 5 · 12GB RAM · 256GB', 'Cámara telefoto ZEISS de 50MP · batería 6500mAh'],
+    stock: true,
+    youtubeVideoId: '8dfMEdUNa9M',
+    youtubeUrl: 'https://www.youtube.com/shorts/8dfMEdUNa9M',
+    sourceUrl: 'https://www.vivo.com/in/products/x300-fe',
+    publishedAt: '2026-09-15T01:56:54+00:00'
   }
 ];
