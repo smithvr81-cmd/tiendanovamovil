@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation';
 import { products } from '../../../data/products';
 
-const WHATSAPP = '51916599383';
+const WHATSAPP = '51953587927';
 
 function currency(value) {
   return new Intl.NumberFormat('es-PE', { style: 'currency', currency: 'PEN', maximumFractionDigits: 0 }).format(value);
@@ -22,7 +22,7 @@ export default async function ProductPage({ params }) {
   const product = products.find((item) => String(item.id) === String(id));
   if (!product) notFound();
 
-  const whatsappText = encodeURIComponent(`Hola Tiendanovamovil, me interesa ${product.name} por ${currency(product.price)}. ¿Tienen stock disponible?`);
+  const whatsappText = encodeURIComponent(`Hola Tiendanovamovil, me interesa ${product.name}. Estoy en [ciudad]. ¿Pueden confirmar precio final, disponibilidad en Lima y costo de envío?`);
   const whatsappUrl = `https://wa.me/${WHATSAPP}?text=${whatsappText}`;
 
   return <main className="productPage">
@@ -42,12 +42,11 @@ export default async function ProductPage({ params }) {
       <article className="purchasePanel">
         <p className="brandText">{product.brand}</p>
         <h1>{product.name}</h1>
-        <div className="conditionLine"><span>{product.condition}</span><span>•</span><span className="stockOk">{product.stock ? 'Disponible' : 'Agotado'}</span></div>
+        <div className="conditionLine"><span>{product.condition}</span><span>•</span><span className="stockOk">{product.stock === true ? 'Disponible' : 'Consultar disponibilidad'}</span></div>
 
         <div className="productPrice">
-          {product.oldPrice ? <del>{currency(product.oldPrice)}</del> : null}
-          <strong>{currency(product.price)}</strong>
-          <p className="priceNotice">Precio referencial. Confirma stock, color y condiciones antes de pagar.</p>
+          {product.priceVerified ? <strong>{currency(product.price)}</strong> : <strong>Consultar precio</strong>}
+          <p className="priceNotice">{product.priceVerified ? 'Precio referencial del equipo.' : 'Solicita una cotización actualizada.'} Confirma stock, color, costo de envío y condiciones antes de pagar.</p>
         </div>
 
         <ul className="specList">{product.specs.map((spec) => <li key={spec}>✓ {spec}</li>)}</ul>

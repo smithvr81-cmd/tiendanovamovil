@@ -15,7 +15,7 @@ function textBetween(xml, tag) { const m = xml.match(new RegExp(`<${tag}[^>]*>([
 function cleanTitle(title) { return title.replace(/#\w+/g,' ').replace(/\b(shorts?|oferta|promoci[oó]n|review|unboxing|precio|per[uú]|cta|v\d+)\b/gi,' ').replace(/[|•🔥✅📱💥🚀–—_]/g,' ').replace(/\s{2,}/g,' ').trim().slice(0,100); }
 function isProduct(title, description) { const h = `${title} ${description}`.toLowerCase(); return productWords.some((w) => h.includes(w)); }
 function extractUrls(text='') { return (text.match(/https?:\/\/[^\s<>"')\]]+/g)||[]).map((u)=>decodeEntities(u.replace(/[.,;!?]+$/,''))); }
-function sourceUrlFrom(description) { return extractUrls(description).find((u)=>!/youtube\.com|youtu\.be|tiendanovamovil\.com/i.test(u)); }
+function sourceUrlFrom(description) { return extractUrls(description).find((u)=>!/youtube\.com|youtu\.be|tiendanovamovil\.com|wa\.me|whatsapp\.com/i.test(u)); }
 function parsePrice(text='') {
   for (const p of [/(?:S\/|S\.|PEN)\s*([0-9]{2,5}(?:[.,][0-9]{1,2})?)/i,/(?:precio(?:\s+(?:base|referencia|referencial))?\s*[:=-]?\s*)([0-9]{2,5}(?:[.,][0-9]{1,2})?)/i]) {
     const m=text.match(p); if(m) return Number(m[1].replace(/\.(?=\d{3}\b)/g,'').replace(',','.'));
@@ -35,7 +35,7 @@ function bestExisting(title,existing){ return existing.map((item)=>({item,score:
 function jsString(v){ return `'${String(v).replaceAll('\\','\\\\').replaceAll("'","\\'").replaceAll('\n',' ')}'`; }
 function inferBrand(name){ const lower=name.toLowerCase(); if(/iphone|ipad|macbook/.test(lower)) return 'Apple'; for(const b of ['Samsung','Xiaomi','Redmi','POCO','HONOR','Motorola','Realme','OPPO','Vivo','Huawei','Nokia','Acer','ASUS','Lenovo','Dell','HP']) if(lower.includes(b.toLowerCase())) return b; return 'Tecnología'; }
 function inferCategory(name){ const l=name.toLowerCase(); if(/macbook|laptop|notebook|acer|asus|lenovo|dell|hp/.test(l)) return 'Laptops'; if(/ipad|tablet/.test(l)) return 'Accesorios'; return 'Celulares'; }
-function productObject({id,name,price,image,specs,videoId,videoUrl,sourceUrl,published}){ const oldPrice=Math.ceil(price+100); const productSpecs=specs?.length?specs:['Publicado automáticamente desde YouTube',`Precio incluye S/ ${MARGIN} de margen`,'Stock sujeto a confirmación']; return `  {\n    id: ${id},\n    name: ${jsString(name)},\n    category: ${jsString(inferCategory(name))},\n    brand: ${jsString(inferBrand(name))},\n    condition: 'Nuevo',\n    price: ${Math.ceil(price)},\n    oldPrice: ${oldPrice},\n    badge: 'Visto en YouTube',\n    image: ${jsString(image)},\n    specs: [${productSpecs.map(jsString).join(', ')}],\n    stock: true,\n    youtubeVideoId: ${jsString(videoId)},\n    youtubeUrl: ${jsString(videoUrl)},\n    sourceUrl: ${jsString(sourceUrl||'')},\n    publishedAt: ${jsString(published)}\n  }`; }
+function productObject({id,name,price,image,specs,videoId,videoUrl,sourceUrl,published}){ const productSpecs=specs?.length?specs:['Publicado desde YouTube Shorts','Precio y disponibilidad por confirmar']; return `  {\n    id: ${id},\n    name: ${jsString(name)},\n    category: ${jsString(inferCategory(name))},\n    brand: ${jsString(inferBrand(name))},\n    condition: 'Nuevo',\n    price: ${Math.ceil(price)},\n    oldPrice: null,\n    badge: 'Visto en YouTube',\n    image: ${jsString(image)},\n    specs: [${productSpecs.map(jsString).join(', ')}],\n    stock: null,\n    priceVerified: false,\n    youtubeVideoId: ${jsString(videoId)},\n    youtubeUrl: ${jsString(videoUrl)},\n    sourceUrl: ${jsString(sourceUrl||'')},\n    publishedAt: ${jsString(published)}\n  }`; }
 async function resolveChannelId(){ const r=await fetch(CHANNEL_URL,{headers:{'user-agent':'Mozilla/5.0'},signal:AbortSignal.timeout(15000)}); if(!r.ok) throw new Error(`No se pudo abrir el canal (${r.status})`); const html=await r.text(); const id=html.match(/"channelId":"(UC[A-Za-z0-9_-]+)"/)?.[1]||html.match(/"externalId":"(UC[A-Za-z0-9_-]+)"/)?.[1]||html.match(/"browseId":"(UC[A-Za-z0-9_-]+)"/)?.[1]||html.match(/youtube\.com\/channel\/(UC[A-Za-z0-9_-]+)/i)?.[1]; if(!id) throw new Error('No se pudo identificar el channelId de YouTube.'); return id; }
 function decodeJsonString(value=''){ try{return JSON.parse(`"${value}"`);}catch{return value.replaceAll('\\n','\n').replaceAll('\\u0026','&');} }
 async function fetchWatchEntry(videoId){ try{ const r=await fetch(`https://www.youtube.com/watch?v=${videoId}`,{headers:{'user-agent':'Mozilla/5.0'},signal:AbortSignal.timeout(15000)}); if(!r.ok) return null; const html=await r.text(); const title=decodeJsonString(html.match(/"videoDetails":\{"videoId":"[^"]+","title":"((?:\\.|[^"\\])*)"/)?.[1]||''); const description=decodeJsonString(html.match(/"shortDescription":"((?:\\.|[^"\\])*)"/)?.[1]||''); const published=html.match(/"publishDate":"([^"]+)"/)?.[1]||new Date().toISOString(); return {videoId,title,published,description,videoUrl:`https://www.youtube.com/shorts/${videoId}`}; }catch{return null;} }
@@ -57,10 +57,12 @@ async function main(){
     const specs=parseSpecs(entry.description);
     const matched=bestExisting(entry.title,existing);
     const strongMatch=matched&&matched.score>=4?matched.item:null;
-    let finalPrice=scraped.price? scraped.price+MARGIN : descriptionPrice? descriptionPrice+MARGIN : null;
-    let image=scraped.image||strongMatch?.image||`https://i.ytimg.com/vi/${entry.videoId}/hqdefault.jpg`;
-    if(!finalPrice&&strongMatch?.price) finalPrice=strongMatch.price;
-    if(!finalPrice||finalPrice<=0){ console.warn(`Omitido ${entry.videoId}: falta precio. Añade en la descripción "Precio referencia: S/ 000" o un enlace de la tienda fuente.`); continue; }
+    const finalPrice=scraped.price? scraped.price+MARGIN : descriptionPrice? descriptionPrice+MARGIN : null;
+    const image=scraped.image||strongMatch?.image||`https://i.ytimg.com/vi/${entry.videoId}/hqdefault.jpg`;
+    if(!sourceUrl||!finalPrice||finalPrice<200||!scraped.name||!isProduct(scraped.name,'')){
+      console.warn(`Omitido ${entry.videoId}: requiere enlace a producto real, nombre y precio comprobables.`);
+      continue;
+    }
     const name=cleanTitle(scraped.name||entry.title||strongMatch?.name||'Producto');
     const numericId=10_000_000_000+Math.floor(new Date(entry.published).getTime()/1000);
     additions.push(productObject({id:numericId,name,price:finalPrice,image,specs,videoId:entry.videoId,videoUrl:entry.videoUrl,sourceUrl,published:entry.published||new Date().toISOString()}));
