@@ -26,7 +26,7 @@ export default function ProvinceQuote({ products }) {
   };
   return <div id="contacto" className={styles.formWrap}><form className={styles.form} onSubmit={submit}>
     <label>Nombre<input name="name" autoComplete="name" required maxLength={120}/></label>
-    <label>Celular peruano<input name="phone" type="tel" inputMode="tel" autoComplete="tel" required pattern="([+]?51[ -]?)?9[0-9]{8}" placeholder="Ej. 953587927" title="Ingresa 9 dígitos empezando en 9, con +51 opcional."/></label>
+    <label>Celular peruano<input name="phone" type="tel" inputMode="tel" autoComplete="tel" required pattern="([+]?51 ?)?9[0-9]{8}" placeholder="Ej. 953587927" title="Ingresa 9 dígitos empezando en 9, con +51 opcional."/></label>
     <label>Equipo<select value={product} onChange={e => setProduct(e.target.value)}>{products.map(p => <option key={p.id}>{p.name}</option>)}<option>Quiero una recomendación</option></select></label>
     <label>Ciudad / provincia<input value={city} onChange={e => setCity(e.target.value)} required maxLength={80} autoComplete="address-level2"/></label>
     <label>Distrito<input value={district} onChange={e => setDistrict(e.target.value)} required maxLength={80}/></label>
