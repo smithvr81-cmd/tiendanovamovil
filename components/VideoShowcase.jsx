@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from 'react';
 
 const videos = [
+  { src: '/videos/redmi-note-14-pro-nova.mp4', title: 'Redmi Note 14 Pro+ 5G · Tienda Móvil', label: 'NOVA · REDMI' },
   { src: '/videos/vivo-x300-fe.mp4', title: 'Vivo X300 FE 5G · Olive Green', label: 'VIVO · NUEVO' },
   { src: '/videos/iphone-duo-concept.mp4', title: 'iPhone Duo · concepto plegable', label: 'CONCEPTO' },
   { src: '/videos/nova-honor-400-lite.mp4', title: 'Nova presenta Honor 400 Lite', label: 'NOVA · DESTACADO' },

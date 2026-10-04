@@ -64,6 +64,13 @@ export default async function ProductPage({ params }) {
       </article>
     </section>
 
+    {product.videoSrc && <section className="productInfo" aria-label={`Video de ${product.name}`}>
+      <h2>Conoce el equipo con Nova</h2>
+      <video controls playsInline preload="metadata" poster={product.image} style={{ width: '100%', maxWidth: 420, borderRadius: 20 }} aria-label={`Video promocional de ${product.name}`}>
+        <source src={product.videoSrc} type="video/mp4" />
+      </video>
+    </section>}
+
     <section className="productInfo">
       <div className="productInfoGrid">
         <article className="infoPanel"><h2>Características del producto</h2><ul>{product.specs.map((spec) => <li key={spec}>{spec}</li>)}</ul><p>Las especificaciones se muestran de forma referencial. Confirma la versión exacta y accesorios incluidos antes de completar la compra.</p></article>
