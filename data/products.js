@@ -2,6 +2,29 @@
 // Las fichas antiguas permanecen para cotización, sin exhibir precios desactualizados.
 export const products = [
   {
+    "id": 2026100401,
+    "name": "Redmi Note 14 Pro+ 5G",
+    "category": "Celulares",
+    "brand": "Xiaomi",
+    "condition": "Nuevo",
+    "price": null,
+    "oldPrice": null,
+    "badge": "Nova · Cotizar",
+    "image": "/redmi-note-14-pro-product.jpg",
+    "specs": [
+      "Pantalla AMOLED de 6.67” hasta 120 Hz",
+      "Procesador Snapdragon 7s Gen 3 · 5G",
+      "Confirma versión, memoria y color al cotizar"
+    ],
+    "stock": null,
+    "priceVerified": false,
+    "videoSrc": "/videos/redmi-note-14-pro-nova.mp4",
+    "youtubeVideoId": "id6qJ9n0vy0",
+    "youtubeUrl": "https://youtube.com/shorts/id6qJ9n0vy0",
+    "sourceUrl": "https://www.mi.com/pe/product/redmi-note-14-pro-plus-5g/specs/",
+    "publishedAt": "2026-10-04T18:00:00-05:00"
+  },
+  {
     "id": 2026092201,
     "name": "Motorola moto g67 256GB",
     "price": 1029,
