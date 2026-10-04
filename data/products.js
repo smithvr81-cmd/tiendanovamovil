@@ -1,5 +1,4 @@
-// Precios referenciales revisados el 22/09/2026. Confirmar compra, envío y disponibilidad antes del pago.
-// Las fichas antiguas permanecen para cotización, sin exhibir precios desactualizados.
+// Precios finales por WhatsApp. Stock y garantía confirmados para la selección de provincias el 04/10/2026.
 export const products = [
   {
     "id": 2026100401,
@@ -16,13 +15,15 @@ export const products = [
       "Procesador Snapdragon 7s Gen 3 · 5G",
       "Confirma versión, memoria y color al cotizar"
     ],
-    "stock": null,
+    "stock": true,
     "priceVerified": false,
     "videoSrc": "/videos/redmi-note-14-pro-nova.mp4",
     "youtubeVideoId": "id6qJ9n0vy0",
     "youtubeUrl": "https://youtube.com/shorts/id6qJ9n0vy0",
     "sourceUrl": "https://www.mi.com/pe/product/redmi-note-14-pro-plus-5g/specs/",
-    "publishedAt": "2026-10-04T18:00:00-05:00"
+    "publishedAt": "2026-10-04T18:00:00-05:00",
+    "warrantyMonths": 12,
+    "shippingProvider": "Shalom"
   },
   {
     "id": 2026092201,
@@ -456,12 +457,14 @@ export const products = [
       "MediaTek Dimensity 7025-Ultra · 12GB RAM · 256GB",
       "Cámara principal 108MP · batería 5230mAh · 5G"
     ],
-    "stock": null,
+    "stock": true,
     "youtubeVideoId": "",
     "youtubeUrl": "",
     "sourceUrl": "https://www.honorperu.pe/celulares/serie-honor-400-lite?color=15",
     "publishedAt": "2026-08-17T19:43:00+00:00",
-    "priceVerified": true
+    "priceVerified": false,
+    "warrantyMonths": 12,
+    "shippingProvider": "Shalom"
   },
   {
     "id": 2026091201,
@@ -500,12 +503,14 @@ export const products = [
       "Dimensity 8400-Ultra · 12GB RAM · 512GB UFS 4.0",
       "Cámara principal 50MP con OIS · batería 6000mAh · carga 90W · IP68"
     ],
-    "stock": null,
+    "stock": true,
     "youtubeVideoId": "4y-vnP8lg0s",
     "youtubeUrl": "https://www.youtube.com/shorts/4y-vnP8lg0s",
     "sourceUrl": "https://movilpro.com.pe/poco-x7-pro-negro-12gb-ram-512gb-rom",
     "publishedAt": "2026-09-12T16:37:14-05:00",
-    "priceVerified": true
+    "priceVerified": false,
+    "warrantyMonths": 12,
+    "shippingProvider": "Shalom"
   },
   {
     "id": 2026091501,
