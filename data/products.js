@@ -1,29 +1,30 @@
-// Precios finales por WhatsApp. Stock y garantía confirmados para la selección de provincias el 04/10/2026.
+// Precios referenciales de la selección de provincias revisados el 04/10/2026. Precio final y envío por WhatsApp.
 export const products = [
   {
     "id": 2026100401,
-    "name": "Redmi Note 14 Pro+ 5G",
+    "name": "Redmi Note 14 Pro+ 5G 8GB + 256GB",
     "category": "Celulares",
     "brand": "Xiaomi",
     "condition": "Nuevo",
-    "price": null,
+    "price": 1347,
     "oldPrice": null,
     "badge": "Nova · Cotizar",
     "image": "/redmi-note-14-pro-product.jpg",
     "specs": [
       "Pantalla AMOLED de 6.67” hasta 120 Hz",
       "Procesador Snapdragon 7s Gen 3 · 5G",
-      "Confirma versión, memoria y color al cotizar"
+      "8GB RAM · 256GB · confirma color y accesorios al cotizar"
     ],
     "stock": true,
-    "priceVerified": false,
+    "priceVerified": true,
     "videoSrc": "/videos/redmi-note-14-pro-nova.mp4",
     "youtubeVideoId": "id6qJ9n0vy0",
     "youtubeUrl": "https://youtube.com/shorts/id6qJ9n0vy0",
-    "sourceUrl": "https://www.mi.com/pe/product/redmi-note-14-pro-plus-5g/specs/",
+    "sourceUrl": "https://www.efe.com.pe/note-14pro-5g-8gb-256gb-black-14pro-black.html",
     "publishedAt": "2026-10-04T18:00:00-05:00",
     "warrantyMonths": 12,
-    "shippingProvider": "Shalom"
+    "shippingProvider": "Shalom",
+    "priceCheckedAt": "2026-10-04"
   },
   {
     "id": 2026092201,
@@ -448,7 +449,7 @@ export const products = [
     "category": "Celulares",
     "brand": "HONOR",
     "condition": "Nuevo",
-    "price": 1299,
+    "price": 1499,
     "oldPrice": null,
     "badge": "Gama media · Cotizar",
     "image": "https://media.falabella.com/falabellaPE/144040576_04/w%3D1500%2Ch%3D1500%2Cfit%3Dcover",
@@ -460,11 +461,12 @@ export const products = [
     "stock": true,
     "youtubeVideoId": "",
     "youtubeUrl": "",
-    "sourceUrl": "https://www.honorperu.pe/celulares/serie-honor-400-lite?color=15",
+    "sourceUrl": "https://www.metro.pe/smartphone-honor-400-lite-12gb-256gb-marrs-green-1040508/p",
     "publishedAt": "2026-08-17T19:43:00+00:00",
-    "priceVerified": false,
+    "priceVerified": true,
     "warrantyMonths": 12,
-    "shippingProvider": "Shalom"
+    "shippingProvider": "Shalom",
+    "priceCheckedAt": "2026-10-04"
   },
   {
     "id": 2026091201,
@@ -508,9 +510,10 @@ export const products = [
     "youtubeUrl": "https://www.youtube.com/shorts/4y-vnP8lg0s",
     "sourceUrl": "https://movilpro.com.pe/poco-x7-pro-negro-12gb-ram-512gb-rom",
     "publishedAt": "2026-09-12T16:37:14-05:00",
-    "priceVerified": false,
+    "priceVerified": true,
     "warrantyMonths": 12,
-    "shippingProvider": "Shalom"
+    "shippingProvider": "Shalom",
+    "priceCheckedAt": "2026-10-04"
   },
   {
     "id": 2026091501,
