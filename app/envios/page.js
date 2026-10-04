@@ -6,7 +6,7 @@ export default function EnviosPage() {
     <section className="legalContent">
       <article className="legalCard"><h2>Confirmación previa</h2><p>Antes de cerrar la compra confirmamos contigo el producto, stock, dirección, costo de envío y plazo estimado de entrega.</p></article>
       <article className="legalCard"><h2>Lima Metropolitana</h2><p>La modalidad y el tiempo de entrega se coordinan por WhatsApp de acuerdo con el distrito, disponibilidad y horario.</p></article>
-      <article className="legalCard"><h2>Envíos a provincias</h2><p>Los envíos nacionales se coordinan con el cliente y pueden realizarse mediante operadores logísticos disponibles. El costo y el plazo se informan antes de pagar.</p></article>
+      <article className="legalCard"><h2>Envíos a provincias</h2><p>Los envíos a provincias se realizan por Shalom. Confirmamos la cobertura para tu destino, modalidad, costo y plazo de entrega por WhatsApp antes de pagar.</p></article>
       <article className="legalCard"><h2>Recepción del pedido</h2><p>Recomendamos revisar el estado exterior del paquete y conservar el comprobante de entrega. Ante una incidencia, comunícate inmediatamente con nuestro canal de atención.</p></article>
     </section>
   </main>;
