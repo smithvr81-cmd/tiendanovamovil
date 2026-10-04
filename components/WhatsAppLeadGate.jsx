@@ -3,7 +3,6 @@
 import { useEffect, useRef, useState } from 'react';
 
 const PENDING_KEY = 'tnm_pending_leads';
-const GOOGLE_ADS_CONTACT_CONVERSION = 'AW-18345503163/RUGKCN7NrN4cELvT6KtE';
 
 function isWhatsAppUrl(value) {
   const href = String(value || '');
@@ -36,14 +35,6 @@ function setGoogleUserData(phone) {
   window.dataLayer.push({ event: 'user_data_ready', user_data: { phone_number: phoneNumber } });
 }
 
-function reportGoogleAdsContactConversion() {
-  if (typeof window.gtag !== 'function') return;
-  window.gtag('event', 'conversion', {
-    send_to: GOOGLE_ADS_CONTACT_CONVERSION,
-    value: 1.0,
-    currency: 'PEN'
-  });
-}
 
 function parseWhatsappMessage(url) {
   try {
@@ -165,7 +156,6 @@ export default function WhatsAppLeadGate() {
         event_label: 'whatsapp_lead_gate',
         method: 'WhatsApp'
       });
-      reportGoogleAdsContactConversion();
     }
 
     allowUntilRef.current = Date.now() + 3000;
