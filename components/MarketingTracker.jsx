@@ -7,7 +7,7 @@ const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID || '';
 const META_PIXEL_ID = process.env.NEXT_PUBLIC_META_PIXEL_ID || '';
 const ADS_ID = process.env.NEXT_PUBLIC_GOOGLE_ADS_ID || 'AW-18345503163';
 const ADS_WHATSAPP_LABEL = process.env.NEXT_PUBLIC_GOOGLE_ADS_WHATSAPP_LABEL || 'KUGKCN7NrN4cELvT6KtE';
-const ADS_LEAD_LABEL = process.env.NEXT_PUBLIC_GOOGLE_ADS_LEAD_LABEL || '';
+const ADS_LEAD_LABEL = process.env.NEXT_PUBLIC_GOOGLE_ADS_LEAD_LABEL || ADS_WHATSAPP_LABEL;
 
 const UTM_KEYS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'gclid', 'gbraid', 'wbraid', 'fbclid'];
 
@@ -110,9 +110,13 @@ export default function MarketingTracker() {
     const originalGtag = typeof window.gtag === 'function' ? window.gtag : null;
     const originalOpen = window.open.bind(window);
     let lastWhatsappAt = 0;
+    const lastConversionAt = new Map();
 
     const fireAdsConversion = (label, details = {}) => {
       if (!originalGtag || !ADS_ID || !label) return;
+      const now = Date.now();
+      if (now - (lastConversionAt.get(label) || 0) < 1000) return;
+      lastConversionAt.set(label, now);
       originalGtag('event', 'conversion', {
         send_to: `${ADS_ID}/${label}`,
         value: Number(details.value || 1),
@@ -222,18 +226,6 @@ export default function MarketingTracker() {
       };
     }
 
-    const onClick = (event) => {
-      const link = event.target.closest?.('a[href*="wa.me"],a[href*="whatsapp.com"]');
-      if (!link) return;
-      if (Date.now() - lastWhatsappAt < 800) return;
-      fireWhatsappConversion({
-        source: link.getAttribute('aria-label') || link.textContent?.trim() || 'whatsapp_link',
-        link_url: link.href
-      });
-    };
-
-    document.addEventListener('click', onClick, true);
-
     window.open = function patchedOpen(url, ...args) {
       const href = typeof url === 'string' ? url : String(url || '');
       if ((href.includes('wa.me/') || href.includes('whatsapp.com/')) && Date.now() - lastWhatsappAt > 800) {
@@ -249,7 +241,6 @@ export default function MarketingTracker() {
     window.addEventListener('tnm-consent-changed', onConsent);
 
     return () => {
-      document.removeEventListener('click', onClick, true);
       window.removeEventListener('tnm-consent-changed', onConsent);
       window.open = originalOpen;
       if (originalGtag) window.gtag = originalGtag;
