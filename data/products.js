@@ -459,8 +459,8 @@ export const products = [
       "Cámara principal 108MP · batería 5230mAh · 5G"
     ],
     "stock": true,
-    "youtubeVideoId": "",
-    "youtubeUrl": "",
+    "youtubeVideoId": "cJbb1VciAKg",
+    "youtubeUrl": "https://youtube.com/shorts/cJbb1VciAKg",
     "sourceUrl": "https://www.metro.pe/smartphone-honor-400-lite-12gb-256gb-marrs-green-1040508/p",
     "publishedAt": "2026-08-17T19:43:00+00:00",
     "priceVerified": true,
