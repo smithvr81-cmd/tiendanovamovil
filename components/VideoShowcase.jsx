@@ -3,10 +3,10 @@
 import { useEffect, useRef, useState } from 'react';
 
 const videos = [
+  { youtube: 'cJbb1VciAKg', src: 'https://www.youtube-nocookie.com/embed/cJbb1VciAKg', title: 'HONOR 400 Lite · S/ 1,350', label: 'CAMPAÑA · PROVINCIAS' },
   { src: '/videos/redmi-note-14-pro-nova.mp4', title: 'Redmi Note 14 Pro+ 5G · Tienda Móvil', label: 'NOVA · REDMI' },
   { src: '/videos/vivo-x300-fe.mp4', title: 'Vivo X300 FE 5G · Olive Green', label: 'VIVO · NUEVO' },
   { src: '/videos/iphone-duo-concept.mp4', title: 'iPhone Duo · concepto plegable', label: 'CONCEPTO' },
-  { src: '/videos/nova-honor-400-lite.mp4', title: 'Nova presenta Honor 400 Lite', label: 'NOVA · DESTACADO' },
   { src: '/videos/vivo-v50e-5g.mp4', title: 'Vivo V50e 5G', label: 'VIVO' },
   { src: '/videos/redmi-note-17-pro-max.mp4', title: 'Redmi Note 17 Pro Max 5G', label: 'REDMI' },
   { src: '/videos/xiaomi-15t-pro.mp4', title: 'Xiaomi 15T Pro', label: 'XIAOMI' },
@@ -36,9 +36,9 @@ export default function VideoShowcase() {
   return <section className="videoShowcase" aria-labelledby="video-showcase-title">
     <div className="videoShowcaseHeader"><div><span className="videoKicker">TIENDANOVAMOVIL EN VIDEO</span><h2 id="video-showcase-title">Descubre lo último en tecnología</h2></div><div className="videoControls"><button type="button" onClick={() => go(-1)} aria-label="Video anterior">‹</button><button type="button" onClick={() => go(1)} aria-label="Video siguiente">›</button></div></div>
     <div className="videoTrack" ref={trackRef}>{videos.map((item, index) => <article className={`videoCard ${index === active ? 'isActive' : ''}`} key={item.src} onClick={() => setActive(index)}>
-      <video ref={(element) => { videoRefs.current[index] = element; }} src={item.src} muted={muted} playsInline preload={index < 2 ? 'metadata' : 'none'} autoPlay={index === 0} onEnded={() => go(1)} aria-label={item.title}/>
-      <div className="videoShade"/><span className="videoLabel">{item.label}</span><div className="videoMeta"><strong>{item.title}</strong><span>{index === active ? 'Reproduciendo ahora' : 'Toca para reproducir'}</span></div>
-      {index === active && <button className="soundToggle" type="button" onClick={(event) => { event.stopPropagation(); setMuted((value) => !value); }} aria-label={muted ? 'Activar sonido' : 'Silenciar video'}>{muted ? '🔇 Activar sonido' : '🔊 Silenciar'}</button>}
+      {item.youtube ? <iframe src={item.src} title={item.title} loading="lazy" allow="encrypted-media; picture-in-picture" allowFullScreen style={{width:'100%',height:'100%',border:0,position:'absolute',inset:0}}/> : <video ref={(element) => { videoRefs.current[index] = element; }} src={item.src} muted={muted} playsInline preload={index < 2 ? 'metadata' : 'none'} autoPlay={index === 0} onEnded={() => go(1)} aria-label={item.title}/>}
+      {!item.youtube && <div className="videoShade"/>}<span className="videoLabel">{item.label}</span><div className="videoMeta"><strong>{item.title}</strong><span>{index === active ? 'Reproduciendo ahora' : 'Toca para reproducir'}</span></div>
+      {index === active && !item.youtube && <button className="soundToggle" type="button" onClick={(event) => { event.stopPropagation(); setMuted((value) => !value); }} aria-label={muted ? 'Activar sonido' : 'Silenciar video'}>{muted ? '🔇 Activar sonido' : '🔊 Silenciar'}</button>}
     </article>)}</div>
     <div className="videoDots" aria-label="Selector de videos">{videos.map((item, index) => <button key={item.src} className={index === active ? 'active' : ''} onClick={() => setActive(index)} aria-label={`Ver ${item.title}`}/>)}</div>
   </section>;
