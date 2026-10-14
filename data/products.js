@@ -449,7 +449,7 @@ export const products = [
     "category": "Celulares",
     "brand": "HONOR",
     "condition": "Nuevo",
-    "price": 1499,
+    "price": 1350,
     "oldPrice": null,
     "badge": "Gama media · Cotizar",
     "image": "https://media.falabella.com/falabellaPE/144040576_04/w%3D1500%2Ch%3D1500%2Cfit%3Dcover",
@@ -466,7 +466,7 @@ export const products = [
     "priceVerified": true,
     "warrantyMonths": 12,
     "shippingProvider": "Shalom",
-    "priceCheckedAt": "2026-10-04"
+    "priceCheckedAt": "2026-10-14"
   },
   {
     "id": 2026091201,
