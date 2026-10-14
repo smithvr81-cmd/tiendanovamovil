@@ -10,8 +10,8 @@ export const metadata = {
   alternates: { canonical: '/ofertas-provincia' }
 };
 const selection = [
+  { id: 2026081701, youtube: 'cJbb1VciAKg', caption: 'HONOR 400 Lite · S/ 1,350' },
   { id: 2026100401, video: '/videos/redmi-note-14-pro-nova.mp4', caption: 'Redmi con Nova', note: 'Confirma si buscas Pro o Pro+; son versiones distintas.' },
-  { id: 2026081701, video: '/videos/nova-honor-400-lite.mp4', caption: 'HONOR con Nova' },
   { id: 2026091202, youtube: '4y-vnP8lg0s', caption: 'POCO X7 Pro' }
 ];
 export default function ProvinceOffers() {
