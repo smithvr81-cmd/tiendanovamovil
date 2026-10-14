@@ -32,15 +32,15 @@ async function sendToSheets(lead) {
       }
 
       const text = await response.text();
-      let result = { ok: true };
+      let result;
       try {
-        result = JSON.parse(text || '{}');
+        result = JSON.parse(text);
       } catch {
-        result = { ok: true };
+        lastError = 'sheets_invalid_response';
+        continue;
       }
-
-      if (result?.ok === false) {
-        lastError = result.error || 'sheets_webhook_failed';
+      if (result?.ok !== true || result?.saved === false) {
+        lastError = result?.error || 'sheets_unconfirmed_save';
         continue;
       }
 

@@ -147,7 +147,7 @@ export default function MarketingTracker() {
           currency: payload.currency,
           ...attrs
         });
-        fireAdsConversion(ADS_WHATSAPP_LABEL, payload);
+        // An opening of WhatsApp is an interaction, not a saved lead.
       }
 
       if (typeof window.fbq === 'function') {
@@ -170,7 +170,7 @@ export default function MarketingTracker() {
         ...attrs
       };
 
-      window.dataLayer.push({ event: 'purchase_form_submit', ...payload });
+      window.dataLayer.push({ event: 'lead_saved', ...payload });
 
       if (originalGtag) {
         originalGtag('event', 'generate_lead', payload);
@@ -202,11 +202,11 @@ export default function MarketingTracker() {
               currency: details.currency || 'PEN',
               ...getAttribution()
             });
-            fireAdsConversion(ADS_WHATSAPP_LABEL, details);
+            // Keep clicks observable without counting them as saved contacts.
             if (typeof window.fbq === 'function') window.fbq('track', 'Contact');
           }
 
-          if (eventName === 'purchase_form_submit') {
+          if (eventName === 'lead_saved') {
             fireLeadConversion(details);
           }
 

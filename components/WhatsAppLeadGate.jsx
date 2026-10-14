@@ -147,11 +147,11 @@ export default function WhatsAppLeadGate() {
     setStatus('idle');
   };
 
-  const continueToWhatsApp = (url, normalizedPhone) => {
+  const continueToWhatsApp = (url, normalizedPhone, saved = false) => {
     setGoogleUserData(normalizedPhone);
 
-    if (typeof window.gtag === 'function') {
-      window.gtag('event', 'purchase_form_submit', {
+    if (saved && typeof window.gtag === 'function') {
+      window.gtag('event', 'lead_saved', {
         event_category: 'conversion',
         event_label: 'whatsapp_lead_gate',
         method: 'WhatsApp'
@@ -210,7 +210,7 @@ export default function WhatsAppLeadGate() {
         queuePendingLead(payload);
       }
 
-      continueToWhatsApp(url, normalizedPhone);
+      continueToWhatsApp(url, normalizedPhone, response.ok && result.ok === true && result.saved === true);
     } catch {
       queuePendingLead(payload);
       continueToWhatsApp(url, normalizedPhone);

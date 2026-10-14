@@ -57,6 +57,11 @@ export default function LeadCapture() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload),
         keepalive: true
+      }).then(async (response) => {
+        const result = await response.json();
+        if (response.ok && result.ok === true && result.saved === true) {
+          window.gtag?.('event', 'lead_saved', { event_label: payload.path === '/ofertas-provincia' ? 'province_quote_saved' : 'contact_form_saved' });
+        }
       }).catch(() => {});
     };
 
