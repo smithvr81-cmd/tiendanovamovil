@@ -113,11 +113,13 @@ export default function MarketingTracker() {
     const lastConversionAt = new Map();
 
     const fireAdsConversion = (label, details = {}) => {
-      if (!originalGtag || !ADS_ID || !label) return;
+      if (localStorage.getItem('tnm_analytics_consent') !== 'accepted') return;
+      const gtag = originalGtag || window.gtag;
+      if (!gtag || !ADS_ID || !label) return;
       const now = Date.now();
       if (now - (lastConversionAt.get(label) || 0) < 1000) return;
       lastConversionAt.set(label, now);
-      originalGtag('event', 'conversion', {
+      gtag('event', 'conversion', {
         send_to: `${ADS_ID}/${label}`,
         value: Number(details.value || 1),
         currency: details.currency || 'PEN'
@@ -160,6 +162,8 @@ export default function MarketingTracker() {
     };
 
     const fireLeadConversion = (details = {}) => {
+      if (localStorage.getItem('tnm_analytics_consent') !== 'accepted') return;
+      const gtag = originalGtag || window.gtag;
       const attrs = getAttribution();
       const payload = {
         event_category: 'conversion',
@@ -172,8 +176,8 @@ export default function MarketingTracker() {
 
       window.dataLayer.push({ event: 'lead_saved', ...payload });
 
-      if (originalGtag) {
-        originalGtag('event', 'generate_lead', payload);
+      if (gtag) {
+        gtag('event', 'generate_lead', payload);
         fireAdsConversion(ADS_LEAD_LABEL, payload);
       }
 
@@ -238,9 +242,12 @@ export default function MarketingTracker() {
       if (event.detail === 'accepted') enableMarketingScripts();
       if (event.detail === 'rejected') denyMarketingScripts();
     };
+    const onLeadSaved = (event) => fireLeadConversion(event.detail || {});
+    window.addEventListener('tnm-lead-saved', onLeadSaved);
     window.addEventListener('tnm-consent-changed', onConsent);
 
     return () => {
+      window.removeEventListener('tnm-lead-saved', onLeadSaved);
       window.removeEventListener('tnm-consent-changed', onConsent);
       window.open = originalOpen;
       if (originalGtag) window.gtag = originalGtag;
