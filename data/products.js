@@ -6,7 +6,7 @@ export const products = [
     "category": "Celulares",
     "brand": "Xiaomi",
     "condition": "Nuevo",
-    "price": 1347,
+    "price": 1200,
     "oldPrice": null,
     "badge": "Nova · Cotizar",
     "image": "/redmi-note-14-pro-product.jpg",
@@ -24,7 +24,8 @@ export const products = [
     "publishedAt": "2026-10-04T18:00:00-05:00",
     "warrantyMonths": 12,
     "shippingProvider": "Shalom",
-    "priceCheckedAt": "2026-10-04"
+    "priceCheckedAt": "2026-10-15",
+    "priceConfirmedByStore": true
   },
   {
     "id": 2026092201,
