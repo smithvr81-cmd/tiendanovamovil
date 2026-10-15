@@ -3,6 +3,16 @@
 import { useEffect, useRef, useState } from 'react';
 
 const videos = [
+  {"src":"https://resource2.heygen.ai/videos/e2b4a27999ae47949c6f0caf067d4168/e2b4a27999ae47949c6f0caf067d4168/01a14104-7028-7dcc-8197-d91b9ae13992.mp4","title":"Redmi Note 15 4G · Delivery y garantía","label":"NOVA · DELIVERY"},
+  {"src":"https://resource2.heygen.ai/videos/e2b4a27999ae47949c6f0caf067d4168/e2b4a27999ae47949c6f0caf067d4168/01a14101-f6f7-7dc8-9bc9-15c024eddd76.mp4","title":"Redmi Note 15 Pro 5G · Delivery y garantía","label":"NOVA · DELIVERY"},
+  {"src":"https://resource2.heygen.ai/videos/e2b4a27999ae47949c6f0caf067d4168/e2b4a27999ae47949c6f0caf067d4168/01a14102-152b-7639-9cc9-60d799d2831d.mp4","title":"Redmi Note 14 4G · Delivery y garantía","label":"NOVA · DELIVERY"},
+  {"src":"https://resource2.heygen.ai/videos/e2b4a27999ae47949c6f0caf067d4168/e2b4a27999ae47949c6f0caf067d4168/01a14102-2d18-7d16-8168-77c1a80167c6.mp4","title":"Redmi Note 14 Pro 5G · Delivery y garantía","label":"NOVA · DELIVERY"},
+  {"src":"https://resource2.heygen.ai/videos/e2b4a27999ae47949c6f0caf067d4168/e2b4a27999ae47949c6f0caf067d4168/01a14102-4c83-7a18-aa25-4be02725520d.mp4","title":"Samsung Galaxy A17 · Delivery y garantía","label":"NOVA · DELIVERY"},
+  {"src":"https://resource2.heygen.ai/videos/e2b4a27999ae47949c6f0caf067d4168/e2b4a27999ae47949c6f0caf067d4168/01a14104-8bc6-70b4-8c98-478603ac0656.mp4","title":"Samsung Galaxy A26 5G · Delivery y garantía","label":"NOVA · DELIVERY"},
+  {"src":"https://resource2.heygen.ai/videos/e2b4a27999ae47949c6f0caf067d4168/e2b4a27999ae47949c6f0caf067d4168/01a14102-7368-7d6e-b9cd-57d202ffe616.mp4","title":"Samsung Galaxy A57 5G · Delivery y garantía","label":"NOVA · DELIVERY"},
+  {"src":"https://resource2.heygen.ai/videos/e2b4a27999ae47949c6f0caf067d4168/e2b4a27999ae47949c6f0caf067d4168/01a14104-a5fa-7a68-94d5-6af8cfaad3b8.mp4","title":"HONOR 400 Lite 5G · Delivery y garantía","label":"NOVA · DELIVERY"},
+  {"src":"https://resource2.heygen.ai/videos/e2b4a27999ae47949c6f0caf067d4168/e2b4a27999ae47949c6f0caf067d4168/01a14104-bd58-7da9-ba7c-0d27cfe512b5.mp4","title":"HONOR X8c · Delivery y garantía","label":"NOVA · DELIVERY"},
+  {"src":"https://resource2.heygen.ai/videos/e2b4a27999ae47949c6f0caf067d4168/e2b4a27999ae47949c6f0caf067d4168/01a14102-d90f-7c79-a6c5-8438b0d0ded0.mp4","title":"Motorola Moto G77 5G · Delivery y garantía","label":"NOVA · DELIVERY"},
   { youtube: 'cJbb1VciAKg', src: 'https://www.youtube-nocookie.com/embed/cJbb1VciAKg', title: 'HONOR 400 Lite · S/ 1,350', label: 'CAMPAÑA · PROVINCIAS' },
   { src: '/videos/redmi-note-14-pro-nova.mp4', title: 'Redmi Note 14 Pro+ 5G · Tienda Móvil', label: 'NOVA · REDMI' },
   { src: '/videos/vivo-x300-fe.mp4', title: 'Vivo X300 FE 5G · Olive Green', label: 'VIVO · NUEVO' },
