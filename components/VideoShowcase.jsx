@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from 'react';
 
 const videos = [
+    { youtube: 'Eqpx_5WzMnw', src: 'https://www.youtube-nocookie.com/embed/Eqpx_5WzMnw', title: 'iPhone 18 Pro Max · Unboxing', label: 'NOVA · VIDEO IA' },
   {"src":"https://resource2.heygen.ai/videos/e2b4a27999ae47949c6f0caf067d4168/e2b4a27999ae47949c6f0caf067d4168/01a14104-7028-7dcc-8197-d91b9ae13992.mp4","title":"Redmi Note 15 4G · Delivery y garantía","label":"NOVA · DELIVERY"},
   {"src":"https://resource2.heygen.ai/videos/e2b4a27999ae47949c6f0caf067d4168/e2b4a27999ae47949c6f0caf067d4168/01a14101-f6f7-7dc8-9bc9-15c024eddd76.mp4","title":"Redmi Note 15 Pro 5G · Delivery y garantía","label":"NOVA · DELIVERY"},
   {"src":"https://resource2.heygen.ai/videos/e2b4a27999ae47949c6f0caf067d4168/e2b4a27999ae47949c6f0caf067d4168/01a14102-152b-7639-9cc9-60d799d2831d.mp4","title":"Redmi Note 14 4G · Delivery y garantía","label":"NOVA · DELIVERY"},
