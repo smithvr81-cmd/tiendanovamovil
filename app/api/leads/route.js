@@ -8,49 +8,29 @@ function clean(value, max = 250) {
 }
 
 async function sendToSheets(lead) {
-  let lastError = 'sheets_webhook_failed';
-
-  for (let attempt = 1; attempt <= 3; attempt += 1) {
-    try {
-      const controller = new AbortController();
-      const timeout = setTimeout(() => controller.abort(), 7000);
-
-      const response = await fetch(WEBHOOK_URL, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(lead),
-        redirect: 'follow',
-        cache: 'no-store',
-        signal: controller.signal
-      });
-
-      clearTimeout(timeout);
-
-      if (!response.ok) {
-        lastError = `sheets_http_${response.status}`;
-        continue;
-      }
-
-      const text = await response.text();
-      let result;
-      try {
-        result = JSON.parse(text);
-      } catch {
-        lastError = 'sheets_invalid_response';
-        continue;
-      }
-      if (result?.ok !== true || result?.saved === false) {
-        lastError = result?.error || 'sheets_unconfirmed_save';
-        continue;
-      }
-
-      return { saved: true };
-    } catch (error) {
-      lastError = error?.name === 'AbortError' ? 'sheets_timeout' : 'sheets_network_error';
+  // Apps Script appends rows without idempotency. Never replay an ambiguous POST.
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), 20000);
+  try {
+    const response = await fetch(WEBHOOK_URL, {
+      method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(lead), redirect: 'follow', cache: 'no-store', signal: controller.signal
+    });
+    if (!response.ok) return { saved: false, warning: `sheets_http_${response.status}` };
+    const text = await response.text();
+    let result;
+    try { result = JSON.parse(text); }
+    catch { return { saved: false, warning: 'sheets_invalid_response' }; }
+    // The deployed Apps Script contract returns {ok:true} only after appendRow.
+    if (result?.ok !== true || result?.saved === false) {
+      return { saved: false, warning: result?.error || 'sheets_unconfirmed_save' };
     }
+    return { saved: true };
+  } catch (error) {
+    return { saved: false, warning: error?.name === 'AbortError' ? 'sheets_timeout' : 'sheets_network_error' };
+  } finally {
+    clearTimeout(timeout);
   }
-
-  return { saved: false, warning: lastError };
 }
 
 export async function POST(request) {
@@ -85,7 +65,7 @@ export async function POST(request) {
     const result = await sendToSheets(lead);
 
     // No bloqueamos el contacto por WhatsApp si Google Sheets tiene una falla temporal.
-    // El cliente recibe saved:false para poder conservar el lead localmente y reintentarlo luego.
+    // saved:false is unconfirmed: do not automatically retry a possibly committed write.
     return NextResponse.json({ ok: true, saved: result.saved, warning: result.warning || null });
   } catch {
     return NextResponse.json({ ok: true, saved: false, warning: 'lead_capture_failed' });

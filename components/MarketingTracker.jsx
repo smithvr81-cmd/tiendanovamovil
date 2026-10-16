@@ -111,16 +111,18 @@ export default function MarketingTracker() {
     const originalOpen = window.open.bind(window);
     let lastWhatsappAt = 0;
     const lastConversionAt = new Map();
+    const convertedLeadIds = new Set();
 
     const fireAdsConversion = (label, details = {}) => {
       if (localStorage.getItem('tnm_analytics_consent') !== 'accepted') return;
       const gtag = originalGtag || window.gtag;
       if (!gtag || !ADS_ID || !label) return;
       const now = Date.now();
-      if (now - (lastConversionAt.get(label) || 0) < 1000) return;
+      if (!details.lead_id && now - (lastConversionAt.get(label) || 0) < 1000) return;
       lastConversionAt.set(label, now);
       gtag('event', 'conversion', {
         send_to: `${ADS_ID}/${label}`,
+        ...(details.lead_id ? { transaction_id: details.lead_id } : {}),
         value: Number(details.value || 1),
         currency: details.currency || 'PEN'
       });
@@ -132,7 +134,8 @@ export default function MarketingTracker() {
       const payload = {
         event_category: 'conversion',
         event_label: details.event_label || details.label || details.source || 'whatsapp',
-        link_url: details.link_url || '',
+        // WhatsApp text contains contact details; never send its query to analytics.
+        link_url: String(details.link_url || '').split('?')[0].split('#')[0],
         page_location: window.location.href,
         value: Number(details.value || 1),
         currency: details.currency || 'PEN',
@@ -162,10 +165,18 @@ export default function MarketingTracker() {
     };
 
     const fireLeadConversion = (details = {}) => {
+      // Synthetic verification must never reach advertising or customer contact channels.
+      if (details.test_mode) {
+        document.querySelector('[data-lead-capture="managed"]')?.setAttribute('data-tracking-verification', 'saved-event-received-ads-suppressed');
+        return;
+      }
+      if (details.lead_id && convertedLeadIds.has(details.lead_id)) return;
       if (localStorage.getItem('tnm_analytics_consent') !== 'accepted') return;
       const gtag = originalGtag || window.gtag;
       const attrs = getAttribution();
+      if (details.lead_id) convertedLeadIds.add(details.lead_id);
       const payload = {
+        lead_id: details.lead_id,
         event_category: 'conversion',
         event_label: details.event_label || 'purchase_form_submit',
         page_location: window.location.href,

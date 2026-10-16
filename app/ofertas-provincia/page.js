@@ -5,25 +5,37 @@ import AnalyticsConsent from '../../components/AnalyticsConsent';
 import styles from './provincia.module.css';
 
 export const metadata = {
-  title: 'Celulares de gama media para provincias',
-  description: 'Mira los videos, compara celulares de gama media y cotiza precio final y envío a tu ciudad con Tienda Móvil.',
+  title: 'Redmi Note 15 a S/ 900 para provincias',
+  description: 'Cotiza el Redmi Note 15 a S/ 900 con Tienda Móvil. Confirma versión y stock; envío a provincias por Shalom cotizado aparte.',
   alternates: { canonical: '/ofertas-provincia' }
 };
+// This offer is landing-only until the exact variant is confirmed for the catalog.
+const redmiOffer = {
+  id: 'redmi-note-15',
+  name: 'Redmi Note 15',
+  brand: 'Redmi',
+  price: 900,
+  priceVerified: true,
+  specs: [],
+  landingOnly: true,
+  video: 'https://resource2.heygen.ai/videos/e2b4a27999ae47949c6f0caf067d4168/e2b4a27999ae47949c6f0caf067d4168/01a14104-7028-7dcc-8197-d91b9ae13992.mp4',
+  caption: 'Video de Redmi Note 15 4G · Confirma la versión de la oferta',
+  note: 'El video presenta el Redmi Note 15 4G. Confirma la versión, memoria y stock de la oferta con el asesor antes de pagar.'
+};
 const selection = [
-  { id: 2026100401, video: '/videos/redmi-note-14-pro-nova.mp4', caption: 'Redmi Note 14 Pro+ 5G · S/ 1,200' },
   { id: 2026091202, youtube: '4y-vnP8lg0s', caption: 'POCO X7 Pro' }
 ];
 export default function ProvinceOffers() {
-  const items = selection.map(item => ({ ...products.find(p => p.id === item.id), ...item }));
+  const items = [redmiOffer, ...selection.map(item => ({ ...products.find(p => p.id === item.id), ...item }))];
   return <div className={styles.page}>
     <a className={styles.skip} href="#equipos">Ir a los celulares</a>
     <header className={styles.header}><a href="/" aria-label="Volver a Tienda Móvil"><Image src="/logo-tiendanovamovil.png" alt="" width={44} height={44} unoptimized /> <strong>Tienda Móvil</strong></a><a href="#cotizar">Cotizar envío →</a></header>
     <main>
-      <section className={styles.hero}><span className={styles.kicker}>GAMA MEDIA · ATENCIÓN PARA PROVINCIAS</span><h1>Redmi Note 14 Pro+ 5G<br/><em>S/ 1,200</em></h1><p>Tu celular con garantía de 1 año y envíos a provincias por Shalom. Precio del equipo de 8GB + 256GB: S/ 1,200. El envío se cotiza aparte según tu ciudad. Confirma versión, stock y entrega antes de pagar.</p><a className={styles.primary} href="#cotizar-2026100401">Cotizar este Redmi por WhatsApp →</a><p><a href="#equipos">Ver video y comparar equipos ↓</a></p><div className={styles.benefits}><span>✓ Atención por WhatsApp</span><span>✓ Garantía de 1 año</span><span>✓ Envíos por Shalom</span></div></section>
-      <section id="equipos" className={styles.section}><span className={styles.kicker}>ELIGE Y COTIZA</span><h2>Encuentra el que va contigo</h2><p>Stock disponible · Garantía de 1 año · Envíos por Shalom. Redmi Note 14 Pro+ 5G 8GB + 256GB: S/ 1,200, actualizado el 15/10/2026. Los demás precios son referenciales; envío aparte por WhatsApp.</p>
+      <section className={styles.hero}><span className={styles.kicker}>GAMA MEDIA · ATENCIÓN PARA PROVINCIAS</span><h1>Redmi Note 15<br/><em>S/ 900</em></h1><p>Tu celular con garantía de 1 año y envíos a provincias por Shalom. Precio del equipo: S/ 900. El envío se cotiza aparte según tu ciudad. Confirma versión, stock y entrega antes de pagar.</p><a className={styles.primary} href="#cotizar-redmi-note-15">Cotizar este Redmi por WhatsApp →</a><p><a href="#equipos">Ver video y comparar equipos ↓</a></p><div className={styles.benefits}><span>✓ Atención por WhatsApp</span><span>✓ Garantía de 1 año</span><span>✓ Envíos por Shalom</span></div></section>
+      <section id="equipos" className={styles.section}><span className={styles.kicker}>ELIGE Y COTIZA</span><h2>Encuentra el que va contigo</h2><p>Redmi Note 15: S/ 900 por el equipo. Confirma versión y stock antes de pagar. Garantía de 1 año · Envíos por Shalom. Los demás precios son referenciales; el envío se cotiza aparte por WhatsApp.</p>
         <div className={styles.grid}>{items.map(p => <article className={styles.card} key={p.id}>
           <div className={styles.media}>{p.video ? <video src={p.video} controls playsInline preload="none" poster={p.image} aria-label={p.caption}/> : <iframe src={'https://www.youtube-nocookie.com/embed/' + p.youtube} title={'Video de ' + p.name} loading="lazy" allow="encrypted-media; picture-in-picture" allowFullScreen referrerPolicy="strict-origin-when-cross-origin"/>}</div>
-          <div className={styles.body}><span className={styles.kicker}>{p.brand} · {p.condition}</span><h3>{p.name}</h3><ul>{p.specs.map(s => <li key={s}>{s}</li>)}</ul><small>Precio referencial del equipo</small><strong className={styles.price}>{p.priceVerified && Number.isFinite(p.price) ? new Intl.NumberFormat('es-PE', {style:'currency',currency:'PEN',maximumFractionDigits:0}).format(p.price) : 'Consultar precio'}</strong><small>Stock disponible · Garantía de 1 año · Envío aparte</small>{p.note && <p className={styles.note}>{p.note}</p>}<a className={styles.primary} href={'#cotizar-' + p.id}>Cotizar este equipo y envío →</a><a className={styles.detail} href={'/producto/' + p.id}>Ver ficha completa</a></div>
+          <div className={styles.body}><span className={styles.kicker}>{p.brand}{p.condition && <> · {p.condition}</>}</span><h3>{p.name}</h3>{p.specs.length > 0 && <ul>{p.specs.map(s => <li key={s}>{s}</li>)}</ul>}<small>{p.landingOnly ? 'Precio del equipo' : 'Precio referencial del equipo'}</small><strong className={styles.price}>{p.priceVerified && Number.isFinite(p.price) ? new Intl.NumberFormat('es-PE', {style:'currency',currency:'PEN',maximumFractionDigits:0}).format(p.price) : 'Consultar precio'}</strong><small>Confirma stock · Garantía de 1 año · Envío aparte</small>{p.note && <p className={styles.note}>{p.note}</p>}<a className={styles.primary} href={'#cotizar-' + p.id}>Cotizar este equipo y envío →</a>{!p.landingOnly && <a className={styles.detail} href={'/producto/' + p.id}>Ver ficha completa</a>}</div>
         </article>)}</div>
       </section>
       <section className={styles.section}><span className={styles.kicker}>DE LIMA A TU CIUDAD</span><h2>Así coordinamos tu compra</h2><div className={styles.steps}><article><b>01</b><h3>Cuéntanos qué buscas</h3><p>Indica equipo, ciudad y distrito de destino.</p></article><article><b>02</b><h3>Recibe tu cotización</h3><p>Recibe por WhatsApp el precio final, la versión del equipo, la forma de pago y el costo y plazo del envío por Shalom.</p></article><article><b>03</b><h3>Confirma antes de pagar</h3><p>Revisa las condiciones con el asesor. La consulta no reserva el equipo ni confirma una venta.</p></article></div></section>

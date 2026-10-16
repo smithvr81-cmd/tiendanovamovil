@@ -62,30 +62,6 @@ function queuePendingLead(payload) {
   } catch {}
 }
 
-async function flushPendingLeads() {
-  const pending = getPendingLeads();
-  if (!pending.length) return;
-
-  const remaining = [];
-  for (const lead of pending) {
-    try {
-      const response = await fetch('/api/leads', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(lead)
-      });
-      const result = await response.json().catch(() => ({}));
-      if (!response.ok || result.ok !== true || result.saved !== true) remaining.push(lead);
-    } catch {
-      remaining.push(lead);
-    }
-  }
-
-  try {
-    if (remaining.length) localStorage.setItem(PENDING_KEY, JSON.stringify(remaining.slice(-20)));
-    else localStorage.removeItem(PENDING_KEY);
-  } catch {}
-}
 
 export default function WhatsAppLeadGate() {
   const [pendingUrl, setPendingUrl] = useState('');
@@ -95,7 +71,7 @@ export default function WhatsAppLeadGate() {
   const allowUntilRef = useRef(0);
 
   useEffect(() => {
-    flushPendingLeads().catch(() => {});
+    // Keep historical pending entries intact; do not replay non-idempotent writes.
 
     const originalOpen = window.open.bind(window);
     originalOpenRef.current = originalOpen;

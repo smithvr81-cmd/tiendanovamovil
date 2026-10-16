@@ -33,7 +33,7 @@ export default function LeadCapture() {
     const onSubmit = (event) => {
       const form = event.target;
       if (!(form instanceof HTMLFormElement)) return;
-      if (!form.closest('#contacto')) return;
+      if (!form.closest('#contacto') || form.dataset.leadCapture === 'managed') return;
 
       const data = new FormData(form);
       const phone = String(data.get('phone') || '').trim().slice(0, 40);
