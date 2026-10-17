@@ -5,22 +5,22 @@ import AnalyticsConsent from '../../components/AnalyticsConsent';
 import styles from './provincia.module.css';
 
 export const metadata = {
-  title: 'Redmi Note 15 8GB + 256GB a S/ 900 para provincias',
-  description: 'Redmi Note 15 8GB RAM + 256GB a S/ 900, con stock disponible. Envío a provincias por Shalom cotizado aparte con Tienda Móvil.',
+  title: 'Redmi Note 15 6GB + 128GB a S/ 900 para provincias',
+  description: 'Redmi Note 15 6GB RAM + 128GB a S/ 900, con stock disponible. Envío a provincias por Shalom cotizado aparte con Tienda Móvil.',
   alternates: { canonical: '/ofertas-provincia' }
 };
 // Memory and stock confirmed by the seller; connectivity variant is not specified.
 const redmiOffer = {
   id: 'redmi-note-15',
-  name: 'Redmi Note 15 8GB + 256GB',
+  name: 'Redmi Note 15 6GB + 128GB',
   brand: 'Redmi',
   price: 900,
   priceVerified: true,
-  specs: ['8GB RAM · 256GB de almacenamiento'],
+  specs: ['6GB RAM · 128GB de almacenamiento'],
   landingOnly: true,
   video: 'https://resource2.heygen.ai/videos/e2b4a27999ae47949c6f0caf067d4168/e2b4a27999ae47949c6f0caf067d4168/01a14104-7028-7dcc-8197-d91b9ae13992.mp4',
   caption: 'Video de Redmi Note 15 4G · Confirma la versión de la oferta',
-  note: 'El video presenta el Redmi Note 15 4G. La oferta confirmada es Redmi Note 15 8GB + 256GB; confirma la conectividad del equipo con el asesor antes de pagar.'
+  note: 'El video presenta el Redmi Note 15 4G. La oferta confirmada es Redmi Note 15 6GB + 128GB; confirma la conectividad del equipo con el asesor antes de pagar.'
 };
 const selection = [
   { id: 2026091202, youtube: '4y-vnP8lg0s', caption: 'POCO X7 Pro' }
@@ -31,9 +31,9 @@ export default function ProvinceOffers() {
     <a className={styles.skip} href="#equipos">Ir a los celulares</a>
     <header className={styles.header}><a href="/" aria-label="Volver a Tienda Móvil"><Image src="/logo-tiendanovamovil.png" alt="" width={44} height={44} unoptimized /> <strong>Tienda Móvil</strong></a><a href="#cotizar">Cotizar envío →</a></header>
     <main>
-      <section className={styles.hero}><span className={styles.kicker}>GAMA MEDIA · ATENCIÓN PARA PROVINCIAS</span><h1>Redmi Note 15<br/>8GB + 256GB<br/><em>S/ 900</em></h1><p>Tu celular con garantía de 1 año y envíos a provincias por Shalom. 8GB RAM + 256GB de almacenamiento. Stock disponible. Precio del equipo: S/ 900. El envío se cotiza aparte según tu ciudad. Confirma conectividad y entrega antes de pagar.</p><a className={styles.primary} href="#cotizar-redmi-note-15">Cotizar este Redmi por WhatsApp →</a><p><a href="#equipos">Ver video y comparar equipos ↓</a></p><div className={styles.benefits}><span>✓ Atención por WhatsApp</span><span>✓ Garantía de 1 año</span><span>✓ Envíos por Shalom</span></div></section>
+      <section className={styles.hero}><span className={styles.kicker}>GAMA MEDIA · ATENCIÓN PARA PROVINCIAS</span><h1>Redmi Note 15<br/>6GB + 128GB<br/><em>S/ 900</em></h1><p>Tu celular con garantía de 1 año y envíos a provincias por Shalom. 6GB RAM + 128GB de almacenamiento. Stock disponible. Precio del equipo: S/ 900. El envío se cotiza aparte según tu ciudad. Confirma conectividad y entrega antes de pagar.</p><a className={styles.primary} href="#cotizar-redmi-note-15">Cotizar este Redmi por WhatsApp →</a><p><a href="#equipos">Ver video y comparar equipos ↓</a></p><div className={styles.benefits}><span>✓ Atención por WhatsApp</span><span>✓ Garantía de 1 año</span><span>✓ Envíos por Shalom</span></div></section>
       <section id="cotizar" className={styles.quote}><span className={styles.kicker}>ASESORÍA PERSONALIZADA</span><h2>Cotiza para tu provincia</h2><p>Te ayudamos a elegir y confirmar si podemos entregar en tu destino.</p><ProvinceQuote products={items.map(p => ({id:p.id,name:p.name,price:p.price,priceVerified:p.priceVerified,priceCheckedAt:p.priceCheckedAt}))}/></section>
-      <section id="equipos" className={styles.section}><span className={styles.kicker}>ELIGE Y COTIZA</span><h2>Encuentra el que va contigo</h2><p>Redmi Note 15 8GB + 256GB: S/ 900 por el equipo. Stock disponible; confirma conectividad antes de pagar. Garantía de 1 año · Envíos por Shalom. Los demás precios son referenciales; el envío se cotiza aparte por WhatsApp.</p>
+      <section id="equipos" className={styles.section}><span className={styles.kicker}>ELIGE Y COTIZA</span><h2>Encuentra el que va contigo</h2><p>Redmi Note 15 6GB + 128GB: S/ 900 por el equipo. Stock disponible; confirma conectividad antes de pagar. Garantía de 1 año · Envíos por Shalom. Los demás precios son referenciales; el envío se cotiza aparte por WhatsApp.</p>
         <div className={styles.grid}>{items.map(p => <article className={styles.card} key={p.id}>
           <div className={styles.media}>{p.video ? <video src={p.video} controls playsInline preload="none" poster={p.image} aria-label={p.caption}/> : <iframe src={'https://www.youtube-nocookie.com/embed/' + p.youtube} title={'Video de ' + p.name} loading="lazy" allow="encrypted-media; picture-in-picture" allowFullScreen referrerPolicy="strict-origin-when-cross-origin"/>}</div>
           <div className={styles.body}><span className={styles.kicker}>{p.brand}{p.condition && <> · {p.condition}</>}</span><h3>{p.name}</h3>{p.specs.length > 0 && <ul>{p.specs.map(s => <li key={s}>{s}</li>)}</ul>}<small>{p.landingOnly ? 'Precio del equipo' : 'Precio referencial del equipo'}</small><strong className={styles.price}>{p.priceVerified && Number.isFinite(p.price) ? new Intl.NumberFormat('es-PE', {style:'currency',currency:'PEN',maximumFractionDigits:0}).format(p.price) : 'Consultar precio'}</strong><small>{p.landingOnly ? 'Stock disponible' : 'Confirma stock'} · Garantía de 1 año · Envío aparte</small>{p.note && <p className={styles.note}>{p.note}</p>}<a className={styles.primary} href={'#cotizar-' + p.id}>Cotizar este equipo y envío →</a>{!p.landingOnly && <a className={styles.detail} href={'/producto/' + p.id}>Ver ficha completa</a>}</div>
