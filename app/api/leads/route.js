@@ -37,6 +37,7 @@ export async function POST(request) {
   try {
     const body = await request.json();
     const lead = {
+      lead_id: /^[a-zA-Z0-9_-]{1,80}$/.test(String(body.lead_id || '')) ? String(body.lead_id) : '',
       name: clean(body.name, 120),
       phone: clean(body.phone, 40),
       interest: clean(body.interest, 180),
@@ -66,8 +67,9 @@ export async function POST(request) {
 
     // No bloqueamos el contacto por WhatsApp si Google Sheets tiene una falla temporal.
     // saved:false is unconfirmed: do not automatically retry a possibly committed write.
-    return NextResponse.json({ ok: true, saved: result.saved, warning: result.warning || null });
+    return NextResponse.json({ ok: true, saved: result.saved, warning: result.warning || null, lead_id: lead.lead_id });
   } catch {
     return NextResponse.json({ ok: true, saved: false, warning: 'lead_capture_failed' });
   }
 }
+

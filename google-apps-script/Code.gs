@@ -36,7 +36,9 @@ function doPost(e) {
       data.landing_page || data.page_url || '',
       data.referrer || '',
       'Nuevo',
-      ''
+      '',
+      '', '', '', '', '', '', // Preserve commercial columns U:Z.
+      /^[a-zA-Z0-9_-]{1,80}$/.test(String(data.lead_id || '')) ? String(data.lead_id) : ''
     ]);
 
     return ContentService.createTextOutput(JSON.stringify({ ok: true }))
@@ -51,3 +53,4 @@ function doGet() {
   return ContentService.createTextOutput(JSON.stringify({ ok: true, service: 'Tiendanovamovil Leads' }))
     .setMimeType(ContentService.MimeType.JSON);
 }
+

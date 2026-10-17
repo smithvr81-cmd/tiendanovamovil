@@ -9,6 +9,7 @@ export default function ProvinceQuote({ products }) {
   const [saving, setSaving] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [verification, setVerification] = useState(null);
+  const [whatsappLink, setWhatsappLink] = useState('');
   const submitting = useRef(false);
   const selected = products.find(p => p.name === product);
   useEffect(() => {
@@ -25,8 +26,19 @@ export default function ProvinceQuote({ products }) {
     if (submitting.current || submitted) return;
     const data = new FormData(event.currentTarget);
     const name = String(data.get('name') || '').trim();
-    const phone = String(data.get('phone') || '').trim();
-    if (!name || !/^([+]?51 ?)?9[0-9]{8}$/.test(phone) || !city.trim()) return;
+    const phone = String(data.get('phone') || '').replace(/[\s()\-]/g, '');
+    const phoneInput = event.currentTarget.elements?.namedItem('phone');
+    if (!/^([+]?51)?9[0-9]{8}$/.test(phone)) {
+      phoneInput?.setCustomValidity('Ingresa un celular peruano de 9 dígitos empezando en 9. Puedes incluir +51, espacios o guiones.');
+      phoneInput?.reportValidity();
+      setStatus('Revisa tu número de celular para continuar.');
+      return;
+    }
+    phoneInput?.setCustomValidity('');
+    if (!name || !city.trim()) {
+      setStatus('Completa tu nombre y ciudad para continuar.');
+      return;
+    }
     submitting.current = true;
     setSaving(true);
     const price = selected?.priceVerified ? 'Precio del equipo: S/ ' + selected.price + '. Envío aparte.\n' : '';
@@ -35,11 +47,14 @@ export default function ProvinceQuote({ products }) {
     const leadId = crypto.randomUUID();
     const whatsappUrl = 'https://wa.me/51953587927?text=' + encodeURIComponent(message);
     // Open within the submit gesture; slow saving must not block the conversation.
-    if (!isTest) window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+    if (!isTest) {
+      setWhatsappLink(whatsappUrl);
+      try { window.open(whatsappUrl, '_blank', 'noopener,noreferrer'); } catch {}
+    }
     let attrs = {};
     try { attrs = JSON.parse(localStorage.getItem('tnm_attribution') || '{}'); } catch {}
     const payload = {
-      ...(isTest ? {} : attrs), name, phone,
+      ...(isTest ? {} : attrs), name, phone, lead_id: leadId,
       interest: product + ' | Destino: ' + city.trim(),
       budget: selected?.priceVerified ? 'Equipo S/ ' + selected.price + '; envío aparte' : 'Por definir',
       source: isTest ? 'verification_test' : 'province_quote',
@@ -59,7 +74,7 @@ export default function ProvinceQuote({ products }) {
       window.dispatchEvent(new CustomEvent('tnm-lead-saved', {detail:{event_label:'province_quote',method:'WhatsApp',lead_id:leadId,test_mode:isTest}}));
       setSubmitted(true);
       if (isTest) setVerification({ leadId, destination: '51953587927', saved: true });
-      setStatus(isTest ? 'PRUEBA guardada. WhatsApp no se abrió y no se envió conversión publicitaria.' : 'Solicitud guardada. Envía el mensaje en WhatsApp para hablar con el asesor.');
+      setStatus(isTest ? 'PRUEBA guardada. WhatsApp no se abrió y no se envió conversión publicitaria.' : '1. Solicitud guardada. 2. En WhatsApp, toca Enviar para hablar con el asesor. Si no se abrió, usa el enlace de abajo.');
     } else {
       setSubmitted(true);
       setStatus('No pudimos confirmar el guardado. Para evitar duplicados no repetiremos el envío automáticamente. Contacta al asesor por WhatsApp.');
@@ -69,12 +84,16 @@ export default function ProvinceQuote({ products }) {
   };
   return <div id="contacto" className={styles.formWrap}><form className={styles.form} onSubmit={submit} data-lead-capture="managed">
     <label>Nombre<input name="name" autoComplete="name" required maxLength={120}/></label>
-    <label>Celular peruano<input name="phone" type="tel" inputMode="tel" autoComplete="tel" required pattern="([+]?51 ?)?9[0-9]{8}" placeholder="Ej. 953587927" title="Ingresa 9 dígitos empezando en 9, con +51 opcional."/></label>
+    <label>Celular peruano<input name="phone" type="tel" inputMode="tel" autoComplete="tel" required maxLength={30} onChange={event => event.currentTarget.setCustomValidity('')} placeholder="Ej. 953 587 927" aria-describedby="phone-help"/></label>
     <label>Ciudad / provincia<input name="city" value={city} onChange={e => setCity(e.target.value)} required maxLength={80} autoComplete="address-level2"/></label>
     <label>Equipo<select value={product} onChange={e => setProduct(e.target.value)}>{products.map(p => <option key={p.id}>{p.name}</option>)}<option>Quiero una recomendación</option></select></label>
+    <p id="phone-help" className={styles.formNote}>Puedes escribir tu celular con +51, espacios o guiones.</p>
     {selected?.priceVerified && <p className={styles.formNote}>Precio del equipo: {new Intl.NumberFormat('es-PE', {style:'currency',currency:'PEN',maximumFractionDigits:0}).format(selected.price)}. Envío aparte según destino. Confirma stock y entrega con el asesor.</p>}
     <p className={styles.formNote}>Solo necesitamos tu nombre, celular y ciudad. Coordinamos distrito y entrega por WhatsApp. Usaremos estos datos para atender tu solicitud. <a href="/privacidad">Política de privacidad.</a></p>
-    <button className={styles.primary} type="submit" disabled={saving || submitted}>{saving ? 'Guardando solicitud…' : submitted ? 'Solicitud enviada' : 'Cotizar por WhatsApp →'}</button>
+    <p className={styles.formNote}>1. Completa y guarda tu solicitud. 2. En WhatsApp, toca Enviar. Abrir WhatsApp no envía el mensaje automáticamente.</p>
+    <button className={styles.primary} type="submit" disabled={saving || submitted}>{saving ? 'Guardando solicitud…' : submitted ? 'Solicitud procesada' : 'Guardar y abrir WhatsApp →'}</button>
     <p role="status" data-testid="lead-status" data-saved={verification?.saved ? "true" : undefined} data-lead-id={verification?.leadId} data-whatsapp-destination={verification?.destination} className={styles.formNote}>{status}</p>
+    {submitted && whatsappLink && <a className={`${styles.primary} ${styles.whatsappFallback}`} data-lead-capture="continuation" href={whatsappLink} target="_blank" rel="noopener noreferrer">Abrir WhatsApp y enviar mi mensaje →</a>}
   </form></div>;
 }
+

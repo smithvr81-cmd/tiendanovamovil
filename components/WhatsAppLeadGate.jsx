@@ -85,6 +85,8 @@ export default function WhatsAppLeadGate() {
     const onClick = (event) => {
       const link = event.target.closest?.('a[href*="wa.me"],a[href*="whatsapp.com"]');
       if (!link) return;
+      // This form already attempted its one non-idempotent write. Never capture it again.
+      if (link.dataset.leadCapture === 'continuation' && link.closest('form[data-lead-capture="managed"]')) return;
       if (Date.now() < allowUntilRef.current) return;
       event.preventDefault();
       event.stopPropagation();
@@ -229,3 +231,4 @@ export default function WhatsAppLeadGate() {
     </div>
   );
 }
+
