@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect } from 'react';
+import { submitLeadOnce } from '../lib/leadSubmission.mjs';
 
 function getAttribution() {
   try {
@@ -13,10 +14,10 @@ function getAttribution() {
 function normalizePeruPhone(value) {
   const raw = String(value || '').trim();
   if (!raw) return '';
+  if (!/^[+0-9\s()\-]+$/.test(raw)) return '';
   const digits = raw.replace(/\D/g, '');
-  if (raw.startsWith('+') && digits.length >= 11 && digits.length <= 15) return `+${digits}`;
-  if (digits.startsWith('51') && digits.length === 11) return `+${digits}`;
-  if (digits.length === 9) return `+51${digits}`;
+  if (/^519[0-9]{8}$/.test(digits)) return `+${digits}`;
+  if (/^9[0-9]{8}$/.test(digits)) return `+51${digits}`;
   return '';
 }
 
@@ -37,37 +38,44 @@ export default function LeadCapture() {
 
       const data = new FormData(form);
       const phone = String(data.get('phone') || '').trim().slice(0, 40);
+      const normalizedPhone = normalizePeruPhone(phone);
+      const phoneInput = form.elements?.namedItem('phone');
+      phoneInput?.setCustomValidity(normalizedPhone ? '' : 'Ingresa un celular peruano válido de 9 dígitos empezando en 9.');
+      if (!normalizedPhone || !String(data.get('city') || '').trim() || !String(data.get('interest') || '').trim()) {
+        event.preventDefault();
+        event.stopImmediatePropagation();
+        phoneInput?.reportValidity();
+        return;
+      }
       const payload = {
+        ...getAttribution(),
         name: String(data.get('name') || '').trim().slice(0, 120),
-        phone,
-        interest: String(data.get('interest') || '').trim().slice(0, 180),
-        budget: String(data.get('budget') || '').trim().slice(0, 100),
+        phone: normalizedPhone,
+        interest: (String(data.get('interest') || '').trim().slice(0, 100) + ' | Destino: ' + String(data.get('city') || '').trim().slice(0, 80)),
+        budget: String(data.get('budget') || 'Por definir').trim().slice(0, 100),
+        source: 'contact_form',
         path: window.location.pathname,
         page_url: window.location.href.slice(0, 500),
-        referrer: document.referrer.slice(0, 500),
-        ...getAttribution()
+        referrer: document.referrer.slice(0, 500)
       };
 
       if (!payload.name || !payload.phone) return;
 
       setGoogleUserData(phone);
 
-      fetch('/api/leads', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload),
-        keepalive: true
-      }).then(async (response) => {
-        const result = await response.json();
-        if (response.ok && result.ok === true && result.saved === true) {
-          window.gtag?.('event', 'lead_saved', { event_label: payload.path === '/ofertas-provincia' ? 'province_quote_saved' : 'contact_form_saved' });
+      submitLeadOnce(payload).then(result => {
+        if (result.saved && !result.duplicate) {
+          window.dispatchEvent(new CustomEvent('tnm-lead-saved', { detail: { event_label: 'contact_form_saved', lead_id: result.lead_id } }));
         }
       }).catch(() => {});
     };
 
+    const onInput = event => { if (event.target.name === 'phone') event.target.setCustomValidity(''); };
+    document.addEventListener('input', onInput);
     document.addEventListener('submit', onSubmit, true);
-    return () => document.removeEventListener('submit', onSubmit, true);
+    return () => { document.removeEventListener('submit', onSubmit, true); document.removeEventListener('input', onInput); };
   }, []);
 
   return null;
 }
+

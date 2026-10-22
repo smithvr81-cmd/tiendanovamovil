@@ -1,8 +1,8 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import { submitLeadOnce, suggestedInterest, cartInquiryContext } from '../lib/leadSubmission.mjs';
 
-const PENDING_KEY = 'tnm_pending_leads';
 
 function isWhatsAppUrl(value) {
   const href = String(value || '');
@@ -20,10 +20,10 @@ function getAttribution() {
 function normalizePeruPhone(value) {
   const raw = String(value || '').trim();
   if (!raw) return '';
+  if (!/^[+0-9\s()\-]+$/.test(raw)) return '';
   const digits = raw.replace(/\D/g, '');
-  if (raw.startsWith('+') && digits.length >= 11 && digits.length <= 15) return `+${digits}`;
-  if (digits.startsWith('51') && digits.length === 11) return `+${digits}`;
-  if (digits.length === 9) return `+51${digits}`;
+  if (/^519[0-9]{8}$/.test(digits)) return `+${digits}`;
+  if (/^9[0-9]{8}$/.test(digits)) return `+51${digits}`;
   return '';
 }
 
@@ -39,36 +39,20 @@ function setGoogleUserData(phone) {
 function parseWhatsappMessage(url) {
   try {
     const parsed = new URL(url, window.location.href);
-    return decodeURIComponent(parsed.searchParams.get('text') || '').slice(0, 1000);
+    return parsed.searchParams.get('text') || '';
   } catch {
     return '';
   }
 }
 
-function getPendingLeads() {
-  try {
-    const value = JSON.parse(localStorage.getItem(PENDING_KEY) || '[]');
-    return Array.isArray(value) ? value : [];
-  } catch {
-    return [];
-  }
-}
-
-function queuePendingLead(payload) {
-  try {
-    const pending = getPendingLeads();
-    pending.push({ ...payload, submitted_at: payload.submitted_at || new Date().toISOString() });
-    localStorage.setItem(PENDING_KEY, JSON.stringify(pending.slice(-20)));
-  } catch {}
-}
-
-
 export default function WhatsAppLeadGate() {
   const [pendingUrl, setPendingUrl] = useState('');
   const [status, setStatus] = useState('idle');
   const [error, setError] = useState('');
+  const [continuationUrl, setContinuationUrl] = useState('');
   const originalOpenRef = useRef(null);
   const allowUntilRef = useRef(0);
+  const submitting = useRef(false);
 
   useEffect(() => {
     // Keep historical pending entries intact; do not replay non-idempotent writes.
@@ -77,6 +61,8 @@ export default function WhatsAppLeadGate() {
     originalOpenRef.current = originalOpen;
 
     const openGate = (url) => {
+      if (submitting.current) return;
+      setContinuationUrl('');
       setPendingUrl(String(url || ''));
       setStatus('idle');
       setError('');
@@ -119,37 +105,39 @@ export default function WhatsAppLeadGate() {
   }, []);
 
   const close = () => {
-    if (status === 'saving') return;
+    if (submitting.current) return;
     setPendingUrl('');
     setError('');
     setStatus('idle');
   };
 
-  const continueToWhatsApp = (url, normalizedPhone, saved = false) => {
+  const continueToWhatsApp = (url, normalizedPhone, saved = false, lead_id) => {
     setGoogleUserData(normalizedPhone);
 
-    if (saved && typeof window.gtag === 'function') {
-      window.gtag('event', 'lead_saved', {
-        event_category: 'conversion',
-        event_label: 'whatsapp_lead_gate',
-        method: 'WhatsApp'
-      });
+    if (saved) {
+      window.dispatchEvent(new CustomEvent('tnm-lead-saved', { detail: { event_label: 'whatsapp_lead_gate', method: 'WhatsApp', lead_id } }));
     }
 
     allowUntilRef.current = Date.now() + 3000;
     setStatus('saved');
-    setPendingUrl('');
-    originalOpenRef.current?.(url, '_blank', 'noopener,noreferrer');
+    setContinuationUrl(url);
+    try { originalOpenRef.current?.(url, '_blank', 'noopener,noreferrer'); } catch {}
   };
 
   const submit = async (event) => {
     event.preventDefault();
-    if (!pendingUrl || status === 'saving') return;
+    if (!pendingUrl || submitting.current || continuationUrl) return;
 
     const data = new FormData(event.currentTarget);
     const name = String(data.get('name') || '').trim();
     const phone = String(data.get('phone') || '').trim();
-    if (!name || !phone) return;
+    const city = String(data.get('city') || '').trim();
+    const interest = String(data.get('interest') || '').trim();
+    const budget = String(data.get('budget') || '').trim();
+    if (!name || !phone || !city || !interest) {
+      setError('Completa tu nombre, teléfono, ciudad y modelo o necesidad.');
+      return;
+    }
 
     const normalizedPhone = normalizePeruPhone(phone);
     if (!normalizedPhone) {
@@ -161,37 +149,31 @@ export default function WhatsAppLeadGate() {
     const message = parseWhatsappMessage(pendingUrl);
     const attrs = getAttribution();
     const payload = {
+      ...attrs,
       name,
-      phone,
-      interest: message || 'Contacto por WhatsApp',
-      budget: 'Por definir',
+      phone: normalizedPhone,
+      interest: interest + (cartInquiryContext(message) ? ' | Pedido: ' + cartInquiryContext(message) : '') + ' | Destino: ' + city,
+      budget: budget || 'Por definir',
       source: 'whatsapp_gate',
       page_url: window.location.href,
       referrer: document.referrer,
-      submitted_at: new Date().toISOString(),
-      ...attrs
+      submitted_at: new Date().toISOString()
     };
 
-    const url = pendingUrl;
+    const destination = new URL(pendingUrl, window.location.href);
+    destination.searchParams.set('text', message.replaceAll('[ciudad]', city) + '\nNombre: ' + name + '\nTeléfono: ' + normalizedPhone + '\nCiudad / provincia: ' + city + '\nModelo / necesidad: ' + interest + (budget ? '\nPresupuesto: ' + budget : ''));
+    const url = destination.toString();
+    submitting.current = true;
     setStatus('saving');
     setError('');
 
     try {
-      const response = await fetch('/api/leads', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload)
-      });
-      const result = await response.json().catch(() => ({}));
-
-      if (!response.ok || result.ok !== true || result.saved !== true) {
-        queuePendingLead(payload);
-      }
-
-      continueToWhatsApp(url, normalizedPhone, response.ok && result.ok === true && result.saved === true);
+      const result = await submitLeadOnce(payload);
+      continueToWhatsApp(url, normalizedPhone, result.saved && !result.duplicate, result.lead_id);
     } catch {
-      queuePendingLead(payload);
       continueToWhatsApp(url, normalizedPhone);
+    } finally {
+      submitting.current = false;
     }
   };
 
@@ -203,18 +185,23 @@ export default function WhatsAppLeadGate() {
         <button className="leadGateClose" type="button" onClick={close} aria-label="Cerrar">×</button>
         <span className="leadGateEyebrow">ATENCIÓN POR WHATSAPP</span>
         <h2 id="lead-gate-title">Antes de continuar</h2>
-        <p>Déjanos tu nombre y teléfono. Guardaremos tu solicitud para que un asesor pueda darte seguimiento y luego abriremos WhatsApp.</p>
-        <form onSubmit={submit}>
+        <p>Déjanos tus datos, ciudad y el equipo o la ayuda que necesitas. Guardaremos tu solicitud para que un asesor pueda darte seguimiento y luego abriremos WhatsApp.</p>
+        <form onSubmit={submit} key={pendingUrl} data-lead-capture="managed">
           <label>Nombre<input name="name" autoComplete="name" required maxLength="120" placeholder="Tu nombre" /></label>
           <label>Teléfono<input name="phone" type="tel" inputMode="tel" autoComplete="tel" required maxLength="40" placeholder="Ej. 999 999 999" /></label>
+          <label>Ciudad / provincia<input name="city" autoComplete="address-level2" required maxLength="80" placeholder="¿Dónde recibirías tu pedido?" /></label>
+          <label>Modelo o necesidad<input name="interest" required maxLength="100" list="lead-gate-needs" defaultValue={suggestedInterest(parseWhatsappMessage(pendingUrl))} placeholder="Modelo o Quiero una recomendación" /></label>
+          <datalist id="lead-gate-needs"><option value="Quiero una recomendación" /></datalist>
+          <label>Presupuesto (opcional)<input name="budget" maxLength="100" placeholder="Por definir" /></label>
           {error && <div className="leadGateError" role="alert">{error}</div>}
-          <button type="submit" disabled={status === 'saving'}>{status === 'saving' ? 'Guardando...' : 'Continuar a WhatsApp'}</button>
+          <button type="submit" disabled={status === 'saving' || !!continuationUrl}>{status === 'saving' ? 'Guardando...' : continuationUrl ? 'Solicitud procesada' : 'Continuar a WhatsApp'}</button>
+          {continuationUrl && <p role="status">En WhatsApp, toca Enviar para hablar con el asesor. <a data-lead-capture="continuation" href={continuationUrl} target="_blank" rel="noopener noreferrer">Abrir WhatsApp</a></p>}
           <small>Usaremos tus datos únicamente para responder tu solicitud comercial y medir conversiones publicitarias conforme a tu consentimiento.</small>
         </form>
       </div>
       <style jsx>{`
         .leadGateBackdrop{position:fixed;inset:0;z-index:9999;display:grid;place-items:center;padding:20px;background:rgba(2,8,18,.78);backdrop-filter:blur(8px)}
-        .leadGateCard{position:relative;width:min(480px,100%);padding:30px;border:1px solid rgba(255,255,255,.14);border-radius:22px;background:#0d1a2c;color:#fff;box-shadow:0 25px 80px rgba(0,0,0,.45)}
+        .leadGateCard{position:relative;width:min(480px,100%);max-height:90dvh;overflow-y:auto;padding:30px;border:1px solid rgba(255,255,255,.14);border-radius:22px;background:#0d1a2c;color:#fff;box-shadow:0 25px 80px rgba(0,0,0,.45)}
         .leadGateClose{position:absolute;right:16px;top:12px;border:0;background:transparent;color:#aab5c4;font-size:30px;cursor:pointer}
         .leadGateEyebrow{font-size:11px;font-weight:800;letter-spacing:.16em;color:#ff9b57}
         h2{margin:10px 0 10px;font-size:32px;letter-spacing:-.03em}
@@ -231,4 +218,5 @@ export default function WhatsAppLeadGate() {
     </div>
   );
 }
+
 
