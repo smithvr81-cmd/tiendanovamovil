@@ -40,7 +40,7 @@ export async function POST(request) {
       lead_id: /^[a-zA-Z0-9_-]{1,80}$/.test(String(body.lead_id || '')) ? String(body.lead_id) : '',
       name: clean(body.name, 120),
       phone: clean(body.phone, 40),
-      interest: clean(body.interest, 180),
+      interest: clean(body.interest, 250),
       budget: clean(body.budget, 100),
       source: clean(body.source || body.utm_source || 'web', 120),
       campaign: clean(body.utm_campaign, 180),
@@ -72,4 +72,5 @@ export async function POST(request) {
     return NextResponse.json({ ok: true, saved: false, warning: 'lead_capture_failed' });
   }
 }
+
 
