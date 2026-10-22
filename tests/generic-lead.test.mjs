@@ -12,7 +12,7 @@ function helper({ store = storage(), fetchImpl, now = 10000000 } = {}) {
     fetch: async (url, options) => { calls.push(JSON.parse(options.body)); return fetchImpl ? fetchImpl(url, options) : { ok: true, json: async () => ({ ok: true, saved: true }) }; }
   };
   vm.createContext(context);
-  vm.runInContext(read('lib/leadSubmission.mjs').replaceAll('export ', '') + '\nglobalThis.api = { submitLeadOnce, inquiryKey, suggestedInterest };', context);
+  vm.runInContext(read('lib/leadSubmission.mjs').replaceAll('export ', '') + '\nglobalThis.api = { submitLeadOnce, inquiryKey, suggestedInterest, cartInquiryContext };', context);
   return { ...context.api, calls, store, advance: ms => { clock += ms; } };
 }
 test('generic helper concurrent identical submits and later repeats send one stable ID', async () => {
@@ -71,7 +71,7 @@ function gate({ fields = {}, saved = true, resultImpl, message = 'Hola, me inter
     FormData: class { get(key) { return values[key]; } }, CustomEvent: class { constructor(type, init) { this.type = type; this.detail = init.detail; } },
     window: { location: { href: 'https://example.test/' }, open: (...args) => { if (blockedPopup) throw Error('popup blocked'); opened.push(args); }, dispatchEvent: e => events.push(e) },
     document: { referrer: '', addEventListener() {}, removeEventListener() {} }, localStorage: { getItem: () => JSON.stringify(attrs) },
-    submitLeadOnce: async payload => { calls.push(payload); return resultImpl ? resultImpl(payload) : { saved, lead_id: 'mock-stable-id' }; }, suggestedInterest: helper().suggestedInterest
+    submitLeadOnce: async payload => { calls.push(payload); return resultImpl ? resultImpl(payload) : { saved, lead_id: 'mock-stable-id' }; }, suggestedInterest: helper().suggestedInterest, cartInquiryContext: helper().cartInquiryContext
   };
   const source = read('components/WhatsAppLeadGate.jsx').replace(/^import .*;$/gm, '').replace('export default function WhatsAppLeadGate', 'function WhatsAppLeadGate').split('  if (!pendingUrl) return null;')[0] + '\nreturn { submit, close }; }\nglobalThis.gate = WhatsAppLeadGate();';
   vm.createContext(context); vm.runInContext(source, context);
@@ -107,3 +107,17 @@ test('generic contact capture forwards required city/model and same stable event
 test('generic contact capture ignores managed A16 form',async()=>{const c=contactCapture({managed:true});await c.submit();assert.equal(c.calls.length,0);assert.equal(c.events.length,0);});
 test('generic contact capture blocks invalid phone, city and model',async()=>{for(const fields of [{phone:'123'},{city:' '},{interest:' '}]){const c=contactCapture({fields});await c.submit();assert.equal(c.calls.length,0);assert.equal(c.events.length,0);assert.equal(c.blocked(),true);}});
 test('generic contact capture duplicate or unconfirmed result never reconverts',async()=>{for(const options of [{duplicate:true},{saved:false}]){const c=contactCapture(options);await c.submit();assert.equal(c.calls.length,1);assert.equal(c.events.length,0);}});
+
+test('changed cart keeps actual items in Sheet payload and gets a distinct ID', async () => {
+  const h = helper();
+  const make = model => gate({fields: {interest: 'Cotizar los productos de mi carrito'}, message: 'Hola, deseo cotizar este pedido:\n• ' + model + '\n\nEstoy en [ciudad].', resultImpl: payload => h.submitLeadOnce(payload)});
+  const a = make('Model Alpha'); const b = make('Model Beta');
+  await a.submit(); await b.submit();
+  assert.match(a.calls[0].interest, /Pedido: • Model Alpha/);
+  assert.match(b.calls[0].interest, /Pedido: • Model Beta/);
+  assert.equal(h.calls.length, 2); assert.notEqual(h.calls[0].lead_id, h.calls[1].lead_id);
+});
+test('cart context preserves items after the old thousand-character cutoff', () => {
+  const h = helper(); const message = 'deseo cotizar este pedido:\n' + '• Model Alpha\n'.repeat(100) + '• Final Model';
+  assert.match(h.cartInquiryContext(message), /Final Model$/);
+});

@@ -3,7 +3,7 @@
 ## Changes
 
 - Generic WhatsApp and homepage contact forms require city and model/need; a recommendation request is valid and budget is optional. Product-specific messages prefill the known model.
-- Model/need and city remain together in column D (`Producto de interés`) as `… | Destino: …`. No historical rows, commercial columns U:Z, catalog, prices, advertisements or budgets are changed.
+- Model/need and city remain together in column D (`Producto de interés`) as `… | Destino: …`. For cart inquiries, actual cart item lines are retained in D and in the duplicate signature, so changing a cart does not suppress a distinct inquiry. No historical rows, commercial columns U:Z, catalog, prices, advertisements or budgets are changed.
 - Generic forms assign a UUID once per normalized inquiry during a 30-minute browser session window. Only a SHA-256 digest plus outcome metadata is kept in sessionStorage. A synchronous guard and shared pending promise suppress double clicks/concurrent submissions. Unconfirmed writes are never automatically retried.
 - `lead_id` is passed to saved-lead conversion tracking; an opening of WhatsApp is not a saved-lead conversion. Existing consent checks remain in MarketingTracker.
 - Apps Script uses its existing AA column as the durable ID ledger and ScriptLock around read/append/flush. Same ID with different phone or inquiry is rejected, never merged. Different IDs and no-ID legacy requests remain distinct. Formula-like new cell values (including +51 phones) are stored as literal text.

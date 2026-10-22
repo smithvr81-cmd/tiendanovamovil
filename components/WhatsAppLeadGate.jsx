@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import { submitLeadOnce, suggestedInterest } from '../lib/leadSubmission.mjs';
+import { submitLeadOnce, suggestedInterest, cartInquiryContext } from '../lib/leadSubmission.mjs';
 
 
 function isWhatsAppUrl(value) {
@@ -39,7 +39,7 @@ function setGoogleUserData(phone) {
 function parseWhatsappMessage(url) {
   try {
     const parsed = new URL(url, window.location.href);
-    return (parsed.searchParams.get('text') || '').slice(0, 1000);
+    return parsed.searchParams.get('text') || '';
   } catch {
     return '';
   }
@@ -152,7 +152,7 @@ export default function WhatsAppLeadGate() {
       ...attrs,
       name,
       phone: normalizedPhone,
-      interest: interest + ' | Destino: ' + city,
+      interest: interest + (cartInquiryContext(message) ? ' | Pedido: ' + cartInquiryContext(message) : '') + ' | Destino: ' + city,
       budget: budget || 'Por definir',
       source: 'whatsapp_gate',
       page_url: window.location.href,
