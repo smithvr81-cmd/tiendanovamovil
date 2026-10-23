@@ -90,7 +90,8 @@ function doPost(e) {
       '',
       '', '', '', '', '', '', // Preserve commercial columns U:Z.
       leadId
-    ].map(literalCell));
+    // The phone column is always text, including local numbers and leading zeros.
+    ].map((value, index) => index === 2 ? "'" + String(value == null ? '' : value) : literalCell(value)));
     // Commit the append before releasing the lock for the next request.
     SpreadsheetApp.flush();
 

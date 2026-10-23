@@ -35,7 +35,7 @@ export default function ProvinceQuote({ products }) {
       return;
     }
     phoneInput?.setCustomValidity('');
-    if (!name || !city.trim()) {
+    if (!name || !city.trim() || /\[ciudad\]/i.test(city) || !product.trim()) {
       setStatus('Completa tu nombre y ciudad para continuar.');
       return;
     }
@@ -46,11 +46,6 @@ export default function ProvinceQuote({ products }) {
     const isTest = /^PRUEBA NO CONTACTAR\b/i.test(name) && phone === '999999999';
     const leadId = crypto.randomUUID();
     const whatsappUrl = 'https://wa.me/51953587927?text=' + encodeURIComponent(message);
-    // Open within the submit gesture; slow saving must not block the conversation.
-    if (!isTest) {
-      setWhatsappLink(whatsappUrl);
-      try { window.open(whatsappUrl, '_blank', 'noopener,noreferrer'); } catch {}
-    }
     let attrs = {};
     try { attrs = JSON.parse(localStorage.getItem('tnm_attribution') || '{}'); } catch {}
     const payload = {
@@ -62,22 +57,36 @@ export default function ProvinceQuote({ products }) {
       submitted_at: new Date().toISOString()
     };
     let saved = false;
+    let duplicate = false;
+    let rejectedBeforeWrite = false;
     try {
       const response = await fetch('/api/leads', {
         method: 'POST', headers: {'Content-Type':'application/json'},
         body: JSON.stringify(payload), keepalive: true
       });
       const result = await response.json();
+      duplicate = result.duplicate === true;
+      rejectedBeforeWrite = response.status === 400 && ['missing_required_fields', 'invalid_phone', 'missing_city_or_interest'].includes(result.error);
       saved = response.ok && result.ok === true && result.saved === true;
     } catch {}
     if (saved) {
-      window.dispatchEvent(new CustomEvent('tnm-lead-saved', {detail:{event_label:'province_quote',method:'WhatsApp',lead_id:leadId,test_mode:isTest}}));
+      if (!duplicate) window.dispatchEvent(new CustomEvent('tnm-lead-saved', {detail:{event_label:'province_quote',method:'WhatsApp',lead_id:leadId,test_mode:isTest}}));
+      if (!isTest) {
+        setWhatsappLink(whatsappUrl);
+        // A manual link remains available if the browser blocks this delayed popup.
+        window.dispatchEvent(new CustomEvent('tnm-whatsapp-ready', { detail: {} }));
+        try { window.open(whatsappUrl, '_blank', 'noopener,noreferrer'); } catch {}
+      }
       setSubmitted(true);
       if (isTest) setVerification({ leadId, destination: '51953587927', saved: true });
       setStatus(isTest ? 'PRUEBA guardada. WhatsApp no se abrió y no se envió conversión publicitaria.' : '1. Solicitud guardada. 2. En WhatsApp, toca Enviar para hablar con el asesor. Si no se abrió, usa el enlace de abajo.');
+    } else if (rejectedBeforeWrite) {
+      setSubmitted(false);
+      submitting.current = false;
+      setStatus('Revisa tu nombre, celular, ciudad y equipo. No se guardó la solicitud; puedes corregir los datos y volver a enviar.');
     } else {
       setSubmitted(true);
-      setStatus('No pudimos confirmar el guardado. Para evitar duplicados no repetiremos el envío automáticamente. Contacta al asesor por WhatsApp.');
+      setStatus('No pudimos confirmar el guardado. Para evitar duplicados no repetiremos el envío automáticamente. Tus datos siguen en el formulario. El guardado queda pendiente; no abrimos WhatsApp.');
     }
     // Keep the synchronous guard locked after an attempted non-idempotent write.
     setSaving(false);
@@ -91,7 +100,7 @@ export default function ProvinceQuote({ products }) {
     {selected?.priceVerified && <p className={styles.formNote}>Precio del equipo: {new Intl.NumberFormat('es-PE', {style:'currency',currency:'PEN',maximumFractionDigits:0}).format(selected.price)}. Envío aparte según destino. Confirma stock y entrega con el asesor.</p>}
     <p className={styles.formNote}>Solo necesitamos tu nombre, celular y ciudad. Coordinamos distrito y entrega por WhatsApp. Usaremos estos datos para atender tu solicitud. <a href="/privacidad">Política de privacidad.</a></p>
     <p className={styles.formNote}>1. Completa y guarda tu solicitud. 2. En WhatsApp, toca Enviar. Abrir WhatsApp no envía el mensaje automáticamente.</p>
-    <button className={styles.primary} type="submit" disabled={saving || submitted}>{saving ? 'Guardando solicitud…' : submitted ? 'Solicitud procesada' : 'Guardar y abrir WhatsApp →'}</button>
+    <button className={styles.primary} type="submit" disabled={saving || submitted}>{saving ? 'Guardando solicitud…' : submitted ? (whatsappLink || verification?.saved ? 'Solicitud guardada' : 'Guardado no confirmado') : 'Guardar y abrir WhatsApp →'}</button>
     <p role="status" data-testid="lead-status" data-saved={verification?.saved ? "true" : undefined} data-lead-id={verification?.leadId} data-whatsapp-destination={verification?.destination} className={styles.formNote}>{status}</p>
     {submitted && whatsappLink && <a className={`${styles.primary} ${styles.whatsappFallback}`} data-lead-capture="continuation" href={whatsappLink} target="_blank" rel="noopener noreferrer">Abrir WhatsApp y enviar mi mensaje →</a>}
   </form></div>;
