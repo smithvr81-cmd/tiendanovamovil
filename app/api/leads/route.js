@@ -25,7 +25,7 @@ async function sendToSheets(lead) {
     if (result?.ok !== true || result?.saved === false) {
       return { saved: false, warning: result?.error || 'sheets_unconfirmed_save' };
     }
-    return { saved: true };
+    return { saved: true, duplicate: result.duplicate === true };
   } catch (error) {
     return { saved: false, warning: error?.name === 'AbortError' ? 'sheets_timeout' : 'sheets_network_error' };
   } finally {
@@ -63,11 +63,20 @@ export async function POST(request) {
       return NextResponse.json({ ok: false, error: 'missing_required_fields' }, { status: 400 });
     }
 
+    // Validate every entry point, including callers that bypass HTML constraints.
+    const compactPhone = lead.phone.replace(/[\s()\-]/g, '');
+    if (!/^([+]?51)?9[0-9]{8}$/.test(compactPhone)) {
+      return NextResponse.json({ ok: false, saved: false, error: 'invalid_phone' }, { status: 400 });
+    }
+    const quote = lead.interest.match(/^(.+) \| Destino: (.+)$/s);
+    if (!quote || !quote[1].trim() || !quote[2].trim() || /\[ciudad\]/i.test(quote[2])) {
+      return NextResponse.json({ ok: false, saved: false, error: 'missing_city_or_interest' }, { status: 400 });
+    }
     const result = await sendToSheets(lead);
 
-    // No bloqueamos el contacto por WhatsApp si Google Sheets tiene una falla temporal.
+    // The client must not announce success or continue until saved is confirmed.
     // saved:false is unconfirmed: do not automatically retry a possibly committed write.
-    return NextResponse.json({ ok: true, saved: result.saved, warning: result.warning || null, lead_id: lead.lead_id });
+    return NextResponse.json({ ok: true, saved: result.saved, duplicate: result.duplicate === true, warning: result.warning || null, lead_id: lead.lead_id });
   } catch {
     return NextResponse.json({ ok: true, saved: false, warning: 'lead_capture_failed' });
   }

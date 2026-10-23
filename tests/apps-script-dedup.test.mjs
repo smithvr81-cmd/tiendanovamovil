@@ -78,6 +78,8 @@ test('formula-like values are escaped in every untrusted sheet column',()=>{
   assert.equal(h.send(data).duplicate,true);
 });
 test('ordinary strings and existing historical rows remain unchanged',()=>{
-  const h=harness();h.send(inquiry);assert.equal(h.writes[0][1],inquiry.name);assert.equal(h.writes[0][2],inquiry.phone);
+  const h=harness();h.send(inquiry);assert.equal(h.writes[0][1],inquiry.name);assert.equal(h.writes[0][2],"'"+inquiry.phone);assert.equal(h.rows[1][2],inquiry.phone);
   const snapshot=JSON.stringify(h.rows);h.send(inquiry);assert.equal(JSON.stringify(h.rows),snapshot);
 });
+
+test('phone text preserves leading zeros and never becomes a formula',()=>{const h=harness();h.send({...inquiry,phone:'000000000'});assert.equal(h.writes[0][2],"'000000000");assert.equal(h.rows[1][2],'000000000');});

@@ -72,21 +72,17 @@ export default function WhatsAppLeadGate() {
       const link = event.target.closest?.('a[href*="wa.me"],a[href*="whatsapp.com"]');
       if (!link) return;
       // This form already attempted its one non-idempotent write. Never capture it again.
-      if (link.dataset.leadCapture === 'continuation' && link.closest('form[data-lead-capture="managed"]')) return;
+      if (link.dataset.leadCapture === 'continuation' && link.closest('form[data-lead-capture="managed"],form[data-lead-saved="true"]')) return;
       if (Date.now() < allowUntilRef.current) return;
       event.preventDefault();
       event.stopPropagation();
       openGate(link.href);
     };
 
-    const onSubmit = (event) => {
-      const form = event.target;
-      if (!(form instanceof HTMLFormElement)) return;
-      if (form.closest('#contacto')) allowUntilRef.current = Date.now() + 2500;
-    };
+    const onReady = () => { allowUntilRef.current = Date.now() + 2500; };
 
     document.addEventListener('click', onClick, true);
-    document.addEventListener('submit', onSubmit, true);
+    window.addEventListener('tnm-whatsapp-ready', onReady);
 
     window.open = function gatedOpen(url, ...args) {
       const href = String(url || '');
@@ -99,7 +95,7 @@ export default function WhatsAppLeadGate() {
 
     return () => {
       document.removeEventListener('click', onClick, true);
-      document.removeEventListener('submit', onSubmit, true);
+      window.removeEventListener('tnm-whatsapp-ready', onReady);
       window.open = originalOpen;
     };
   }, []);
@@ -169,9 +165,15 @@ export default function WhatsAppLeadGate() {
 
     try {
       const result = await submitLeadOnce(payload);
-      continueToWhatsApp(url, normalizedPhone, result.saved && !result.duplicate, result.lead_id);
+      if (!result.saved) {
+        setStatus('error');
+        setError('No pudimos confirmar el guardado. Tus datos siguen aquí. No repetiremos este envío para evitar duplicados; intenta más tarde o consulta al asesor indicando que el guardado quedó pendiente.');
+        return;
+      }
+      continueToWhatsApp(url, normalizedPhone, !result.duplicate, result.lead_id);
     } catch {
-      continueToWhatsApp(url, normalizedPhone);
+      setStatus('error');
+      setError('No pudimos confirmar el guardado. Conservamos tus datos; no abrimos WhatsApp ni repetimos el envío.');
     } finally {
       submitting.current = false;
     }
