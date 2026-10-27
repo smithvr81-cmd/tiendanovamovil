@@ -66,7 +66,7 @@ test('product and cart message suggestions preserve meaningful interests', () =>
 function gate({ fields = {}, saved = true, resultImpl, message = 'Hola, me interesa Model Alpha. Estoy en [ciudad].', attrs = {}, blockedPopup = false } = {}) {
   const values = { name: 'Synthetic Customer', phone: '999999991', city: 'Piura', interest: 'Model Alpha', budget: '', ...fields };
   const calls = [], opened = [], events = [], state = []; let hook = 0;
-  const url = 'https://wa.me/51953587927?text=' + encodeURIComponent(message);
+  const url = 'https://wa.me/51935748390?text=' + encodeURIComponent(message);
   const context = { URL, Date, useState: initial => { const i = hook++; return [i === 0 ? url : initial, value => { state[i] = value; }]; }, useRef: current => ({ current }), useEffect: fn => fn(),
     FormData: class { get(key) { return values[key]; } }, CustomEvent: class { constructor(type, init) { this.type = type; this.detail = init.detail; } },
     window: { addEventListener() {}, removeEventListener() {}, location: { href: 'https://example.test/' }, open: (...args) => { if (blockedPopup) throw Error('popup blocked'); opened.push(args); }, dispatchEvent: e => events.push(e) },
@@ -79,7 +79,7 @@ function gate({ fields = {}, saved = true, resultImpl, message = 'Hola, me inter
 }
 test('generic gate submits required city/model, optional budget and matching enriched WhatsApp', async () => {
   const g = gate(); await g.submit(); assert.equal(g.calls.length, 1); assert.equal(g.calls[0].interest, 'Model Alpha | Destino: Piura'); assert.equal(g.calls[0].budget, 'Por definir'); assert.equal(g.calls[0].phone, '+51999999991');
-  const url = new URL(g.opened[0][0]); assert.equal(url.hostname, 'wa.me'); assert.equal(url.pathname, '/51953587927'); const message = url.searchParams.get('text');
+  const url = new URL(g.opened[0][0]); assert.equal(url.hostname, 'wa.me'); assert.equal(url.pathname, '/51935748390'); const message = url.searchParams.get('text');
   assert.match(message, /me interesa Model Alpha/); assert.match(message, /Estoy en Piura/); assert.match(message, /Ciudad \/ provincia: Piura/); assert.match(message, /Modelo \/ necesidad: Model Alpha/); assert.equal(g.events[0].detail.lead_id, 'mock-stable-id');
 });
 for (const field of ['name', 'phone', 'city', 'interest']) test('generic gate blocks missing ' + field, async () => { const g = gate({ fields: { [field]: '   ' } }); await g.submit(); assert.equal(g.calls.length, 0); assert.equal(g.opened.length, 0); });
@@ -91,7 +91,7 @@ test('generic gate does not double-decode percent signs in message', async () =>
 
 for (const phone of ['999 999 991', '+51 999 999 991', '(+51) 999-999-991']) test('generic formatted phone accepted: ' + phone, async () => { const g = gate({ fields: { phone } }); await g.submit(); assert.equal(g.calls.length, 1); assert.equal(g.calls[0].phone, '+51999999991'); });
 for (const phone of ['899999991', '999999991x', '+1 999999991', '99999999']) test('generic malformed phone rejected: ' + phone, async () => { const g = gate({ fields: { phone } }); await g.submit(); assert.equal(g.calls.length, 0); assert.equal(g.opened.length, 0); });
-test('generic blocked popup retains manual continuation with one saved event', async () => { const g = gate({ blockedPopup: true }); await g.submit(); assert.equal(g.calls.length, 1); assert.equal(g.events.length, 1); assert.match(g.state[3], /^https:\/\/wa.me\/51953587927\?text=/); });
+test('generic blocked popup retains manual continuation with one saved event', async () => { const g = gate({ blockedPopup: true }); await g.submit(); assert.equal(g.calls.length, 1); assert.equal(g.events.length, 1); assert.match(g.state[3], /^https:\/\/wa.me\/51935748390\?text=/); });
 test('generic close before submit writes nothing', () => { const g = gate(); g.close(); assert.equal(g.calls.length, 0); assert.equal(g.state[0], ''); });
 test('generic close during in-flight submission is ignored', async () => { let release; const g = gate({ resultImpl: () => new Promise(resolve => { release = resolve; }) }); const request = g.submit(); g.close(); assert.notEqual(g.state[0], ''); release({ saved: true, lead_id: 'mock-id' }); await request; assert.equal(g.calls.length, 1); assert.equal(g.events.length, 1); });
 

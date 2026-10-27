@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation';
 import { products } from '../../../data/products';
 
-const WHATSAPP = '51953587927';
+const WHATSAPP = '51935748390';
 
 function currency(value) {
   return new Intl.NumberFormat('es-PE', { style: 'currency', currency: 'PEN', maximumFractionDigits: 0 }).format(value);

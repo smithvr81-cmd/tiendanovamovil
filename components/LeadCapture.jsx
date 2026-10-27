@@ -90,7 +90,7 @@ export default function LeadCapture() {
           window.dispatchEvent(new CustomEvent('tnm-lead-saved', { detail: { event_label: 'contact_form_saved', lead_id: result.lead_id } }));
         }
         const message = 'Hola Tiendanovamovil.\nNombre: ' + payload.name + '\nTeléfono: ' + payload.phone + '\nCiudad / provincia: ' + data.get('city') + '\nProducto: ' + data.get('interest') + '\nPresupuesto: ' + payload.budget;
-        const url = 'https://wa.me/51953587927?text=' + encodeURIComponent(message);
+        const url = 'https://wa.me/51935748390?text=' + encodeURIComponent(message);
         const link = document.createElement('a');
         link.dataset.leadCapture = 'continuation';
         link.href = url;

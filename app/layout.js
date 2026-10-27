@@ -37,9 +37,9 @@ const organizationSchema = {
   name: 'Tiendanovamovil Perú',
   url: 'https://www.tiendanovamovil.com',
   logo: 'https://www.tiendanovamovil.com/logo-tiendanovamovil.png',
-  telephone: '+51 953 587 927',
+  telephone: '+51 935 748 390',
   areaServed: 'PE',
-  contactPoint: { '@type': 'ContactPoint', telephone: '+51 953 587 927', contactType: 'sales', availableLanguage: 'Spanish' }
+  contactPoint: { '@type': 'ContactPoint', telephone: '+51 935 748 390', contactType: 'sales', availableLanguage: 'Spanish' }
 };
 
 export default function RootLayout({ children }) {

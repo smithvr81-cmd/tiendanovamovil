@@ -6,7 +6,7 @@ Tienda de tecnología desarrollada con Next.js y preparada para Vercel.
 
 - Catálogo filtrable.
 - Buscador.
-- Botones de compra por WhatsApp al número +51 953 587 927.
+- Botones de compra por WhatsApp al número +51 935 748 390.
 - Formulario de contacto.
 - Etiqueta base de Google Ads `AW-18345503163`.
 - Consent Mode para analítica y publicidad.

@@ -75,7 +75,7 @@ export default function SamsungA16Offer() {
     </main>
     <footer className={styles.footer}>
       <strong>Samsung A16 128GB en Tienda Móvil.</strong>
-      <p>WhatsApp: +51 953 587 927</p>
+      <p>WhatsApp: +51 935 748 390</p>
       <nav><a href="/">Tienda</a><a href="/envios">Envíos</a><a href="/garantia">Garantía</a><a href="/privacidad">Privacidad</a><a href="/terminos">Términos</a></nav>
     </footer>
     <AnalyticsConsent/>

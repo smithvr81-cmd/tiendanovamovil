@@ -45,7 +45,7 @@ export default function ProvinceQuote({ products }) {
     const message = 'Hola Tienda Móvil. Quiero cotizar un celular con envío a provincia.\nNombre: ' + name + '\nTeléfono: ' + phone + '\nEquipo: ' + product + '\n' + price + 'Ciudad / provincia: ' + city.trim() + '\nPor favor confirmen versión, stock, garantía, forma de pago, costo y plazo de envío por Shalom.';
     const isTest = /^PRUEBA NO CONTACTAR\b/i.test(name) && phone === '999999999';
     const leadId = crypto.randomUUID();
-    const whatsappUrl = 'https://wa.me/51953587927?text=' + encodeURIComponent(message);
+    const whatsappUrl = 'https://wa.me/51935748390?text=' + encodeURIComponent(message);
     let attrs = {};
     try { attrs = JSON.parse(localStorage.getItem('tnm_attribution') || '{}'); } catch {}
     const payload = {
@@ -78,7 +78,7 @@ export default function ProvinceQuote({ products }) {
         try { window.open(whatsappUrl, '_blank', 'noopener,noreferrer'); } catch {}
       }
       setSubmitted(true);
-      if (isTest) setVerification({ leadId, destination: '51953587927', saved: true });
+      if (isTest) setVerification({ leadId, destination: '51935748390', saved: true });
       setStatus(isTest ? 'PRUEBA guardada. WhatsApp no se abrió y no se envió conversión publicitaria.' : '1. Solicitud guardada. 2. En WhatsApp, toca Enviar para hablar con el asesor. Si no se abrió, usa el enlace de abajo.');
     } else if (rejectedBeforeWrite) {
       setSubmitted(false);
@@ -93,7 +93,7 @@ export default function ProvinceQuote({ products }) {
   };
   return <div id="contacto" className={styles.formWrap}><form className={styles.form} onSubmit={submit} data-lead-capture="managed">
     <label>Nombre<input name="name" autoComplete="name" required maxLength={120}/></label>
-    <label>Celular peruano<input name="phone" type="tel" inputMode="tel" autoComplete="tel" required maxLength={30} onChange={event => event.currentTarget.setCustomValidity('')} placeholder="Ej. 953 587 927" aria-describedby="phone-help"/></label>
+    <label>Celular peruano<input name="phone" type="tel" inputMode="tel" autoComplete="tel" required maxLength={30} onChange={event => event.currentTarget.setCustomValidity('')} placeholder="Ej. 935 748 390" aria-describedby="phone-help"/></label>
     <label>Ciudad / provincia<input name="city" value={city} onChange={e => setCity(e.target.value)} required maxLength={80} autoComplete="address-level2"/></label>
     <label>Equipo<select value={product} onChange={e => setProduct(e.target.value)}>{products.map(p => <option key={p.id}>{p.name}</option>)}<option>Quiero una recomendación</option></select></label>
     <p id="phone-help" className={styles.formNote}>Puedes escribir tu celular con +51, espacios o guiones.</p>
