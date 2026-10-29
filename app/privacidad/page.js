@@ -8,6 +8,8 @@ export default function PrivacyPage() {
       <p>Tiendanovamovil utiliza la información que los usuarios proporcionan voluntariamente para atender solicitudes, cotizaciones y reseñas.</p>
       <h2>Datos de contacto y reseñas</h2>
       <p>Cuando envías un formulario podemos recibir nombre, correo, teléfono, red social y el contenido de tu mensaje. El correo y el teléfono no se publican en las reseñas.</p>
+      <h2>Reclamaciones y quejas</h2>
+      <p>Los datos de identidad, domicilio, contacto y compra enviados mediante el apartado de reclamaciones se conservan en un registro privado para tramitar la solicitud y responder al consumidor. No se publican ni se utilizan para publicidad. La eliminación de estos registros está sujeta a las obligaciones legales de conservación aplicables.</p>
       <h2>Estadísticas de navegación</h2>
       <p>Con tu consentimiento podemos registrar datos técnicos generales como página visitada, procedencia, idioma, zona horaria, resolución de pantalla y tipo de dispositivo. Estos datos se utilizan para mejorar la experiencia de la tienda.</p>
       <h2>Finalidad</h2>

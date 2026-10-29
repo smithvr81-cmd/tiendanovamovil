@@ -1,5 +1,5 @@
 export default function sitemap() {
-  return [{ url: 'https://www.tiendanovamovil.com/ofertas-provincia', lastModified: new Date(), changeFrequency: 'weekly', priority: 0.9 }, {
+  return [{ url: 'https://www.tiendanovamovil.com/reclamaciones', lastModified: new Date(), changeFrequency: 'yearly', priority: 0.5 }, { url: 'https://www.tiendanovamovil.com/ofertas-provincia', lastModified: new Date(), changeFrequency: 'weekly', priority: 0.9 }, {
     url: 'https://www.tiendanovamovil.com',
     lastModified: new Date(),
     changeFrequency: 'weekly',

@@ -67,6 +67,7 @@ export default function RootLayout({ children }) {
         <LeadCapture />
         <WhatsAppLeadGate />
         {children}
+        <div style={{background:"#07111f",padding:"18px 24px",textAlign:"center"}}><a href="/reclamaciones" style={{color:"#ffffff",textDecoration:"underline",fontWeight:700}}>Reclamaciones y quejas — Atención al consumidor</a></div>
       </body>
     </html>
   );

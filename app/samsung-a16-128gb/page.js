@@ -76,7 +76,7 @@ export default function SamsungA16Offer() {
     <footer className={styles.footer}>
       <strong>Samsung A16 128GB en Tienda Móvil.</strong>
       <p>WhatsApp: +51 935 748 390</p>
-      <nav><a href="/">Tienda</a><a href="/envios">Envíos</a><a href="/garantia">Garantía</a><a href="/privacidad">Privacidad</a><a href="/terminos">Términos</a></nav>
+      <nav><a href="/">Tienda</a><a href="/envios">Envíos</a><a href="/garantia">Garantía</a><a href="/privacidad">Privacidad</a><a href="/terminos">Términos</a><a href="/reclamaciones">Reclamaciones y quejas</a></nav>
     </footer>
     <AnalyticsConsent/>
   </div>;
