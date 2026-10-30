@@ -18,5 +18,5 @@ jobs:
       - name: Revisar videos en Drive (sin publicar)
         env:
           DRIVE_SERVICE_ACCOUNT_JSON: ${{ secrets.DRIVE_SERVICE_ACCOUNT_JSON }}
-          SOCIAL_VIDEO_FOLDER_ID: ${{ vars.SOCIAL_VIDEO_FOLDER_ID }}
+          SOCIAL_VIDEO_FOLDER_ID: ${{ vars.SOCIAL_VIDEO_FOLDER_ID || '1djo0rGuSElpX6ntvFWd3Y4LMuylBbKgx' }}
         run: python scripts/social_video_prepare.py
