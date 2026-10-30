@@ -16,7 +16,7 @@ def main():
     drive=build("drive","v3",credentials=credentials,cache_discovery=False)
     folder=os.environ["SOCIAL_VIDEO_FOLDER_ID"].replace("'","\\'")
     query=f"'{folder}' in parents and trashed = false and mimeType contains 'video/'"
-    result=drive.files().list(q=query,fields="nextPageToken,files(id,name,mimeType,createdTime,description)",orderBy="createdTime desc",page_size=20).execute()
+    result=drive.files().list(q=query,fields="nextPageToken,files(id,name,mimeType,createdTime,description)",orderBy="createdTime desc",pageSize=20).execute()
     videos=result.get("files",[])
     print(json.dumps({"videos_encontrados":len(videos),"archivos":[{"id":v["id"],"name":v["name"]} for v in videos]},ensure_ascii=False))
     print("Modo seguro: no se publica hasta configurar OAuth y validación por plataforma.")
