@@ -2,11 +2,11 @@
   "profile": "default",
   "folder_id": "1djo0rGuSElpX6ntvFWd3Y4LMuylBbKgx",
   "whatsapp": "51935748390",
-  "automation_status": "testing",
+  "automation_status": "enabled",
   "posts": {
     "1Zu6z5wIuv-FIUjERz-OM8z2D57uY-VUo": {
       "name": "ZTE_Nubia_Focus2_Beneficios_20261022110643.mp4",
-      "status": "queued",
+      "status": "processing",
       "request_id": "8c34336198ee434daf901163b6d8f021",
       "job_id": "ec16f62c9adc4da699c030450dbddc5b",
       "requested_platforms": [
@@ -15,7 +15,45 @@
         "instagram",
         "tiktok"
       ],
-      "published_platforms": []
+      "published_platforms": [
+        "youtube",
+        "facebook",
+        "instagram"
+      ],
+      "results": [
+        {
+          "platform": "youtube",
+          "status": "completed",
+          "success": true,
+          "url": "https://www.youtube.com/watch?v=0lm1tHEbG5M"
+        },
+        {
+          "platform": "facebook",
+          "status": "completed",
+          "success": true,
+          "url": "https://www.facebook.com/reel/1687821616018187"
+        },
+        {
+          "platform": "instagram",
+          "status": "completed",
+          "success": true,
+          "url": "https://www.instagram.com/reel/DfKkcUsjYRe/"
+        },
+        {
+          "platform": "tiktok",
+          "status": "processing",
+          "success": false,
+          "url": null
+        }
+      ]
     }
+  },
+  "automation": {
+    "id": "6ae6150c6e34819182bd70988718555a",
+    "timezone": "America/Lima",
+    "starts": "2026-11-01",
+    "approximate_time": "19:00",
+    "max_new_videos_per_run": 1,
+    "new_file_prefix": "PUBLICAR_"
   }
 }
