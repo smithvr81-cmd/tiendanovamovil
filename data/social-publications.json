@@ -67,16 +67,62 @@
     },
     "1WNUcPoJY6wUHO5Wv0JdjKZ0hKSX7ueWs": {
       "name": "Red_Magic_9S_Pro_Unboxing_Nova_Movil.mp4",
-      "status": "processing",
+      "status": "completed",
       "requested_platforms": [
         "youtube",
         "facebook",
         "instagram",
         "tiktok"
       ],
-      "published_platforms": [],
-      "results": [],
-      "last_update": "2026-10-31T17:09:44.495Z",
+      "published_platforms": [
+        "youtube",
+        "facebook",
+        "instagram",
+        "tiktok"
+      ],
+      "results": [
+        {
+          "platform": "youtube",
+          "status": "completed",
+          "success": true,
+          "url": "https://www.youtube.com/watch?v=1PpyB5OQYcU",
+          "platform_post_id": "1PpyB5OQYcU",
+          "upload_timestamp": "2026-10-31T17:09:46.530Z",
+          "error_message": null,
+          "error_code": null
+        },
+        {
+          "platform": "facebook",
+          "status": "completed",
+          "success": true,
+          "url": "https://www.facebook.com/reel/2129623287640666",
+          "platform_post_id": "2129623287640666",
+          "upload_timestamp": "2026-10-31T17:09:55.918Z",
+          "error_message": null,
+          "error_code": null
+        },
+        {
+          "platform": "instagram",
+          "status": "completed",
+          "success": true,
+          "url": "https://www.instagram.com/reel/DfKqSJjkXW-/",
+          "platform_post_id": "18107510732296142",
+          "upload_timestamp": "2026-10-31T17:10:20.495Z",
+          "error_message": null,
+          "error_code": null
+        },
+        {
+          "platform": "tiktok",
+          "status": "completed",
+          "success": true,
+          "url": "https://www.tiktok.com/@tiendanovamovil1/video/7702880323046083860",
+          "platform_post_id": "7702880323046083860",
+          "upload_timestamp": "2026-10-31T17:10:27.584Z",
+          "error_message": null,
+          "error_code": null
+        }
+      ],
+      "last_update": "2026-10-31T17:10:27.584Z",
       "source_library_file_id": "libfile_677411cea8ac8191a34d72439939083a",
       "request_id": "51e89cf34a21488eb3cfbe2a04245a80",
       "job_id": "25404acea6ba483b8a90c55ca454efc5"
