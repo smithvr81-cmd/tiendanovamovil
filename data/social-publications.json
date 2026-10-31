@@ -2,20 +2,20 @@
   "profile": "default",
   "folder_id": "1djo0rGuSElpX6ntvFWd3Y4LMuylBbKgx",
   "whatsapp": "51935748390",
-  "automation_status": "blocked_plan_choice_required",
+  "automation_status": "testing",
   "posts": {
     "1Zu6z5wIuv-FIUjERz-OM8z2D57uY-VUo": {
       "name": "ZTE_Nubia_Focus2_Beneficios_20261022110643.mp4",
-      "status": "rejected_before_publish",
-      "error_code": "plan_required",
-      "blocked_platform": "tiktok",
-      "published_platforms": [],
+      "status": "queued",
+      "request_id": "8c34336198ee434daf901163b6d8f021",
+      "job_id": "ec16f62c9adc4da699c030450dbddc5b",
       "requested_platforms": [
         "youtube",
         "facebook",
         "instagram",
         "tiktok"
-      ]
+      ],
+      "published_platforms": []
     }
   }
 }
