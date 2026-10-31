@@ -23,3 +23,8 @@ test('catalog photos are local assets and old mismatched supplier SKUs are absen
  for (const p of products) { assert.ok(p.image.startsWith('/')); assert.ok(existsSync(new URL('../public'+p.image,import.meta.url))); }
  assert.ok(!products.some(p=>/128304459|123780095/.test(p.image)));
 });
+
+test('homepage carousel does not advertise withdrawn HONOR price', () => {
+ assert.ok(!read('components/VideoShowcase.jsx').includes('cJbb1VciAKg'));
+ assert.ok(!read('components/VideoShowcase.jsx').includes('S/ 1,350'));
+});

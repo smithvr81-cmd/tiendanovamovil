@@ -14,7 +14,6 @@ const videos = [
   {"src":"https://resource2.heygen.ai/videos/e2b4a27999ae47949c6f0caf067d4168/e2b4a27999ae47949c6f0caf067d4168/01a14104-a5fa-7a68-94d5-6af8cfaad3b8.mp4","title":"HONOR 400 Lite 5G · Delivery y garantía","label":"NOVA · DELIVERY"},
   {"src":"https://resource2.heygen.ai/videos/e2b4a27999ae47949c6f0caf067d4168/e2b4a27999ae47949c6f0caf067d4168/01a14104-bd58-7da9-ba7c-0d27cfe512b5.mp4","title":"HONOR X8c · Delivery y garantía","label":"NOVA · DELIVERY"},
   {"src":"https://resource2.heygen.ai/videos/e2b4a27999ae47949c6f0caf067d4168/e2b4a27999ae47949c6f0caf067d4168/01a14102-d90f-7c79-a6c5-8438b0d0ded0.mp4","title":"Motorola Moto G77 5G · Delivery y garantía","label":"NOVA · DELIVERY"},
-  { youtube: 'cJbb1VciAKg', src: 'https://www.youtube-nocookie.com/embed/cJbb1VciAKg', title: 'HONOR 400 Lite · S/ 1,350', label: 'CAMPAÑA · PROVINCIAS' },
   { src: '/videos/redmi-note-14-pro-nova.mp4', title: 'Redmi Note 14 Pro+ 5G · Tienda Móvil', label: 'NOVA · REDMI' },
   { src: '/videos/vivo-x300-fe.mp4', title: 'Vivo X300 FE 5G · Olive Green', label: 'VIVO · NUEVO' },
   { src: '/videos/iphone-duo-concept.mp4', title: 'iPhone Duo · concepto plegable', label: 'CONCEPTO' },
