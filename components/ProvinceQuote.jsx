@@ -97,7 +97,7 @@ export default function ProvinceQuote({ products }) {
     <label>Ciudad / provincia<input name="city" value={city} onChange={e => setCity(e.target.value)} required maxLength={80} autoComplete="address-level2"/></label>
     <label>Equipo<select value={product} onChange={e => setProduct(e.target.value)}>{products.map(p => <option key={p.id}>{p.name}</option>)}<option>Quiero una recomendación</option></select></label>
     <p id="phone-help" className={styles.formNote}>Puedes escribir tu celular con +51, espacios o guiones.</p>
-    {selected?.priceVerified && <p className={styles.formNote}>Precio del equipo: {new Intl.NumberFormat('es-PE', {style:'currency',currency:'PEN',maximumFractionDigits:0}).format(selected.price)}. Envío aparte según destino. Confirma stock y entrega con el asesor.</p>}
+    {selected?.priceVerified && <p className={styles.formNote}>Precio del equipo: {new Intl.NumberFormat('es-PE', {style:'currency',currency:'PEN',minimumFractionDigits:0,maximumFractionDigits:2}).format(selected.price)}. Envío aparte según destino. Confirma stock y entrega con el asesor.</p>}
     <p className={styles.formNote}>Solo necesitamos tu nombre, celular y ciudad. Coordinamos distrito y entrega por WhatsApp. Usaremos estos datos para atender tu solicitud. <a href="/privacidad">Política de privacidad.</a></p>
     <p className={styles.formNote}>1. Completa y guarda tu solicitud. 2. En WhatsApp, toca Enviar. Abrir WhatsApp no envía el mensaje automáticamente.</p>
     <button className={styles.primary} type="submit" disabled={saving || submitted}>{saving ? 'Guardando solicitud…' : submitted ? (whatsappLink || verification?.saved ? 'Solicitud guardada' : 'Guardado no confirmado') : 'Guardar y abrir WhatsApp →'}</button>

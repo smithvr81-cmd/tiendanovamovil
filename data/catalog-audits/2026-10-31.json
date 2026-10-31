@@ -1,0 +1,3105 @@
+{
+  "checkedAt": "2026-10-31",
+  "marginPEN": 100,
+  "stockMeaning": "Supplier availability is not owned inventory. Store stock requires confirmation.",
+  "products": [
+    {
+      "id": 1,
+      "name": "iPhone 15 128GB",
+      "variant": "IPHONE 15 BLACK 128GB-BES",
+      "supplierPrice": 2999.0,
+      "retailPrice": 3099.0,
+      "source": "https://www.falabella.com.pe/falabella-pe/product/prod17580066/Iphone-15-128Gb/20039955",
+      "seller": "Falabella",
+      "image": "https://media.falabella.com/falabellaPE/20039955_01/public",
+      "availability": "isPurchaseable=true; isOnlineSellable=true; product isOutOfStock=false",
+      "priceEvidence": "Live __NEXT_DATA__ variants[].prices type=internetPrice; excludes cmrPrice; validity31/10/2026",
+      "publishedPricePEN": 3099.0,
+      "publishedPriceVerified": true,
+      "publishedImage": "/products/product-1.webp"
+    },
+    {
+      "id": 2,
+      "name": "iPhone 16e 128GB",
+      "variant": "iPhone 16e 128GB Black",
+      "supplierPrice": 2599.0,
+      "retailPrice": 2699.0,
+      "source": "https://www.falabella.com.pe/falabella-pe/product/prod18410446/iPhone-16e-128GB/20977276",
+      "seller": "Falabella",
+      "image": "https://media.falabella.com/falabellaPE/20977276_1/public",
+      "availability": "isPurchaseable=true; isOnlineSellable=true; product isOutOfStock=false",
+      "priceEvidence": "Live __NEXT_DATA__ variants[].prices type=internetPrice; excludes cmrPrice; validity31/10/2026",
+      "publishedPricePEN": 2699.0,
+      "publishedPriceVerified": true,
+      "publishedImage": "/products/product-2.webp"
+    },
+    {
+      "id": 3,
+      "name": "iPhone 16 128GB",
+      "variant": "IPHONE 16 BLK 128GB",
+      "supplierPrice": 3499.0,
+      "retailPrice": 3599.0,
+      "source": "https://www.falabella.com.pe/falabella-pe/product/prod18120095/iPhone-16-128GB/20687062",
+      "seller": "Falabella",
+      "image": "https://media.falabella.com/falabellaPE/20687062_01/public",
+      "availability": "isPurchaseable=true; isOnlineSellable=true; product isOutOfStock=false",
+      "priceEvidence": "Live __NEXT_DATA__ variants[].prices type=internetPrice; excludes cmrPrice; validity31/10/2026",
+      "publishedPricePEN": 3599.0,
+      "publishedPriceVerified": true,
+      "publishedImage": "/products/product-3.jpg"
+    },
+    {
+      "id": 4,
+      "name": "iPhone 17 256GB",
+      "variant": "iPhone 17 256GB White",
+      "supplierPrice": 4299.0,
+      "retailPrice": 4399.0,
+      "source": "https://www.falabella.com.pe/falabella-pe/product/prod18580269/iPhone-17-256GB/21283539",
+      "seller": "Falabella",
+      "image": "https://media.falabella.com/falabellaPE/21283539_01/public",
+      "availability": "isPurchaseable=true; isOnlineSellable=true; product isOutOfStock=false",
+      "priceEvidence": "Live __NEXT_DATA__ variants[].prices type=internetPrice; excludes cmrPrice; validity31/10/2026",
+      "publishedPricePEN": 4399.0,
+      "publishedPriceVerified": true,
+      "publishedImage": "/products/product-4.jpg"
+    },
+    {
+      "id": 5,
+      "name": "iPhone 17 Pro 256GB",
+      "variant": "iPhone 17 Pro 256GB Silver",
+      "supplierPrice": 5499.0,
+      "retailPrice": 5599.0,
+      "source": "https://www.falabella.com.pe/falabella-pe/product/prod18580271/iPhone-17-Pro-256GB/21283548",
+      "seller": "Falabella",
+      "image": "https://media.falabella.com/falabellaPE/21283548_01/public",
+      "availability": "isPurchaseable=true; isOnlineSellable=true; product isOutOfStock=false",
+      "priceEvidence": "Live __NEXT_DATA__ variants[].prices type=internetPrice; excludes cmrPrice; validity31/10/2026",
+      "publishedPricePEN": 5599.0,
+      "publishedPriceVerified": true,
+      "publishedImage": "/products/product-5.webp"
+    },
+    {
+      "id": 6,
+      "name": "iPhone 17 Pro Max 256GB",
+      "variant": "iPhone 17 Pro Max 256GB D Blue",
+      "supplierPrice": 6299.0,
+      "retailPrice": 6399.0,
+      "source": "https://www.falabella.com.pe/falabella-pe/product/prod18580273/iPhone-17-Pro-Max-256GB/21283556",
+      "seller": "Falabella",
+      "image": "https://media.falabella.com/falabellaPE/21283556_01/public",
+      "availability": "isPurchaseable=true; isOnlineSellable=true; product isOutOfStock=false",
+      "priceEvidence": "Live __NEXT_DATA__ variants[].prices type=internetPrice; excludes cmrPrice; validity31/10/2026",
+      "publishedPricePEN": 6399.0,
+      "publishedPriceVerified": true,
+      "publishedImage": "/products/product-6.jpg"
+    },
+    {
+      "id": 7,
+      "name": "iPad 11 A16 Wi-Fi 128GB",
+      "variant": "IPAD A16 WIFI 128GB SLV",
+      "supplierPrice": 1999.0,
+      "retailPrice": 2099.0,
+      "source": "https://www.falabella.com.pe/falabella-pe/product/prod18440041/iPad-Apple-11-Chip-A16-Wi-Fi/21014911",
+      "seller": "Falabella",
+      "image": "https://media.falabella.com/falabellaPE/21014911_1/public",
+      "availability": "isPurchaseable=true; isOnlineSellable=true; product isOutOfStock=false",
+      "priceEvidence": "Live __NEXT_DATA__ variants[].prices type=internetPrice; excludes cmrPrice; validity31/10/2026",
+      "publishedPricePEN": 2099.0,
+      "publishedPriceVerified": true,
+      "publishedImage": "/products/product-7.webp"
+    },
+    {
+      "id": 2026091201,
+      "name": "iPhone Air 256GB",
+      "variant": "Cloud White 256GB eSIM, new",
+      "supplierPrice": 4089,
+      "retailPrice": 4189,
+      "source": "https://www.coolbox.pe/iphone-air-5g-256gb-8gb-ram-a19-pro-esim-cloud-white-ps33430472/p",
+      "seller": "Mac Center Peru Sac via Coolbox marketplace",
+      "image": "https://coolboxpe.vtexassets.com/arquivos/ids/583729/358.png?v=639270055983670000",
+      "availability": "JSONLD InStock NewCondition; VTEX AvailableQuantity10",
+      "priceEvidence": "Live JSONLD Offer4089 PEN; VTEX Price=4089 spotPrice=4089 PriceWithoutDiscount=4089 discountHighlights=[] teasers=[]",
+      "publishedPricePEN": 4189,
+      "publishedPriceVerified": true,
+      "publishedImage": "/products/product-2026091201.png"
+    },
+    {
+      "id": 2026100401,
+      "name": "Redmi Note 14 Pro+ 5G 8GB + 256GB",
+      "supplierPrice": 1419,
+      "retailPrice": 1519,
+      "seller": "Corporacion M & P (Falabella marketplace)",
+      "sourceUrl": "https://www.falabella.com.pe/falabella-pe/product/154573354/celular-xiaomi-redmi-note-14-pro-plus-6-67-pulg-8gb-ram-256gb-xiaomi-hyperos-azul-escarcha/154573355",
+      "supplierStock": true,
+      "stockEvidence": "Live __NEXT_DATA__ productData.variants isPurchaseable=true",
+      "physicalRamGB": 8,
+      "imageUrl": "https://i02.appmifile.com/399_operator_sg/10/03/2025/5247d417292a5de5b12e18330b648b12.png",
+      "imageSource": "https://www.mi.com/global/product/redmi-note-14-pro-plus-5g/specs/",
+      "notes": "LIVE confirmation supersedes previous indexed prices. Exact Plus model Snapdragon7sGen3/200MP/5G, not ordinary Pro. Source crawl last month; public price no bank restriction shown.",
+      "liveVerified": true,
+      "priceField": "eventPrice (no payment icon)",
+      "priceValidity": "31/10/2026",
+      "imageDownloadStatus": "Official photo downloaded and visually verified; no competitor watermark.",
+      "publishedPricePEN": 1519,
+      "publishedPriceVerified": true,
+      "publishedImage": "/products/redmi-note-14-pro-plus.png"
+    },
+    {
+      "id": 2026092201,
+      "name": "Motorola moto g67 256GB",
+      "supplierPrice": 849,
+      "retailPrice": 949,
+      "seller": "Falabella",
+      "sourceUrl": "https://www.falabella.com.pe/falabella-pe/product/21436257",
+      "supplierStock": true,
+      "stockEvidence": "Live __NEXT_DATA__ productData.variants isPurchaseable=true",
+      "physicalRamGB": 4,
+      "imageUrl": "https://prmoto.vtexassets.com/arquivos/ids/167571-800-auto?aspect=true&height=auto&v=639274245761730000&width=800",
+      "imageSource": "https://www.motorola.com.pe/moto-g67/p",
+      "notes": "LIVE confirmation supersedes previous indexed prices. PDP redirects to Lima color (not gris slug). 4GB physical, not RAM boost. Manufacturer price899 alternative. Product screen6.8 not catalog6.7. Image model correct but color must be visually checked.",
+      "liveVerified": true,
+      "priceField": "internetPrice",
+      "priceValidity": "01/11/2026",
+      "publishedPricePEN": 949,
+      "publishedPriceVerified": true,
+      "publishedImage": "/products/product-2026092201.png"
+    },
+    {
+      "id": 2026092202,
+      "name": "Motorola moto g77 256GB",
+      "supplierPrice": 999,
+      "retailPrice": 1099,
+      "seller": "Falabella",
+      "sourceUrl": "https://www.falabella.com.pe/falabella-pe/product/21436258/celular-motorola-g77-8gb-256gb-negro",
+      "supplierStock": true,
+      "stockEvidence": "Live __NEXT_DATA__ productData.variants isPurchaseable=true",
+      "physicalRamGB": 8,
+      "imageUrl": "https://prmoto.vtexassets.com/arquivos/ids/167552-800-auto?aspect=true&height=auto&v=639274245097100000&width=800",
+      "imageSource": "https://www.motorola.com.pe/moto-g77/p",
+      "notes": "Live internetPrice S/999 supersedes cached snippet and earlier rendered page prices. CMR S/899 excluded. Manufacturer photo depicts exact model; color and accessories require store confirmation.",
+      "liveVerified": true,
+      "priceField": "internetPrice",
+      "priceValidity": "01/11/2026",
+      "publishedPricePEN": 1099,
+      "publishedPriceVerified": true,
+      "publishedImage": "/products/product-2026092202.png"
+    },
+    {
+      "id": 2026092203,
+      "name": "Motorola moto g86 Power 5G 256GB",
+      "supplierPrice": 989,
+      "retailPrice": 1089,
+      "seller": "Intx Store (Falabella marketplace)",
+      "sourceUrl": "https://www.falabella.com.pe/falabella-pe/product/157593683/celular-motorola-g86-power-5g-8256gb",
+      "supplierStock": true,
+      "stockEvidence": "Live __NEXT_DATA__ productData.variants isPurchaseable=true",
+      "physicalRamGB": 8,
+      "imageUrl": "https://prmoto.vtexassets.com/arquivos/ids/167536-800-auto?aspect=true&height=auto&v=639274244098200000&width=800",
+      "imageSource": "https://www.motorola.com.pe/moto-g86-power-5g/p",
+      "notes": "LIVE confirmation supersedes previous indexed prices. Exact Power:6720mAh Dimensity7300 8GB physical.",
+      "liveVerified": true,
+      "priceField": "internetPrice",
+      "priceValidity": null,
+      "publishedPricePEN": 1089,
+      "publishedPriceVerified": true,
+      "publishedImage": "/products/product-2026092203.png"
+    },
+    {
+      "id": 2026081701,
+      "name": "HONOR 400 Lite 12GB + 256GB",
+      "supplierPrice": null,
+      "retailPrice": null,
+      "seller": "Metro (fallback Peru retailer)",
+      "sourceUrl": "https://www.metro.pe/smartphone-honor-400-lite-12gb-256gb-marrs-green-1040508/p",
+      "supplierStock": null,
+      "stockEvidence": "Price and Agregar displayed; delivery location not selected, stock not explicit.",
+      "physicalRamGB": 12,
+      "imageUrl": "https://metroio.vtexassets.com/arquivos/ids/609051-800-auto?aspect=true&height=auto&v=638948614407430000&width=800",
+      "imageSource": "same product PDP image link",
+      "notes": "Metro indexed1399 but liveHTML has no price/stock. Hiraoka live JSON-LD price1399 valid2026-11-07 is explicitly OutOfStock. Falabella direct and alternative Marketcell via Rulpi returned403, no retry or bypass. Coolbox exact page indexed AGOTADO. No current purchasable source established.",
+      "liveVerified": false,
+      "recommendedAction": "Cotizar; no live confirmed purchasable supplier",
+      "indexedPrice": 1399,
+      "additionalEvidence": {
+        "hiraokaHtml": "/workspace/shared/android-images/honor-hiraoka.html",
+        "hiraokaUrl": "https://hiraoka.com.pe/celular-libre-honor-400-lite-6-7-256gb-12gb-ram-velvet-grey",
+        "coolboxUrl": "https://www.coolbox.pe/celular-honor-400-lite-5g-256gb-12gb-ram-velvet-grey-5109brwd/p"
+      },
+      "publishedPricePEN": null,
+      "publishedPriceVerified": false,
+      "publishedImage": "/products/product-2026081701.jpg"
+    },
+    {
+      "id": 2026091202,
+      "name": "POCO X7 Pro 5G 12GB + 512GB",
+      "supplierPrice": 1689,
+      "retailPrice": 1789,
+      "seller": "Movil Pro (fallback Peru retailer)",
+      "sourceUrl": "https://movilpro.com.pe/poco-x7-pro-negro-12gb-ram-512gb-rom",
+      "supplierStock": true,
+      "stockEvidence": "PDP últimas unidades; Disponible envío a domicilio; no retiro tienda.",
+      "physicalRamGB": 12,
+      "imageUrl": "https://movilpro.com.pe/products/images/poco-x7-pro-negro-movilpro-1743892451811.webp?v=2",
+      "imageSource": "same product PDP image link",
+      "notes": "Live MovilPro1689 available, locally shipped. Falabella GlobalCel out of stock; Tentenger international source live403. Coolbox exact indexed AGOTADO. Existing catalog image128304459 reused X6Pro listing DO NOT USE.",
+      "alternative": {
+        "supplierPrice": 1609,
+        "retailPrice": 1709,
+        "seller": "Tentenger GT Shop PE (Falabella international)",
+        "sourceUrl": "https://www.falabella.com.pe/falabella-pe/product/156535003/celular-xiaomi-poco-x7-pro-12512-flagship-dimensity-8400-ultra-amoled-de-1-5k-y-120-hz-2412dpc0ag",
+        "notes": "Explicit international shipment, no pickup; 12GB512 Dimensity8400Ultra confirmed."
+      },
+      "liveVerified": true,
+      "coolboxUrl": "https://www.coolbox.pe/celular-poco-x7-pro-xiaomi-5g-512gb-12gb-ram-camara-principal-50mp---8mp-frontal-20mp-6-67--negro-100439572/p",
+      "publishedPricePEN": 1789,
+      "publishedPriceVerified": true,
+      "publishedImage": "/products/product-2026091202.webp"
+    },
+    {
+      "id": 2026091501,
+      "name": "Vivo X300 FE 5G 12GB + 256GB",
+      "supplierPrice": null,
+      "retailPrice": null,
+      "seller": null,
+      "sourceUrl": "https://www.vivo.com/in/products/x300-fe",
+      "supplierStock": null,
+      "physicalRamGB": null,
+      "imageUrl": "https://in-exstatic-vivofs.vivo.com/gdHFRinHEMrj3yPG/Picture_library/1776841080309/zip/img/pc1.jpg",
+      "imageSource": "https://www.vivo.com/in/products/picture/x300-fe",
+      "notes": "Exact model confirmed manufacturer India and gallery. No Peru supplier found; don't publish aggregator converted2952 as verified price. Set cotizar price null. Gallery image may be lifestyle/composite—visual QA required.",
+      "publishedPricePEN": null,
+      "publishedPriceVerified": false,
+      "publishedImage": "/products/product-2026091501.jpg"
+    },
+    {
+      "id": 8,
+      "sourcePricePEN": null,
+      "retailPricePEN": null,
+      "seller": "corporacion charatec",
+      "sourceUrl": "https://www.falabella.com.pe/falabella-pe/product/144009751/LAPTOP-HP-255-G10-RYZEN-3-7320U-RAM-16GB-SSD-256GB-15.6-HD-Windows-11-PRO-./144009752",
+      "imageUrl": null,
+      "availability": "out_of_stock",
+      "pricePageVerified": false,
+      "notes": "Live HTML supersedes earlier cached notes. Exact configuration checked against productData attributes and name. Supplier availability, not Nova inventory.",
+      "liveHtmlStatus": "200 ordinary curl",
+      "livePriceVerified": false,
+      "isOutOfStock": true,
+      "isPurchaseable": false,
+      "imageValidation": "Updater independently browser-downloaded original144009752_01 and visually confirmed Ryzen3/8GB/256 label; original PDP currentlyOOS.",
+      "publicationDecision": "Price withheld: supplier out of stock; quote current availability.",
+      "publishedPricePEN": null,
+      "publishedPriceVerified": false,
+      "publishedImage": "/products/hp-255-g10-ryzen3.webp",
+      "liveProductTitle": "Laptop Hp 255 G10 AMD Ryzen 3 7320U Ram 8Gb SSD 256Gb 15.6\"HD FreeDos",
+      "liveSpecifications": [
+        {
+          "id": "9_product_warranty",
+          "name": "Detalle de la garantía",
+          "value": "12 meses"
+        },
+        {
+          "id": "10_condicion_del_producto",
+          "name": "Condicion del producto",
+          "value": "Nuevo"
+        },
+        {
+          "id": "2063_caracteristicas_de_la_pantalla",
+          "name": "Características de la pantalla",
+          "value": "Anti glare,HD"
+        },
+        {
+          "id": "2148_resolucion_de_pantalla",
+          "name": "Resolución de pantalla",
+          "value": "HD+"
+        },
+        {
+          "id": "2158_sistema_operativo_especifico",
+          "name": "Sistema operativo específico",
+          "value": "Free dos"
+        },
+        {
+          "id": "3091_Alto",
+          "name": "alto",
+          "value": "2 cm"
+        },
+        {
+          "id": "3092_ancho",
+          "name": "Ancho",
+          "value": "36 cm"
+        },
+        {
+          "id": "3093_largo",
+          "name": "Largo",
+          "value": "25 cm"
+        },
+        {
+          "id": "3166_tarjeta_grafica_especifica",
+          "name": "Tarjeta gráfica específica",
+          "value": "AMD"
+        },
+        {
+          "id": "3167_procesador_especifico_txt",
+          "name": "Procesador específico",
+          "value": "AMD Ryzen™ 3 7320U (aumento máximo del reloj hasta 4,1 GHz, 4 MB de caché L3, 4 núcleos, 8 subprocesos)"
+        },
+        {
+          "id": "3168_marca_tarjeta_grafica",
+          "name": "Marca tarjeta gráfica",
+          "value": "AMD"
+        },
+        {
+          "id": "3169_marca_procesador",
+          "name": "Procesador",
+          "value": "AMD Ryzen 3"
+        },
+        {
+          "id": "3232_ano_fabricacion",
+          "name": "Año de lanzamiento",
+          "value": "2024"
+        },
+        {
+          "id": "3294_pantalla_touch",
+          "name": "Pantalla touch",
+          "value": "No"
+        },
+        {
+          "id": "4415_tipo_de_portatil",
+          "name": "Tipo de Portátil",
+          "value": "Laptop"
+        },
+        {
+          "id": "2159_tamano_dela_pantalla",
+          "name": "Tamaño de la pantalla",
+          "value": "15.6"
+        },
+        {
+          "id": "6_model",
+          "name": "Modelo",
+          "value": "HP 255 G10 - BF9X1AT#ABM"
+        },
+        {
+          "id": "7_production_country",
+          "name": "Hecho en",
+          "value": "China"
+        },
+        {
+          "id": "11_detalle_de_la_condicion",
+          "name": "Detalle de la Condición",
+          "value": "Nuevo y Sellado"
+        },
+        {
+          "id": "2054_cantidad_de_puertos_usb",
+          "name": "Cantidad de puertos USB",
+          "value": "3"
+        },
+        {
+          "id": "2061_caracteristicas",
+          "name": "Características",
+          "value": "Cuenta con bluetooth,Cuenta con micrófono,Cuenta con parlantes integrados,Cuenta con wifi,Entradas para micrófono"
+        },
+        {
+          "id": "2081_dimensiones",
+          "name": "Dimensiones",
+          "value": "35,8 cm  x 24,2 cm  x 1,99 cm"
+        },
+        {
+          "id": "2056_capacidad_de_almacenamiento",
+          "name": "Capacidad de almacenamiento",
+          "value": "256 GB"
+        },
+        {
+          "id": "2882_requiere_serialnumber",
+          "name": "Requiere Serial Number",
+          "value": "Si"
+        },
+        {
+          "id": "2064_color",
+          "name": "Color",
+          "value": "GRIS OSCURO"
+        },
+        {
+          "id": "2147_rendimiento",
+          "name": "Rendimiento",
+          "value": "AMD Ryzen 3 7320U"
+        },
+        {
+          "id": "8_seller_warranty",
+          "name": "Garantía del proveedor",
+          "value": "1 año"
+        },
+        {
+          "id": "2069_conectividad_conexion",
+          "name": "Conectividad/conexión",
+          "value": "Wifi 6"
+        },
+        {
+          "id": "2076_cuenta_con_bluetooth",
+          "name": "Cuenta con bluetooth",
+          "value": "Sí"
+        },
+        {
+          "id": "2053_cantidad_de_puertos_hdmi",
+          "name": "Cantidad de puertos HDMI",
+          "value": "1"
+        },
+        {
+          "id": "2126_nucleos_del_procesador",
+          "name": "Núcleos del procesador",
+          "value": "Octa core"
+        },
+        {
+          "id": "2202_velocidad_de_imagen",
+          "name": "Velocidad de imagen",
+          "value": "60Hz"
+        },
+        {
+          "id": "4_package_content",
+          "name": "Incluye",
+          "value": "Laptop, Manual y Cargador"
+        },
+        {
+          "id": "2157_sistema_operativo",
+          "name": "Sistema operativo",
+          "value": "Free dos"
+        },
+        {
+          "id": "2164_tasa_de_refresco_nativa",
+          "name": "Tasa de refresco nativa",
+          "value": "60hz"
+        },
+        {
+          "id": "2087_duracion_de_la_bateria__hrs_",
+          "name": "Duración de la batería (hrs)",
+          "value": "8"
+        },
+        {
+          "id": "2206_velocidad_de_procesamiento__ghz_",
+          "name": "Velocidad de procesamiento (GHz)",
+          "value": "4.1 GHz"
+        },
+        {
+          "id": "2120_memoria_ram",
+          "name": "Memoria RAM",
+          "value": "8GB"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "sourcePricePEN": 2750.0,
+      "retailPricePEN": 2850.0,
+      "seller": "GRUPO R & Q S.A.C",
+      "sourceUrl": "https://www.falabella.com.pe/falabella-pe/product/136298210/Laptop-LENOVO-V15-G4-AMN-Ryzen-5-7520U-Pantalla-15.6-FHD-16GB-512GB-Windows-11/136298211",
+      "imageUrl": "https://media.falabella.com/falabellaPE/136298211_01/public",
+      "availability": "online_available",
+      "pricePageVerified": true,
+      "notes": "Live HTML supersedes earlier cached notes. Exact configuration checked against productData attributes and name. Supplier availability, not Nova inventory.",
+      "liveHtmlStatus": "200 ordinary curl",
+      "livePriceVerified": true,
+      "isOutOfStock": false,
+      "prices": [
+        {
+          "label": "",
+          "icons": "",
+          "symbol": "S/ ",
+          "crossed": false,
+          "type": "eventPrice",
+          "price": [
+            "2,750"
+          ],
+          "validity": "31/10/2026"
+        },
+        {
+          "label": "",
+          "icons": "",
+          "symbol": "S/ ",
+          "crossed": true,
+          "type": "normalPrice",
+          "price": [
+            "3,200"
+          ]
+        }
+      ],
+      "isPurchaseable": true,
+      "variantId": "136298211",
+      "sourceImageUrls": [
+        "https://media.falabella.com/falabellaPE/136298211_01/public",
+        "https://media.falabella.com/falabellaPE/136298211_02/public"
+      ],
+      "publishedPricePEN": 2850.0,
+      "publishedPriceVerified": true,
+      "publishedImage": "/products/product-9.webp",
+      "liveProductTitle": "Laptop LENOVO V15 G4 16GB RAM 512GB SSD + 2GB Video Dedicado Listo para Trabajar Win 11",
+      "liveSpecifications": [
+        {
+          "id": "9_product_warranty",
+          "name": "Detalle de la garantía",
+          "value": "En caso de Devoluciones: La laptop debe estar en su empaque original, sin daños ni alteraciones. Debe incluir todos los accesorios, manuales y documentación que venían con la laptop. La laptop no debe haber sido usada o estar en condiciones no aptas para la venta. Debes presentar el comprobante de compra (boleta o factura)."
+        },
+        {
+          "id": "10_condicion_del_producto",
+          "name": "Condicion del producto",
+          "value": "Nuevo"
+        },
+        {
+          "id": "2063_caracteristicas_de_la_pantalla",
+          "name": "Características de la pantalla",
+          "value": "FHD"
+        },
+        {
+          "id": "2148_resolucion_de_pantalla",
+          "name": "Resolución de pantalla",
+          "value": "FHD"
+        },
+        {
+          "id": "2158_sistema_operativo_especifico",
+          "name": "Sistema operativo específico",
+          "value": "Windows 11 Home"
+        },
+        {
+          "id": "3166_tarjeta_grafica_especifica",
+          "name": "Tarjeta gráfica específica",
+          "value": "AMD Radeon™ 610M 2GB Integrado"
+        },
+        {
+          "id": "3167_procesador_especifico_txt",
+          "name": "Procesador específico",
+          "value": "AMD Ryzen 5-7520U"
+        },
+        {
+          "id": "3168_marca_tarjeta_grafica",
+          "name": "Marca tarjeta gráfica",
+          "value": "Integrada"
+        },
+        {
+          "id": "3169_marca_procesador",
+          "name": "Procesador",
+          "value": "Amd Ryzen 5"
+        },
+        {
+          "id": "3232_ano_fabricacion",
+          "name": "Año de lanzamiento",
+          "value": "2024"
+        },
+        {
+          "id": "4415_tipo_de_portatil",
+          "name": "Tipo de Portátil",
+          "value": "Laptop"
+        },
+        {
+          "id": "5132_seller_warranty_in_months",
+          "name": "Garantía del proveedor en meses",
+          "value": "12"
+        },
+        {
+          "id": "2159_tamano_dela_pantalla",
+          "name": "Tamaño de la pantalla",
+          "value": "15.6"
+        },
+        {
+          "id": "6_model",
+          "name": "Modelo",
+          "value": "82YU00XYLM"
+        },
+        {
+          "id": "11_detalle_de_la_condicion",
+          "name": "Detalle de la Condición",
+          "value": "Caja sellada"
+        },
+        {
+          "id": "2054_cantidad_de_puertos_usb",
+          "name": "Cantidad de puertos USB",
+          "value": "3"
+        },
+        {
+          "id": "2061_caracteristicas",
+          "name": "Características",
+          "value": "Cámara Web"
+        },
+        {
+          "id": "2056_capacidad_de_almacenamiento",
+          "name": "Capacidad de almacenamiento",
+          "value": "512 GB"
+        },
+        {
+          "id": "2064_color",
+          "name": "Color",
+          "value": "Artic Grey"
+        },
+        {
+          "id": "2147_rendimiento",
+          "name": "Rendimiento",
+          "value": "AMD Ryzen 5 7520U"
+        },
+        {
+          "id": "8_seller_warranty",
+          "name": "Garantía del proveedor",
+          "value": "1 año"
+        },
+        {
+          "id": "2069_conectividad_conexion",
+          "name": "Conectividad/conexión",
+          "value": "Wifi"
+        },
+        {
+          "id": "2076_cuenta_con_bluetooth",
+          "name": "Cuenta con bluetooth",
+          "value": "Sí"
+        },
+        {
+          "id": "2053_cantidad_de_puertos_hdmi",
+          "name": "Cantidad de puertos HDMI",
+          "value": "1"
+        },
+        {
+          "id": "2126_nucleos_del_procesador",
+          "name": "Núcleos del procesador",
+          "value": "Hexa core"
+        },
+        {
+          "id": "2082_disco_duro_secundario",
+          "name": "Disco duro secundario",
+          "value": "512GB"
+        },
+        {
+          "id": "2060_capacidad_de_la_tarjeta_de_video",
+          "name": "Capacidad de la tarjeta de video",
+          "value": "2GB"
+        },
+        {
+          "id": "2157_sistema_operativo",
+          "name": "Sistema operativo",
+          "value": "Windows 11"
+        },
+        {
+          "id": "2120_memoria_ram",
+          "name": "Memoria RAM",
+          "value": "16GB"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "sourcePricePEN": 3039.0,
+      "retailPricePEN": 3139.0,
+      "seller": "VICTORIA ILIMITADA",
+      "sourceUrl": "https://www.falabella.com.pe/falabella-pe/product/153350724/laptop-asus-vivobook-15-intel-core-5-120u-x1504va-90nb13y1-m02ea0-ram-16gb-ddr4-ssd-512gb-15-6/153350725",
+      "imageUrl": "https://media.falabella.com/falabellaPE/153350725_01/public",
+      "availability": "online_available",
+      "pricePageVerified": true,
+      "notes": "Live HTML supersedes earlier cached notes. Exact configuration checked against productData attributes and name. Supplier availability, not Nova inventory.",
+      "liveHtmlStatus": "200 ordinary curl",
+      "livePriceVerified": true,
+      "isOutOfStock": false,
+      "prices": [
+        {
+          "label": "",
+          "icons": "",
+          "symbol": "S/ ",
+          "crossed": false,
+          "type": "eventPrice",
+          "price": [
+            "3,039"
+          ],
+          "validity": "31/10/2026"
+        },
+        {
+          "label": "",
+          "icons": "",
+          "symbol": "S/ ",
+          "crossed": true,
+          "type": "normalPrice",
+          "price": [
+            "5,200"
+          ]
+        }
+      ],
+      "isPurchaseable": true,
+      "variantId": "153350725",
+      "sourceImageUrls": [
+        "https://media.falabella.com/falabellaPE/153350725_01/public",
+        "https://media.falabella.com/falabellaPE/153350725_02/public",
+        "https://media.falabella.com/falabellaPE/153350725_03/public"
+      ],
+      "publishedPricePEN": 3139.0,
+      "publishedPriceVerified": true,
+      "publishedImage": "/products/product-10.webp",
+      "liveProductTitle": "LAPTOP ASUS VIVOBOOK 15 INTEL CORE 5 120U X1504VA 90NB13Y1-M02EA0 RAM 16GB DDR4 SSD 512GB 15.6\"",
+      "liveSpecifications": [
+        {
+          "id": "9_product_warranty",
+          "name": "Detalle de la garantía",
+          "value": "Devoluciones: Aceptamos devoluciones únicamente dentro de los 7 días hábiles posteriores a la entrega, siempre que el producto se encuentre sellado, en caja original, sin uso y en buen estado. En este caso, los costos de traslado/logística inversa corren por cuenta del cliente cuando el motivo es desistimiento o error de compra.  Garantía del producto: Cobertura de 12 meses únicamente por fallas de fábrica.  La garantía incluye defectos de software y problemas de funcionamiento de fábrica.  No cubre daños ocasionados por mal uso, golpes, caídas, manipulación indebida, exposición a líquidos o reparaciones hechas por terceros no autorizados.  El servicio técnico es brindado directamente por nosotros como proveedor autorizado.  Para acceder a la garantía, el cliente debe presentar el comprobante de compra.  El traslado hacia nuestro servicio técnico corre por cuenta del cliente; si procede la garantía, el retorno del equipo se asume sin costo adicional."
+        },
+        {
+          "id": "10_condicion_del_producto",
+          "name": "Condicion del producto",
+          "value": "Nuevo"
+        },
+        {
+          "id": "2063_caracteristicas_de_la_pantalla",
+          "name": "Características de la pantalla",
+          "value": "FHD"
+        },
+        {
+          "id": "2148_resolucion_de_pantalla",
+          "name": "Resolución de pantalla",
+          "value": "FHD+"
+        },
+        {
+          "id": "2158_sistema_operativo_especifico",
+          "name": "Sistema operativo específico",
+          "value": "Windows 11 Home"
+        },
+        {
+          "id": "3091_Alto",
+          "name": "alto",
+          "value": "1.79"
+        },
+        {
+          "id": "3092_ancho",
+          "name": "Ancho",
+          "value": "35.97"
+        },
+        {
+          "id": "3093_largo",
+          "name": "Largo",
+          "value": "23.25"
+        },
+        {
+          "id": "3094_profundidad",
+          "name": "Profundidad",
+          "value": "23.25"
+        },
+        {
+          "id": "3166_tarjeta_grafica_especifica",
+          "name": "Tarjeta gráfica específica",
+          "value": "Intel Graphics"
+        },
+        {
+          "id": "3167_procesador_especifico_txt",
+          "name": "Procesador específico",
+          "value": "Intel Core 5 120U"
+        },
+        {
+          "id": "3168_marca_tarjeta_grafica",
+          "name": "Marca tarjeta gráfica",
+          "value": "Intel"
+        },
+        {
+          "id": "3169_marca_procesador",
+          "name": "Procesador",
+          "value": "Intel Core"
+        },
+        {
+          "id": "3232_ano_fabricacion",
+          "name": "Año de lanzamiento",
+          "value": "-"
+        },
+        {
+          "id": "3294_pantalla_touch",
+          "name": "Pantalla touch",
+          "value": "No"
+        },
+        {
+          "id": "4415_tipo_de_portatil",
+          "name": "Tipo de Portátil",
+          "value": "Laptop"
+        },
+        {
+          "id": "2159_tamano_dela_pantalla",
+          "name": "Tamaño de la pantalla",
+          "value": "15.6"
+        },
+        {
+          "id": "6_model",
+          "name": "Modelo",
+          "value": "90NB13Y1-M02EA0"
+        },
+        {
+          "id": "11_detalle_de_la_condicion",
+          "name": "Detalle de la Condición",
+          "value": "producto nuevo caja sellada"
+        },
+        {
+          "id": "2054_cantidad_de_puertos_usb",
+          "name": "Cantidad de puertos USB",
+          "value": "4"
+        },
+        {
+          "id": "2061_caracteristicas",
+          "name": "Características",
+          "value": "Ajuste del brillo,Cuenta con bluetooth"
+        },
+        {
+          "id": "2081_dimensiones",
+          "name": "Dimensiones",
+          "value": "1.79 cm x 23.25 cm x 35.97 cm"
+        },
+        {
+          "id": "2056_capacidad_de_almacenamiento",
+          "name": "Capacidad de almacenamiento",
+          "value": "512 GB"
+        },
+        {
+          "id": "2064_color",
+          "name": "Color",
+          "value": "Azul"
+        },
+        {
+          "id": "2147_rendimiento",
+          "name": "Rendimiento",
+          "value": "Intel Core i5 120U"
+        },
+        {
+          "id": "8_seller_warranty",
+          "name": "Garantía del proveedor",
+          "value": "1 año"
+        },
+        {
+          "id": "2069_conectividad_conexion",
+          "name": "Conectividad/conexión",
+          "value": "Bluetooth,USB,Wifi"
+        },
+        {
+          "id": "2076_cuenta_con_bluetooth",
+          "name": "Cuenta con bluetooth",
+          "value": "Sí"
+        },
+        {
+          "id": "2053_cantidad_de_puertos_hdmi",
+          "name": "Cantidad de puertos HDMI",
+          "value": "1"
+        },
+        {
+          "id": "2126_nucleos_del_procesador",
+          "name": "Núcleos del procesador",
+          "value": "Deca core"
+        },
+        {
+          "id": "4_package_content",
+          "name": "Incluye",
+          "value": "-"
+        },
+        {
+          "id": "2157_sistema_operativo",
+          "name": "Sistema operativo",
+          "value": "Windows 11"
+        },
+        {
+          "id": "2164_tasa_de_refresco_nativa",
+          "name": "Tasa de refresco nativa",
+          "value": "60 Hz"
+        },
+        {
+          "id": "2087_duracion_de_la_bateria__hrs_",
+          "name": "Duración de la batería (hrs)",
+          "value": "6"
+        },
+        {
+          "id": "2120_memoria_ram",
+          "name": "Memoria RAM",
+          "value": "16GB"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "sourcePricePEN": 2459.0,
+      "retailPricePEN": 2559.0,
+      "seller": "GRUPO S&M",
+      "sourceUrl": "https://www.falabella.com.pe/falabella-pe/product/154903293/laptop-lenovo-intel-core-i5-13420h-ram-8gb-ssd-512gb-15-6-fhd-grey/154903294",
+      "imageUrl": "https://media.falabella.com/falabellaPE/154903294_01/public",
+      "availability": "online_available",
+      "pricePageVerified": true,
+      "notes": "Live HTML supersedes earlier cached notes. Exact configuration checked against productData attributes and name. Supplier availability, not Nova inventory. WARNING updater pixel QA: primary source photo states15.3 inches while title/spec15.6. Exact model unavailable (generic Intel Core i5). Do not use incorrect photo; needs alternative.",
+      "liveHtmlStatus": "200 ordinary curl",
+      "livePriceVerified": true,
+      "isOutOfStock": false,
+      "prices": [
+        {
+          "label": "",
+          "icons": "",
+          "symbol": "S/ ",
+          "crossed": false,
+          "type": "eventPrice",
+          "price": [
+            "2,459"
+          ],
+          "validity": "31/10/2026"
+        },
+        {
+          "label": "",
+          "icons": "",
+          "symbol": "S/ ",
+          "crossed": true,
+          "type": "normalPrice",
+          "price": [
+            "2,800"
+          ]
+        }
+      ],
+      "isPurchaseable": true,
+      "variantId": "154903294",
+      "sourceImageUrls": [
+        "https://media.falabella.com/falabellaPE/154903294_01/public",
+        "https://media.falabella.com/falabellaPE/154903294_02/public",
+        "https://media.falabella.com/falabellaPE/154903294_03/public"
+      ],
+      "imageVerified": false,
+      "imageValidation": "Primary image dimension15.3 conflicts requested15.6; alternate angles no independent model evidence. Do not mark verified.",
+      "publicationDecision": "Price and image withheld: source photo states 15.3 inch, catalog 15.6 inch; exact variant unresolved.",
+      "publishedPricePEN": null,
+      "publishedPriceVerified": false,
+      "publishedImage": "/products/photo-pending.svg",
+      "liveProductTitle": "LAPTOP LENOVO INTEL CORE i5-13420H RAM 8GB SSD 512GB 15.6″ FHD GREY",
+      "liveSpecifications": [
+        {
+          "id": "9_product_warranty",
+          "name": "Detalle de la garantía",
+          "value": "GARANTÍA DE 12 MESES ANTE FALLAS DE FÁBRICA"
+        },
+        {
+          "id": "10_condicion_del_producto",
+          "name": "Condicion del producto",
+          "value": "Nuevo"
+        },
+        {
+          "id": "2158_sistema_operativo_especifico",
+          "name": "Sistema operativo específico",
+          "value": "Free dos"
+        },
+        {
+          "id": "3091_Alto",
+          "name": "alto",
+          "value": "35cm"
+        },
+        {
+          "id": "3092_ancho",
+          "name": "Ancho",
+          "value": "25cm"
+        },
+        {
+          "id": "3093_largo",
+          "name": "Largo",
+          "value": "35cm"
+        },
+        {
+          "id": "3166_tarjeta_grafica_especifica",
+          "name": "Tarjeta gráfica específica",
+          "value": "INTEGRADA"
+        },
+        {
+          "id": "3167_procesador_especifico_txt",
+          "name": "Procesador específico",
+          "value": "Core I5-13420H"
+        },
+        {
+          "id": "3168_marca_tarjeta_grafica",
+          "name": "Marca tarjeta gráfica",
+          "value": "Integrada"
+        },
+        {
+          "id": "3232_ano_fabricacion",
+          "name": "Año de lanzamiento",
+          "value": "2025"
+        },
+        {
+          "id": "3294_pantalla_touch",
+          "name": "Pantalla touch",
+          "value": "No"
+        },
+        {
+          "id": "4415_tipo_de_portatil",
+          "name": "Tipo de Portátil",
+          "value": "Laptop"
+        },
+        {
+          "id": "3169_marca_procesador",
+          "name": "Procesador",
+          "value": "Intel Core"
+        },
+        {
+          "id": "2159_tamano_dela_pantalla",
+          "name": "Tamaño de la pantalla",
+          "value": "15.6"
+        },
+        {
+          "id": "6_model",
+          "name": "Modelo",
+          "value": "INTEL CORE I5"
+        },
+        {
+          "id": "11_detalle_de_la_condicion",
+          "name": "Detalle de la Condición",
+          "value": "Producto Nuevo"
+        },
+        {
+          "id": "2054_cantidad_de_puertos_usb",
+          "name": "Cantidad de puertos USB",
+          "value": "3"
+        },
+        {
+          "id": "2061_caracteristicas",
+          "name": "Características",
+          "value": "Cuenta con wifi,Cámara Web"
+        },
+        {
+          "id": "2081_dimensiones",
+          "name": "Dimensiones",
+          "value": "35x25x35"
+        },
+        {
+          "id": "2148_resolucion_de_pantalla",
+          "name": "Resolución de pantalla",
+          "value": "FHD"
+        },
+        {
+          "id": "2056_capacidad_de_almacenamiento",
+          "name": "Capacidad de almacenamiento",
+          "value": "512 GB"
+        },
+        {
+          "id": "2064_color",
+          "name": "Color",
+          "value": "GRIS"
+        },
+        {
+          "id": "2147_rendimiento",
+          "name": "Rendimiento",
+          "value": "Alto"
+        },
+        {
+          "id": "8_seller_warranty",
+          "name": "Garantía del proveedor",
+          "value": "1 año"
+        },
+        {
+          "id": "2069_conectividad_conexion",
+          "name": "Conectividad/conexión",
+          "value": "Wifi,Bluetooth"
+        },
+        {
+          "id": "2126_nucleos_del_procesador",
+          "name": "Núcleos del procesador",
+          "value": "Octa core"
+        },
+        {
+          "id": "2063_caracteristicas_de_la_pantalla",
+          "name": "Características de la pantalla",
+          "value": "Anti glare"
+        },
+        {
+          "id": "2060_capacidad_de_la_tarjeta_de_video",
+          "name": "Capacidad de la tarjeta de video",
+          "value": "No aplica"
+        },
+        {
+          "id": "2157_sistema_operativo",
+          "name": "Sistema operativo",
+          "value": "Free dos"
+        },
+        {
+          "id": "2120_memoria_ram",
+          "name": "Memoria RAM",
+          "value": "8GB"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "sourcePricePEN": 2799.0,
+      "retailPricePEN": 2899.0,
+      "seller": "FALABELLA",
+      "sourceUrl": "https://www.falabella.com.pe/falabella-pe/product/883746914/Laptop-Aspire-Lite-Intel-Core-i7-13620H-16GB-512-GB-15.6-FHD/883746914",
+      "imageUrl": "https://media.falabella.com/falabellaPE/883746914_01/public",
+      "availability": "out_of_stock",
+      "pricePageVerified": true,
+      "notes": "Live HTML supersedes earlier cached notes. Exact configuration checked against productData attributes and name. Supplier availability, not Nova inventory.",
+      "liveHtmlStatus": "200 ordinary curl",
+      "livePriceVerified": true,
+      "isOutOfStock": true,
+      "prices": [
+        {
+          "label": "",
+          "icons": "",
+          "symbol": "S/ ",
+          "crossed": false,
+          "type": "internetPrice",
+          "price": [
+            "2,799"
+          ],
+          "validity": "31/10/2026"
+        },
+        {
+          "label": "",
+          "icons": "",
+          "symbol": "S/ ",
+          "crossed": true,
+          "type": "normalPrice",
+          "price": [
+            "3,399"
+          ]
+        }
+      ],
+      "isPurchaseable": false,
+      "variantId": "883746914",
+      "sourceImageUrls": [
+        "https://media.falabella.com/falabellaPE/883746914_01/public",
+        "https://media.falabella.com/falabellaPE/883746914_02/public",
+        "https://media.falabella.com/falabellaPE/883746914_03/public",
+        "https://media.falabella.com/falabellaPE/883746914_04/public",
+        "https://media.falabella.com/falabellaPE/883746914_05/public",
+        "https://media.falabella.com/falabellaPE/883746914_06/public",
+        "https://media.falabella.com/falabellaPE/883746914_07/public",
+        "https://media.falabella.com/falabellaPE/883746914_08/public",
+        "https://media.falabella.com/falabellaPE/883746914_09/public",
+        "https://media.falabella.com/falabellaPE/883746914_10/public",
+        "https://media.falabella.com/falabellaPE/883746914_11/public",
+        "https://media.falabella.com/falabellaPE/883746914_12/public"
+      ],
+      "publicationDecision": "Price withheld: supplier out of stock; quote current availability.",
+      "publishedPricePEN": null,
+      "publishedPriceVerified": false,
+      "publishedImage": "/products/product-12.jpg",
+      "liveProductTitle": "Laptop Acer Aspire Lite Intel Core I7-13620h 16gb 512 Gb 15.6\" FHD IPS (1920 X 1080)",
+      "liveSpecifications": [
+        {
+          "id": "9_product_warranty",
+          "name": "Detalle de la garantía",
+          "value": "falla de fabrica"
+        },
+        {
+          "id": "2148_resolucion_de_pantalla",
+          "name": "Resolución de pantalla",
+          "value": "FHD"
+        },
+        {
+          "id": "2158_sistema_operativo_especifico",
+          "name": "Sistema operativo específico",
+          "value": "Windows 11 Home"
+        },
+        {
+          "id": "3167_procesador_especifico_txt",
+          "name": "Procesador específico",
+          "value": "Intel Core i7-13620H"
+        },
+        {
+          "id": "4415_tipo_de_portatil",
+          "name": "Tipo de Portátil",
+          "value": "Laptop"
+        },
+        {
+          "id": "2063_caracteristicas_de_la_pantalla",
+          "name": "Características de la pantalla",
+          "value": "FHD,IPS"
+        },
+        {
+          "id": "3168_marca_tarjeta_grafica",
+          "name": "Marca tarjeta gráfica",
+          "value": "Intel"
+        },
+        {
+          "id": "3169_marca_procesador",
+          "name": "Procesador",
+          "value": "Intel Core i7"
+        },
+        {
+          "id": "3294_pantalla_touch",
+          "name": "Pantalla touch",
+          "value": "No"
+        },
+        {
+          "id": "2159_tamano_dela_pantalla",
+          "name": "Tamaño de la pantalla",
+          "value": "15.6"
+        },
+        {
+          "id": "6_model",
+          "name": "Modelo",
+          "value": "AL15-72P-7948"
+        },
+        {
+          "id": "7_production_country",
+          "name": "Hecho en",
+          "value": "China"
+        },
+        {
+          "id": "2056_capacidad_de_almacenamiento",
+          "name": "Capacidad de almacenamiento",
+          "value": "512 GB"
+        },
+        {
+          "id": "2147_rendimiento",
+          "name": "Rendimiento",
+          "value": "Intel Core i7-13620H"
+        },
+        {
+          "id": "8_seller_warranty",
+          "name": "Garantía del proveedor",
+          "value": "1 año"
+        },
+        {
+          "id": "2069_conectividad_conexion",
+          "name": "Conectividad/conexión",
+          "value": "USB-C,Wifi 6"
+        },
+        {
+          "id": "2076_cuenta_con_bluetooth",
+          "name": "Cuenta con bluetooth",
+          "value": "Sí"
+        },
+        {
+          "id": "2053_cantidad_de_puertos_hdmi",
+          "name": "Cantidad de puertos HDMI",
+          "value": "1"
+        },
+        {
+          "id": "2126_nucleos_del_procesador",
+          "name": "Núcleos del procesador",
+          "value": "10 NUCLEOS"
+        },
+        {
+          "id": "2156_sistema_de_sonido",
+          "name": "Sistema de sonido",
+          "value": "No incluye"
+        },
+        {
+          "id": "4_package_content",
+          "name": "Incluye",
+          "value": "laptop/cagador cable poder"
+        },
+        {
+          "id": "2082_disco_duro_secundario",
+          "name": "Disco duro secundario",
+          "value": "512GB"
+        },
+        {
+          "id": "2157_sistema_operativo",
+          "name": "Sistema operativo",
+          "value": "Windows 11"
+        },
+        {
+          "id": "2206_velocidad_de_procesamiento__ghz_",
+          "name": "Velocidad de procesamiento (GHz)",
+          "value": "4.90 GHz"
+        },
+        {
+          "id": "2120_memoria_ram",
+          "name": "Memoria RAM",
+          "value": "16GB"
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "sourcePricePEN": 2999.0,
+      "retailPricePEN": 3099.0,
+      "seller": "FALABELLA",
+      "sourceUrl": "https://www.falabella.com.pe/falabella-pe/product/883668657/Laptop-Acer-Aspire-Lite-Intel-Core-Ultra-7-Processor-155u-16-Gb-512-Gb-Wuxga-(1920-X-1200)/883668657",
+      "imageUrl": "https://media.falabella.com/falabellaPE/883668657_1/public",
+      "availability": "out_of_stock",
+      "pricePageVerified": true,
+      "notes": "Live HTML supersedes earlier cached notes. Exact configuration checked against productData attributes and name. Supplier availability, not Nova inventory.",
+      "liveHtmlStatus": "200 ordinary curl",
+      "livePriceVerified": true,
+      "isOutOfStock": true,
+      "prices": [
+        {
+          "label": "",
+          "icons": "",
+          "symbol": "S/ ",
+          "crossed": false,
+          "type": "internetPrice",
+          "price": [
+            "2,999"
+          ],
+          "validity": "31/10/2026"
+        },
+        {
+          "label": "",
+          "icons": "",
+          "symbol": "S/ ",
+          "crossed": true,
+          "type": "normalPrice",
+          "price": [
+            "3,799"
+          ]
+        }
+      ],
+      "isPurchaseable": false,
+      "variantId": "883668657",
+      "sourceImageUrls": [
+        "https://media.falabella.com/falabellaPE/883668657_1/public",
+        "https://media.falabella.com/falabellaPE/883668657_10/public",
+        "https://media.falabella.com/falabellaPE/883668657_11/public",
+        "https://media.falabella.com/falabellaPE/883668657_2/public",
+        "https://media.falabella.com/falabellaPE/883668657_3/public",
+        "https://media.falabella.com/falabellaPE/883668657_4/public",
+        "https://media.falabella.com/falabellaPE/883668657_5/public",
+        "https://media.falabella.com/falabellaPE/883668657_6/public",
+        "https://media.falabella.com/falabellaPE/883668657_7/public",
+        "https://media.falabella.com/falabellaPE/883668657_8/public",
+        "https://media.falabella.com/falabellaPE/883668657_9/public"
+      ],
+      "publicationDecision": "Price withheld: supplier out of stock; quote current availability.",
+      "publishedPricePEN": null,
+      "publishedPriceVerified": false,
+      "publishedImage": "/products/product-13.webp",
+      "liveProductTitle": "Laptop Acer Aspire Lite Intel Core Ultra 7 - 155u 16 Gb 512 Gb Wuxga IPS (1920 X 1200)",
+      "liveSpecifications": [
+        {
+          "id": "9_product_warranty",
+          "name": "Detalle de la garantía",
+          "value": "falla de fabrica"
+        },
+        {
+          "id": "3092_ancho",
+          "name": "Ancho",
+          "value": "1.89 CM"
+        },
+        {
+          "id": "3093_largo",
+          "name": "Largo",
+          "value": "35.76 CM"
+        },
+        {
+          "id": "3167_procesador_especifico_txt",
+          "name": "Procesador específico",
+          "value": "Intel® Core¿ Ultra 7 processor 155U"
+        },
+        {
+          "id": "4415_tipo_de_portatil",
+          "name": "Tipo de Portátil",
+          "value": "Laptop"
+        },
+        {
+          "id": "3168_marca_tarjeta_grafica",
+          "name": "Marca tarjeta gráfica",
+          "value": "Intel"
+        },
+        {
+          "id": "3169_marca_procesador",
+          "name": "Procesador",
+          "value": "Intel Core Ultra 7"
+        },
+        {
+          "id": "2159_tamano_dela_pantalla",
+          "name": "Tamaño de la pantalla",
+          "value": "16"
+        },
+        {
+          "id": "6_model",
+          "name": "Modelo",
+          "value": "AL16-53P-7550"
+        },
+        {
+          "id": "7_production_country",
+          "name": "Hecho en",
+          "value": "China"
+        },
+        {
+          "id": "2054_cantidad_de_puertos_usb",
+          "name": "Cantidad de puertos USB",
+          "value": "4"
+        },
+        {
+          "id": "2148_resolucion_de_pantalla",
+          "name": "Resolución de pantalla",
+          "value": "WUXGA"
+        },
+        {
+          "id": "2061_caracteristicas",
+          "name": "Características",
+          "value": "Cámara Web,Lector de huella"
+        },
+        {
+          "id": "2056_capacidad_de_almacenamiento",
+          "name": "Capacidad de almacenamiento",
+          "value": "512 GB"
+        },
+        {
+          "id": "2064_color",
+          "name": "Color",
+          "value": "Light Silver"
+        },
+        {
+          "id": "2147_rendimiento",
+          "name": "Rendimiento",
+          "value": "Intel Core Ultra 7 - 155U"
+        },
+        {
+          "id": "8_seller_warranty",
+          "name": "Garantía del proveedor",
+          "value": "1 año"
+        },
+        {
+          "id": "2076_cuenta_con_bluetooth",
+          "name": "Cuenta con bluetooth",
+          "value": "Sí"
+        },
+        {
+          "id": "2069_conectividad_conexion",
+          "name": "Conectividad/conexión",
+          "value": "USB-C,Wifi"
+        },
+        {
+          "id": "2053_cantidad_de_puertos_hdmi",
+          "name": "Cantidad de puertos HDMI",
+          "value": "1"
+        },
+        {
+          "id": "2126_nucleos_del_procesador",
+          "name": "Núcleos del procesador",
+          "value": "12 core"
+        },
+        {
+          "id": "2063_caracteristicas_de_la_pantalla",
+          "name": "Características de la pantalla",
+          "value": "IPS,WUXGA"
+        },
+        {
+          "id": "4_package_content",
+          "name": "Incluye",
+          "value": "laptop/cagador cable poder"
+        },
+        {
+          "id": "2082_disco_duro_secundario",
+          "name": "Disco duro secundario",
+          "value": "512GB"
+        },
+        {
+          "id": "2060_capacidad_de_la_tarjeta_de_video",
+          "name": "Capacidad de la tarjeta de video",
+          "value": "No aplica"
+        },
+        {
+          "id": "2157_sistema_operativo",
+          "name": "Sistema operativo",
+          "value": "Windows 11"
+        },
+        {
+          "id": "2164_tasa_de_refresco_nativa",
+          "name": "Tasa de refresco nativa",
+          "value": "60Hz"
+        },
+        {
+          "id": "2087_duracion_de_la_bateria__hrs_",
+          "name": "Duración de la batería (hrs)",
+          "value": "6"
+        },
+        {
+          "id": "2206_velocidad_de_procesamiento__ghz_",
+          "name": "Velocidad de procesamiento (GHz)",
+          "value": "4.80 GHz"
+        },
+        {
+          "id": "2120_memoria_ram",
+          "name": "Memoria RAM",
+          "value": "16GB"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "sourcePricePEN": 2689.0,
+      "retailPricePEN": 2789.0,
+      "seller": "ROIS COMPUTER S.A.C.",
+      "sourceUrl": "https://www.falabella.com.pe/falabella-pe/product/150682491/laptop-hp-15-fd0260la-intel-core-5-120u-16gb-ram-512gb-ssd-15-6-b9tx9la",
+      "imageUrl": "https://media.falabella.com/falabellaPE/150682492_01/public",
+      "availability": "online_available",
+      "pricePageVerified": true,
+      "notes": "Live HTML supersedes earlier cached notes. Exact configuration checked against productData attributes and name. Supplier availability, not Nova inventory.",
+      "liveHtmlStatus": "200 ordinary curl",
+      "livePriceVerified": true,
+      "isOutOfStock": false,
+      "prices": [
+        {
+          "label": "",
+          "icons": "",
+          "symbol": "S/ ",
+          "crossed": false,
+          "type": "eventPrice",
+          "price": [
+            "2,689"
+          ],
+          "validity": "02/11/2026"
+        },
+        {
+          "label": "",
+          "icons": "",
+          "symbol": "S/ ",
+          "crossed": true,
+          "type": "normalPrice",
+          "price": [
+            "3,849"
+          ]
+        }
+      ],
+      "isPurchaseable": true,
+      "variantId": "150682492",
+      "sourceImageUrls": [
+        "https://media.falabella.com/falabellaPE/150682492_01/public",
+        "https://media.falabella.com/falabellaPE/150682492_02/public",
+        "https://media.falabella.com/falabellaPE/150682492_03/public",
+        "https://media.falabella.com/falabellaPE/150682492_04/public",
+        "https://media.falabella.com/falabellaPE/150682492_05/public",
+        "https://media.falabella.com/falabellaPE/150682492_06/public"
+      ],
+      "publishedPricePEN": 2789.0,
+      "publishedPriceVerified": true,
+      "publishedImage": "/products/product-14.webp",
+      "liveProductTitle": "Laptop HP 15-FD0260LA Intel Core 5 120U, 16Gb Ram, 512Gb SSD 15.6\"-B9TX9LA",
+      "liveSpecifications": [
+        {
+          "id": "4415_tipo_de_portatil",
+          "name": "Tipo de Portátil",
+          "value": "Laptop"
+        },
+        {
+          "id": "3294_pantalla_touch",
+          "name": "Pantalla touch",
+          "value": "No"
+        },
+        {
+          "id": "10_condicion_del_producto",
+          "name": "Condicion del producto",
+          "value": "Nuevo"
+        },
+        {
+          "id": "3166_tarjeta_grafica_especifica",
+          "name": "Tarjeta gráfica específica",
+          "value": "Gráficos Integradas Tarjeta gráfica Intel ®8 Integrada"
+        },
+        {
+          "id": "3232_ano_fabricacion",
+          "name": "Año de lanzamiento",
+          "value": "2025"
+        },
+        {
+          "id": "2148_resolucion_de_pantalla",
+          "name": "Resolución de pantalla",
+          "value": "FHD"
+        },
+        {
+          "id": "3167_procesador_especifico_txt",
+          "name": "Procesador específico",
+          "value": "Procesador Intel® Core™ 5 120U (hasta 5 GHz con tecnología Intel® Turbo Boost, 12 MB de caché L3, 10 núcleos)6,7"
+        },
+        {
+          "id": "3168_marca_tarjeta_grafica",
+          "name": "Marca tarjeta gráfica",
+          "value": "Integrada"
+        },
+        {
+          "id": "9_product_warranty",
+          "name": "Detalle de la garantía",
+          "value": "TÉRMINOS Y CONDICIONES  ROISCOMPUTER S.A.C.  1.Distribución: ROISCOMPUTER S.A.C. actúa como distribuidor autorizado de los equipos comercializados.  2.Garantía: La garantía es brindada directamente por la marca fabricante y aplica únicamente al hardware del equipo, no al software ni a su configuración en el caso de laptops.  3.Procedimiento de garantía:  ⦁\tEl servicio de garantía requiere coordinación previa entre el usuario y la marca, ya sea vía telefónica o por correo electrónico. ⦁\tEl usuario es responsable de entregar el equipo en el centro de servicio autorizado correspondiente, previa coordinación. ⦁\tLa marca no realiza recojo a domicilio de equipos para atención de garantía.  4.Exclusiones de garantía: La garantía no cubre los siguientes casos:  ⦁\tDaños ocasionados por golpes, caídas o manipulación indebida. ⦁\tPresencia o extracción de cuerpos extraños. ⦁\tConfiguraciones, instalación o reinstalación de software. ⦁\tSustitución de piezas dañadas por uso inadecuado o causas ajenas a defectos de fabricaci"
+        },
+        {
+          "id": "2063_caracteristicas_de_la_pantalla",
+          "name": "Características de la pantalla",
+          "value": "Anti glare"
+        },
+        {
+          "id": "3169_marca_procesador",
+          "name": "Procesador",
+          "value": "Intel Core i5"
+        },
+        {
+          "id": "2159_tamano_dela_pantalla",
+          "name": "Tamaño de la pantalla",
+          "value": "15.6"
+        },
+        {
+          "id": "2054_cantidad_de_puertos_usb",
+          "name": "Cantidad de puertos USB",
+          "value": "2"
+        },
+        {
+          "id": "6_model",
+          "name": "Modelo",
+          "value": "HP 15-FD0260LA - B9TX9LAABM"
+        },
+        {
+          "id": "11_detalle_de_la_condicion",
+          "name": "Detalle de la Condición",
+          "value": "NUEVO"
+        },
+        {
+          "id": "2061_caracteristicas",
+          "name": "Características",
+          "value": "Carga rápida"
+        },
+        {
+          "id": "2056_capacidad_de_almacenamiento",
+          "name": "Capacidad de almacenamiento",
+          "value": "512 GB"
+        },
+        {
+          "id": "2882_requiere_serialnumber",
+          "name": "Requiere Serial Number",
+          "value": "Si"
+        },
+        {
+          "id": "2064_color",
+          "name": "Color",
+          "value": "Dorado cálido"
+        },
+        {
+          "id": "2147_rendimiento",
+          "name": "Rendimiento",
+          "value": "Intel Core 5 120U"
+        },
+        {
+          "id": "8_seller_warranty",
+          "name": "Garantía del proveedor",
+          "value": "1 año"
+        },
+        {
+          "id": "2069_conectividad_conexion",
+          "name": "Conectividad/conexión",
+          "value": "Bluetooth"
+        },
+        {
+          "id": "2076_cuenta_con_bluetooth",
+          "name": "Cuenta con bluetooth",
+          "value": "Sí"
+        },
+        {
+          "id": "2126_nucleos_del_procesador",
+          "name": "Núcleos del procesador",
+          "value": "Deca core"
+        },
+        {
+          "id": "2053_cantidad_de_puertos_hdmi",
+          "name": "Cantidad de puertos HDMI",
+          "value": "1"
+        },
+        {
+          "id": "2060_capacidad_de_la_tarjeta_de_video",
+          "name": "Capacidad de la tarjeta de video",
+          "value": "No aplica"
+        },
+        {
+          "id": "2087_duracion_de_la_bateria__hrs_",
+          "name": "Duración de la batería (hrs)",
+          "value": "7"
+        },
+        {
+          "id": "2120_memoria_ram",
+          "name": "Memoria RAM",
+          "value": "16GB"
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "sourcePricePEN": 3479.0,
+      "retailPricePEN": 3579.0,
+      "seller": "VENTY",
+      "sourceUrl": "https://www.falabella.com.pe/falabella-pe/product/153698402/laptop-hp-intel-core-i7-1355u-ram-32gb-ssd-512gb-250-g10-13va-gen-15-6-hd/153698403",
+      "imageUrl": "https://media.falabella.com/falabellaPE/153698403_01/public",
+      "availability": "online_available",
+      "pricePageVerified": true,
+      "notes": "Live HTML supersedes earlier cached notes. Exact configuration checked against productData attributes and name. Supplier availability, not Nova inventory.",
+      "liveHtmlStatus": "200 ordinary curl",
+      "livePriceVerified": true,
+      "isOutOfStock": false,
+      "prices": [
+        {
+          "label": "",
+          "icons": "",
+          "symbol": "S/ ",
+          "crossed": false,
+          "type": "eventPrice",
+          "price": [
+            "3,479"
+          ],
+          "validity": "31/10/2026"
+        },
+        {
+          "label": "",
+          "icons": "",
+          "symbol": "S/ ",
+          "crossed": true,
+          "type": "normalPrice",
+          "price": [
+            "3,699"
+          ]
+        }
+      ],
+      "isPurchaseable": true,
+      "variantId": "153698403",
+      "sourceImageUrls": [
+        "https://media.falabella.com/falabellaPE/153698403_01/public",
+        "https://media.falabella.com/falabellaPE/153698403_02/public",
+        "https://media.falabella.com/falabellaPE/153698403_03/public",
+        "https://media.falabella.com/falabellaPE/153698403_04/public",
+        "https://media.falabella.com/falabellaPE/153698403_05/public"
+      ],
+      "publishedPricePEN": 3579.0,
+      "publishedPriceVerified": true,
+      "publishedImage": "/products/product-15.jpg",
+      "liveProductTitle": "Laptop HP Intel Core i7 1355U RAM 32GB SSD 512GB 250 G10 13va Gen 15.6\" HD",
+      "liveSpecifications": [
+        {
+          "id": "9_product_warranty",
+          "name": "Detalle de la garantía",
+          "value": "LA GARANTIA SE TRAMITA  UNICAMENTE EN NUESTRA TIENDA EN EL CENTRO DE LIMA, SI ES DE PROVINCIA, DEBE DE ENVIAR EL EQUIPO A NUESTRA TIENDA."
+        },
+        {
+          "id": "10_condicion_del_producto",
+          "name": "Condicion del producto",
+          "value": "Nuevo"
+        },
+        {
+          "id": "2063_caracteristicas_de_la_pantalla",
+          "name": "Características de la pantalla",
+          "value": "HD"
+        },
+        {
+          "id": "2069_conectividad_conexion",
+          "name": "Conectividad/conexión",
+          "value": "Bluetooth,WF wireless"
+        },
+        {
+          "id": "2148_resolucion_de_pantalla",
+          "name": "Resolución de pantalla",
+          "value": "HD+"
+        },
+        {
+          "id": "2158_sistema_operativo_especifico",
+          "name": "Sistema operativo específico",
+          "value": "Free dos"
+        },
+        {
+          "id": "3091_Alto",
+          "name": "alto",
+          "value": "21.6"
+        },
+        {
+          "id": "3092_ancho",
+          "name": "Ancho",
+          "value": "1.99"
+        },
+        {
+          "id": "3093_largo",
+          "name": "Largo",
+          "value": "32.54"
+        },
+        {
+          "id": "3166_tarjeta_grafica_especifica",
+          "name": "Tarjeta gráfica específica",
+          "value": "INTEL UHD GRAPHICS"
+        },
+        {
+          "id": "3167_procesador_especifico_txt",
+          "name": "Procesador específico",
+          "value": "Core i7 1355U"
+        },
+        {
+          "id": "3168_marca_tarjeta_grafica",
+          "name": "Marca tarjeta gráfica",
+          "value": "Integrada"
+        },
+        {
+          "id": "3169_marca_procesador",
+          "name": "Procesador",
+          "value": "Intel Core i7"
+        },
+        {
+          "id": "3232_ano_fabricacion",
+          "name": "Año de lanzamiento",
+          "value": "2026"
+        },
+        {
+          "id": "3294_pantalla_touch",
+          "name": "Pantalla touch",
+          "value": "No"
+        },
+        {
+          "id": "4415_tipo_de_portatil",
+          "name": "Tipo de Portátil",
+          "value": "Laptop"
+        },
+        {
+          "id": "2159_tamano_dela_pantalla",
+          "name": "Tamaño de la pantalla",
+          "value": "15.6"
+        },
+        {
+          "id": "6_model",
+          "name": "Modelo",
+          "value": "250 G10 (9S8U5LA)"
+        },
+        {
+          "id": "7_production_country",
+          "name": "Hecho en",
+          "value": "China"
+        },
+        {
+          "id": "11_detalle_de_la_condicion",
+          "name": "Detalle de la Condición",
+          "value": "NUEVO"
+        },
+        {
+          "id": "2054_cantidad_de_puertos_usb",
+          "name": "Cantidad de puertos USB",
+          "value": "2"
+        },
+        {
+          "id": "2061_caracteristicas",
+          "name": "Características",
+          "value": "Cámara Web,Cuenta con bluetooth,Cuenta con wifi"
+        },
+        {
+          "id": "2081_dimensiones",
+          "name": "Dimensiones",
+          "value": "21.60 x 32.54 x 1.99"
+        },
+        {
+          "id": "2056_capacidad_de_almacenamiento",
+          "name": "Capacidad de almacenamiento",
+          "value": "512 GB"
+        },
+        {
+          "id": "2882_requiere_serialnumber",
+          "name": "Requiere Serial Number",
+          "value": "Si"
+        },
+        {
+          "id": "2064_color",
+          "name": "Color",
+          "value": "GRIS"
+        },
+        {
+          "id": "8_seller_warranty",
+          "name": "Garantía del proveedor",
+          "value": "1 año"
+        },
+        {
+          "id": "2076_cuenta_con_bluetooth",
+          "name": "Cuenta con bluetooth",
+          "value": "Sí"
+        },
+        {
+          "id": "2053_cantidad_de_puertos_hdmi",
+          "name": "Cantidad de puertos HDMI",
+          "value": "1"
+        },
+        {
+          "id": "2126_nucleos_del_procesador",
+          "name": "Núcleos del procesador",
+          "value": "Deca core"
+        },
+        {
+          "id": "2156_sistema_de_sonido",
+          "name": "Sistema de sonido",
+          "value": "Otro"
+        },
+        {
+          "id": "2202_velocidad_de_imagen",
+          "name": "Velocidad de imagen",
+          "value": "75Hz"
+        },
+        {
+          "id": "4_package_content",
+          "name": "Incluye",
+          "value": "LAPTOP. CARGADOR, BOLETA O FACTURA DE COMPRA"
+        },
+        {
+          "id": "2082_disco_duro_secundario",
+          "name": "Disco duro secundario",
+          "value": "No aplica"
+        },
+        {
+          "id": "2060_capacidad_de_la_tarjeta_de_video",
+          "name": "Capacidad de la tarjeta de video",
+          "value": "No aplica"
+        },
+        {
+          "id": "2157_sistema_operativo",
+          "name": "Sistema operativo",
+          "value": "Free dos"
+        },
+        {
+          "id": "2164_tasa_de_refresco_nativa",
+          "name": "Tasa de refresco nativa",
+          "value": "75HZ"
+        },
+        {
+          "id": "2087_duracion_de_la_bateria__hrs_",
+          "name": "Duración de la batería (hrs)",
+          "value": "4"
+        },
+        {
+          "id": "2206_velocidad_de_procesamiento__ghz_",
+          "name": "Velocidad de procesamiento (GHz)",
+          "value": "1,7 GHZ"
+        },
+        {
+          "id": "2120_memoria_ram",
+          "name": "Memoria RAM",
+          "value": "32GB"
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "sourcePricePEN": 2369.0,
+      "retailPricePEN": 2469.0,
+      "seller": "VICMARK",
+      "sourceUrl": "https://www.falabella.com.pe/falabella-pe/product/138989610/Laptop-Acer-Aspire-15-Intel-Core-5-120U-8GB-LPDDR5-RAM-512GB-SSD-15.6-FHD-WIND-11-A15-51P-57AR/138989611",
+      "imageUrl": "https://media.falabella.com/falabellaPE/138989611_01/public",
+      "availability": "out_of_stock",
+      "pricePageVerified": true,
+      "notes": "Live HTML supersedes earlier cached notes. Exact configuration checked against productData attributes and name. Supplier availability, not Nova inventory.",
+      "liveHtmlStatus": "200 ordinary curl",
+      "livePriceVerified": true,
+      "isOutOfStock": true,
+      "prices": [
+        {
+          "label": "",
+          "icons": "",
+          "symbol": "S/ ",
+          "crossed": false,
+          "type": "eventPrice",
+          "price": [
+            "2,369"
+          ],
+          "validity": "31/10/2026"
+        },
+        {
+          "label": "",
+          "icons": "",
+          "symbol": "S/ ",
+          "crossed": true,
+          "type": "normalPrice",
+          "price": [
+            "4,999"
+          ]
+        }
+      ],
+      "isPurchaseable": false,
+      "variantId": "138989611",
+      "sourceImageUrls": [
+        "https://media.falabella.com/falabellaPE/138989611_01/public",
+        "https://media.falabella.com/falabellaPE/138989611_02/public",
+        "https://media.falabella.com/falabellaPE/138989611_03/public",
+        "https://media.falabella.com/falabellaPE/138989611_04/public",
+        "https://media.falabella.com/falabellaPE/138989611_05/public"
+      ],
+      "imageVerified": true,
+      "imageValidation": "HTTP200, opened pixels and confirmed printed model/configuration.",
+      "publicationDecision": "Price withheld: supplier out of stock; quote current availability.",
+      "publishedPricePEN": null,
+      "publishedPriceVerified": false,
+      "publishedImage": "/products/product-16.jpg",
+      "liveProductTitle": "Laptop Acer Aspire 15 Intel Core 5 120U 8GB LPDDR5 RAM 512GB SSD 15.6\" FHD WIND 11 -  A15-51P-57AR",
+      "liveSpecifications": [
+        {
+          "id": "9_product_warranty",
+          "name": "Detalle de la garantía",
+          "value": "Garantía de 1 año por la misma Marca"
+        },
+        {
+          "id": "3092_ancho",
+          "name": "Ancho",
+          "value": "36 cm"
+        },
+        {
+          "id": "3167_procesador_especifico_txt",
+          "name": "Procesador específico",
+          "value": "Core 5-120U 14Va Generación"
+        },
+        {
+          "id": "4415_tipo_de_portatil",
+          "name": "Tipo de Portátil",
+          "value": "Laptop"
+        },
+        {
+          "id": "3294_pantalla_touch",
+          "name": "Pantalla touch",
+          "value": "No"
+        },
+        {
+          "id": "3093_largo",
+          "name": "Largo",
+          "value": "24 cm"
+        },
+        {
+          "id": "10_condicion_del_producto",
+          "name": "Condicion del producto",
+          "value": "Nuevo"
+        },
+        {
+          "id": "3091_Alto",
+          "name": "alto",
+          "value": "1.8 cm"
+        },
+        {
+          "id": "3232_ano_fabricacion",
+          "name": "Año de lanzamiento",
+          "value": "2024"
+        },
+        {
+          "id": "3166_tarjeta_grafica_especifica",
+          "name": "Tarjeta gráfica específica",
+          "value": "Intel® Graphics Integrada"
+        },
+        {
+          "id": "3168_marca_tarjeta_grafica",
+          "name": "Marca tarjeta gráfica",
+          "value": "Intel"
+        },
+        {
+          "id": "3169_marca_procesador",
+          "name": "Procesador",
+          "value": "Intel Core"
+        },
+        {
+          "id": "2159_tamano_dela_pantalla",
+          "name": "Tamaño de la pantalla",
+          "value": "15.6"
+        },
+        {
+          "id": "2054_cantidad_de_puertos_usb",
+          "name": "Cantidad de puertos USB",
+          "value": "2"
+        },
+        {
+          "id": "6_model",
+          "name": "Modelo",
+          "value": "A15-51P-57AR"
+        },
+        {
+          "id": "2148_resolucion_de_pantalla",
+          "name": "Resolución de pantalla",
+          "value": "FHD"
+        },
+        {
+          "id": "11_detalle_de_la_condicion",
+          "name": "Detalle de la Condición",
+          "value": "Producto es abierto para la instalación del Windows"
+        },
+        {
+          "id": "8_seller_warranty",
+          "name": "Garantía del proveedor",
+          "value": "1 año"
+        },
+        {
+          "id": "2069_conectividad_conexion",
+          "name": "Conectividad/conexión",
+          "value": "Bluetooth,Wifi 6,HDMI,USB"
+        },
+        {
+          "id": "2126_nucleos_del_procesador",
+          "name": "Núcleos del procesador",
+          "value": "Deca core"
+        },
+        {
+          "id": "2053_cantidad_de_puertos_hdmi",
+          "name": "Cantidad de puertos HDMI",
+          "value": "1"
+        },
+        {
+          "id": "2063_caracteristicas_de_la_pantalla",
+          "name": "Características de la pantalla",
+          "value": "FHD"
+        },
+        {
+          "id": "2157_sistema_operativo",
+          "name": "Sistema operativo",
+          "value": "Windows 11"
+        },
+        {
+          "id": "2120_memoria_ram",
+          "name": "Memoria RAM",
+          "value": "8GB"
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "sourcePricePEN": 2599.0,
+      "retailPricePEN": 2699.0,
+      "seller": "ZAVITECH",
+      "sourceUrl": "https://www.falabella.com.pe/falabella-pe/product/153535078/laptop-lenovo-ideapad-slim-3-15irh10-intel-core-i5-13420h-8gb-ram-512gb-ssd-15-3-83k100wjlm/153535079",
+      "imageUrl": "https://media.falabella.com/falabellaPE/153535079_01/public",
+      "availability": "online_available",
+      "pricePageVerified": true,
+      "notes": "Live HTML supersedes earlier cached notes. Exact configuration checked against productData attributes and name. Supplier availability, not Nova inventory. Supplier description states WUXGA1920x1200, generic FHD/IPS fields inconsistent; original model83K100WJLM unchanged.",
+      "liveHtmlStatus": "200 ordinary curl",
+      "livePriceVerified": true,
+      "isOutOfStock": false,
+      "prices": [
+        {
+          "label": "",
+          "icons": "",
+          "symbol": "S/ ",
+          "crossed": false,
+          "type": "eventPrice",
+          "price": [
+            "2,599"
+          ],
+          "validity": "31/10/2026"
+        },
+        {
+          "label": "",
+          "icons": "",
+          "symbol": "S/ ",
+          "crossed": true,
+          "type": "normalPrice",
+          "price": [
+            "4,200"
+          ]
+        }
+      ],
+      "isPurchaseable": true,
+      "variantId": "153535079",
+      "sourceImageUrls": [
+        "https://media.falabella.com/falabellaPE/153535079_01/public",
+        "https://media.falabella.com/falabellaPE/153535079_02/public",
+        "https://media.falabella.com/falabellaPE/153535079_03/public",
+        "https://media.falabella.com/falabellaPE/153535079_04/public",
+        "https://media.falabella.com/falabellaPE/153535079_05/public"
+      ],
+      "publishedPricePEN": 2699.0,
+      "publishedPriceVerified": true,
+      "publishedImage": "/products/product-17.jpg",
+      "liveProductTitle": "Laptop Lenovo IdeaPad Slim 3 15IRH10 Intel Core i5-13420H 8GB RAM 512GB SSD 15.3\"  83k100wjlm + mochila",
+      "liveSpecifications": [
+        {
+          "id": "9_product_warranty",
+          "name": "Detalle de la garantía",
+          "value": "OBSERVACION: Si se devolverá el producto se aceptará siempre y cuando se cumplan las siguientes condiciones: Se aceptan devoluciones dentro de los 7 días hábiles de la recepción de su compra, siempre y cuando el producto no haya sido utilizado o presente fallas de fabrica. Si el producto se encuentra en mal estado, incompleto, usado o empaque dañado no se aceptará la devolución.  GARANTIA: Presenta con garantía de 12 meses. Si el producto presenta falla de fábrica, presentar con sus accesorios completos para el diagnóstico. Si el producto presenta negligencias, golpes, uso o manipulaciones indebidas, tensión no idónea o desgaste por su uso normal, NO procede por garantía. Garantizada por la misma marca y recomendada por el proveedor."
+        },
+        {
+          "id": "10_condicion_del_producto",
+          "name": "Condicion del producto",
+          "value": "Nuevo"
+        },
+        {
+          "id": "2063_caracteristicas_de_la_pantalla",
+          "name": "Características de la pantalla",
+          "value": "FHD,IPS"
+        },
+        {
+          "id": "2148_resolucion_de_pantalla",
+          "name": "Resolución de pantalla",
+          "value": "FHD+"
+        },
+        {
+          "id": "2158_sistema_operativo_especifico",
+          "name": "Sistema operativo específico",
+          "value": "Windows 11 Home"
+        },
+        {
+          "id": "3091_Alto",
+          "name": "alto",
+          "value": "1.79"
+        },
+        {
+          "id": "3092_ancho",
+          "name": "Ancho",
+          "value": "34.34"
+        },
+        {
+          "id": "3093_largo",
+          "name": "Largo",
+          "value": "23.95"
+        },
+        {
+          "id": "3094_profundidad",
+          "name": "Profundidad",
+          "value": "23.95"
+        },
+        {
+          "id": "3166_tarjeta_grafica_especifica",
+          "name": "Tarjeta gráfica específica",
+          "value": "Intel UHD Graphics"
+        },
+        {
+          "id": "3167_procesador_especifico_txt",
+          "name": "Procesador específico",
+          "value": "Intel Core i5-13420H"
+        },
+        {
+          "id": "3168_marca_tarjeta_grafica",
+          "name": "Marca tarjeta gráfica",
+          "value": "Intel"
+        },
+        {
+          "id": "3232_ano_fabricacion",
+          "name": "Año de lanzamiento",
+          "value": "-"
+        },
+        {
+          "id": "3294_pantalla_touch",
+          "name": "Pantalla touch",
+          "value": "No"
+        },
+        {
+          "id": "4415_tipo_de_portatil",
+          "name": "Tipo de Portátil",
+          "value": "Laptop"
+        },
+        {
+          "id": "3169_marca_procesador",
+          "name": "Procesador",
+          "value": "Intel Core i5"
+        },
+        {
+          "id": "5132_seller_warranty_in_months",
+          "name": "Garantía del proveedor en meses",
+          "value": "12"
+        },
+        {
+          "id": "2159_tamano_dela_pantalla",
+          "name": "Tamaño de la pantalla",
+          "value": "15.3"
+        },
+        {
+          "id": "6_model",
+          "name": "Modelo",
+          "value": "83k100wjlm"
+        },
+        {
+          "id": "11_detalle_de_la_condicion",
+          "name": "Detalle de la Condición",
+          "value": "PRODUCTO NUEVO SELLADO EN CAJA"
+        },
+        {
+          "id": "2054_cantidad_de_puertos_usb",
+          "name": "Cantidad de puertos USB",
+          "value": "3"
+        },
+        {
+          "id": "2061_caracteristicas",
+          "name": "Características",
+          "value": "Ajuste del brillo,Cuenta con bluetooth"
+        },
+        {
+          "id": "2081_dimensiones",
+          "name": "Dimensiones",
+          "value": "1.79 cm x 23.95 cm x 34.34 cm"
+        },
+        {
+          "id": "7_production_country",
+          "name": "Hecho en",
+          "value": "China"
+        },
+        {
+          "id": "2056_capacidad_de_almacenamiento",
+          "name": "Capacidad de almacenamiento",
+          "value": "512 GB"
+        },
+        {
+          "id": "2064_color",
+          "name": "Color",
+          "value": "Luna Grey"
+        },
+        {
+          "id": "2147_rendimiento",
+          "name": "Rendimiento",
+          "value": "Alto"
+        },
+        {
+          "id": "8_seller_warranty",
+          "name": "Garantía del proveedor",
+          "value": "1 año"
+        },
+        {
+          "id": "2069_conectividad_conexion",
+          "name": "Conectividad/conexión",
+          "value": "Bluetooth,Wifi"
+        },
+        {
+          "id": "2076_cuenta_con_bluetooth",
+          "name": "Cuenta con bluetooth",
+          "value": "Sí"
+        },
+        {
+          "id": "2053_cantidad_de_puertos_hdmi",
+          "name": "Cantidad de puertos HDMI",
+          "value": "1"
+        },
+        {
+          "id": "2126_nucleos_del_procesador",
+          "name": "Núcleos del procesador",
+          "value": "Octa core"
+        },
+        {
+          "id": "4_package_content",
+          "name": "Incluye",
+          "value": "-"
+        },
+        {
+          "id": "2082_disco_duro_secundario",
+          "name": "Disco duro secundario",
+          "value": "No aplica"
+        },
+        {
+          "id": "2157_sistema_operativo",
+          "name": "Sistema operativo",
+          "value": "Windows 11"
+        },
+        {
+          "id": "2087_duracion_de_la_bateria__hrs_",
+          "name": "Duración de la batería (hrs)",
+          "value": "8"
+        },
+        {
+          "id": "2120_memoria_ram",
+          "name": "Memoria RAM",
+          "value": "8GB"
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "sourcePricePEN": 3499.0,
+      "retailPricePEN": 3599.0,
+      "seller": "gorantex peru sac",
+      "sourceUrl": "https://www.falabella.com.pe/falabella-pe/product/125048721/Laptop-Dell-Inspiron-3520-15.6-FHD-IPS%2C-Core-i7-1255U%2C-Ram-16GB%2C-Ssd-512GB%2C-Win-11/125048722",
+      "imageUrl": "https://media.falabella.com/falabellaPE/125048722_01/public",
+      "availability": "online_available",
+      "pricePageVerified": true,
+      "notes": "Live HTML supersedes earlier cached notes. Exact configuration checked against productData attributes and name. Supplier availability, not Nova inventory. URL slug retains old Inspiron name; live title, model, CPU, description and photo all confirm DC15250 i7-1355U.",
+      "liveHtmlStatus": "200 ordinary curl",
+      "livePriceVerified": true,
+      "imageVerified": true,
+      "isOutOfStock": false,
+      "prices": [
+        {
+          "label": "",
+          "icons": "",
+          "symbol": "S/ ",
+          "crossed": false,
+          "type": "eventPrice",
+          "price": [
+            "3,499"
+          ],
+          "validity": "15/11/2026"
+        },
+        {
+          "label": "",
+          "icons": "",
+          "symbol": "S/ ",
+          "crossed": true,
+          "type": "normalPrice",
+          "price": [
+            "3,859"
+          ]
+        }
+      ],
+      "isPurchaseable": true,
+      "variantId": "125048722",
+      "sourceImageUrls": [
+        "https://media.falabella.com/falabellaPE/125048722_01/public",
+        "https://media.falabella.com/falabellaPE/125048722_02/public",
+        "https://media.falabella.com/falabellaPE/125048722_03/public",
+        "https://media.falabella.com/falabellaPE/125048722_04/public",
+        "https://media.falabella.com/falabellaPE/125048722_05/public",
+        "https://media.falabella.com/falabellaPE/125048722_06/public"
+      ],
+      "imageValidation": "HTTP200, opened pixels and confirmed printed model/configuration.",
+      "publishedPricePEN": 3599.0,
+      "publishedPriceVerified": true,
+      "publishedImage": "/products/product-18.jpg",
+      "liveProductTitle": "Laptop Dell 15 DC15250 15.6\" FHD IPS, Core i7-1355U, Ram 16GB, Ssd 512GB, Win 11 Pro",
+      "liveSpecifications": [
+        {
+          "id": "9_product_warranty",
+          "name": "Detalle de la garantía",
+          "value": "Un Año de Garantía del Producto de la marca"
+        },
+        {
+          "id": "10_condicion_del_producto",
+          "name": "Condicion del producto",
+          "value": "Nuevo"
+        },
+        {
+          "id": "2063_caracteristicas_de_la_pantalla",
+          "name": "Características de la pantalla",
+          "value": "FHD,IPS"
+        },
+        {
+          "id": "2069_conectividad_conexion",
+          "name": "Conectividad/conexión",
+          "value": "Bluetooth,HDMI,USB,USB-C,Wifi 6"
+        },
+        {
+          "id": "2148_resolucion_de_pantalla",
+          "name": "Resolución de pantalla",
+          "value": "FHD"
+        },
+        {
+          "id": "2158_sistema_operativo_especifico",
+          "name": "Sistema operativo específico",
+          "value": "Windows 11 Pro"
+        },
+        {
+          "id": "3091_Alto",
+          "name": "alto",
+          "value": "1.99"
+        },
+        {
+          "id": "3092_ancho",
+          "name": "Ancho",
+          "value": "35.90"
+        },
+        {
+          "id": "3093_largo",
+          "name": "Largo",
+          "value": "23.60"
+        },
+        {
+          "id": "3094_profundidad",
+          "name": "Profundidad",
+          "value": "40"
+        },
+        {
+          "id": "3166_tarjeta_grafica_especifica",
+          "name": "Tarjeta gráfica específica",
+          "value": "INTEL UHD GRAPHICS"
+        },
+        {
+          "id": "3167_procesador_especifico_txt",
+          "name": "Procesador específico",
+          "value": "Intel Core i7-1355U - 1.70 / 5.00 GHz"
+        },
+        {
+          "id": "3168_marca_tarjeta_grafica",
+          "name": "Marca tarjeta gráfica",
+          "value": "Integrada"
+        },
+        {
+          "id": "3232_ano_fabricacion",
+          "name": "Año de lanzamiento",
+          "value": "2025"
+        },
+        {
+          "id": "3294_pantalla_touch",
+          "name": "Pantalla touch",
+          "value": "No"
+        },
+        {
+          "id": "4415_tipo_de_portatil",
+          "name": "Tipo de Portátil",
+          "value": "Laptop"
+        },
+        {
+          "id": "3169_marca_procesador",
+          "name": "Procesador",
+          "value": "Intel Core i7"
+        },
+        {
+          "id": "2159_tamano_dela_pantalla",
+          "name": "Tamaño de la pantalla",
+          "value": "15.6"
+        },
+        {
+          "id": "6_model",
+          "name": "Modelo",
+          "value": "Dell 15 DC15250 - 3XHY0"
+        },
+        {
+          "id": "7_production_country",
+          "name": "Hecho en",
+          "value": "Vietnam"
+        },
+        {
+          "id": "11_detalle_de_la_condicion",
+          "name": "Detalle de la Condición",
+          "value": "nuevo caja sellada Garantizado"
+        },
+        {
+          "id": "2054_cantidad_de_puertos_usb",
+          "name": "Cantidad de puertos USB",
+          "value": "3"
+        },
+        {
+          "id": "2061_caracteristicas",
+          "name": "Características",
+          "value": "Cámara Web,Cuenta con bluetooth,Cuenta con wifi,Lector SD/micro SD,RAM expandible"
+        },
+        {
+          "id": "2081_dimensiones",
+          "name": "Dimensiones",
+          "value": "23.60 CM X 35.90 CM X 1.99 CM"
+        },
+        {
+          "id": "2056_capacidad_de_almacenamiento",
+          "name": "Capacidad de almacenamiento",
+          "value": "512 GB"
+        },
+        {
+          "id": "2882_requiere_serialnumber",
+          "name": "Requiere Serial Number",
+          "value": "Si"
+        },
+        {
+          "id": "2064_color",
+          "name": "Color",
+          "value": "silver plata"
+        },
+        {
+          "id": "2147_rendimiento",
+          "name": "Rendimiento",
+          "value": "10"
+        },
+        {
+          "id": "8_seller_warranty",
+          "name": "Garantía del proveedor",
+          "value": "1 año"
+        },
+        {
+          "id": "2076_cuenta_con_bluetooth",
+          "name": "Cuenta con bluetooth",
+          "value": "Sí"
+        },
+        {
+          "id": "2053_cantidad_de_puertos_hdmi",
+          "name": "Cantidad de puertos HDMI",
+          "value": "1"
+        },
+        {
+          "id": "2126_nucleos_del_procesador",
+          "name": "Núcleos del procesador",
+          "value": "Deca core"
+        },
+        {
+          "id": "2156_sistema_de_sonido",
+          "name": "Sistema de sonido",
+          "value": "Otro"
+        },
+        {
+          "id": "2202_velocidad_de_imagen",
+          "name": "Velocidad de imagen",
+          "value": "120Hz"
+        },
+        {
+          "id": "4_package_content",
+          "name": "Incluye",
+          "value": "Laptop, cargador, manuales"
+        },
+        {
+          "id": "2082_disco_duro_secundario",
+          "name": "Disco duro secundario",
+          "value": "No aplica"
+        },
+        {
+          "id": "2060_capacidad_de_la_tarjeta_de_video",
+          "name": "Capacidad de la tarjeta de video",
+          "value": "No aplica"
+        },
+        {
+          "id": "2157_sistema_operativo",
+          "name": "Sistema operativo",
+          "value": "Windows 11"
+        },
+        {
+          "id": "2164_tasa_de_refresco_nativa",
+          "name": "Tasa de refresco nativa",
+          "value": "120Hz"
+        },
+        {
+          "id": "2087_duracion_de_la_bateria__hrs_",
+          "name": "Duración de la batería (hrs)",
+          "value": "6"
+        },
+        {
+          "id": "2206_velocidad_de_procesamiento__ghz_",
+          "name": "Velocidad de procesamiento (GHz)",
+          "value": "1.70 / 5.00 GHZ"
+        },
+        {
+          "id": "2120_memoria_ram",
+          "name": "Memoria RAM",
+          "value": "16GB"
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "sourcePricePEN": 3345.0,
+      "retailPricePEN": 3445.0,
+      "seller": "VICTORIA ILIMITADA",
+      "sourceUrl": "https://www.falabella.com.pe/falabella-pe/product/154116271/laptop-hp-15-fc0276la-amd-ryzen-7-16-gb-1-tb-ssd-15-6-fhd-windows-11-home/154116272",
+      "imageUrl": "https://media.falabella.com/falabellaPE/154116272_01/public",
+      "availability": "online_available",
+      "pricePageVerified": true,
+      "notes": "Live HTML supersedes earlier cached notes. Exact configuration checked against productData attributes and name. Supplier availability, not Nova inventory.",
+      "liveHtmlStatus": "200 ordinary curl",
+      "livePriceVerified": true,
+      "isOutOfStock": false,
+      "prices": [
+        {
+          "label": "",
+          "icons": "",
+          "symbol": "S/ ",
+          "crossed": false,
+          "type": "eventPrice",
+          "price": [
+            "3,345"
+          ],
+          "validity": "31/10/2026"
+        },
+        {
+          "label": "",
+          "icons": "",
+          "symbol": "S/ ",
+          "crossed": true,
+          "type": "normalPrice",
+          "price": [
+            "4,000"
+          ]
+        }
+      ],
+      "isPurchaseable": true,
+      "variantId": "154116272",
+      "sourceImageUrls": [
+        "https://media.falabella.com/falabellaPE/154116272_01/public",
+        "https://media.falabella.com/falabellaPE/154116272_02/public",
+        "https://media.falabella.com/falabellaPE/154116272_03/public",
+        "https://media.falabella.com/falabellaPE/154116272_04/public",
+        "https://media.falabella.com/falabellaPE/154116272_05/public",
+        "https://media.falabella.com/falabellaPE/154116272_06/public"
+      ],
+      "publishedPricePEN": 3445.0,
+      "publishedPriceVerified": true,
+      "publishedImage": "/products/product-19.jpg",
+      "liveProductTitle": "Laptop HP 15-fc0276la, AMD Ryzen 7, 16 GB, 1 TB SSD, 15.6, FHD Windows 11 Home",
+      "liveSpecifications": [
+        {
+          "id": "9_product_warranty",
+          "name": "Detalle de la garantía",
+          "value": "El cliente tiene 7 dias calendario para solicitar la devolución o cambio de producto, siempre y cuando este presente fallas de fabrica, en caso de devolucion , el producto no debe tener señales de uso y debe estar con todo su empaque original en buen estado"
+        },
+        {
+          "id": "10_condicion_del_producto",
+          "name": "Condicion del producto",
+          "value": "Nuevo"
+        },
+        {
+          "id": "2063_caracteristicas_de_la_pantalla",
+          "name": "Características de la pantalla",
+          "value": "FHD,IPS"
+        },
+        {
+          "id": "2148_resolucion_de_pantalla",
+          "name": "Resolución de pantalla",
+          "value": "FHD"
+        },
+        {
+          "id": "2158_sistema_operativo_especifico",
+          "name": "Sistema operativo específico",
+          "value": "Windows 11 Home"
+        },
+        {
+          "id": "3091_Alto",
+          "name": "alto",
+          "value": "1.86 cm"
+        },
+        {
+          "id": "3092_ancho",
+          "name": "Ancho",
+          "value": "35.85 cm"
+        },
+        {
+          "id": "3093_largo",
+          "name": "Largo",
+          "value": "24.2 cm"
+        },
+        {
+          "id": "3094_profundidad",
+          "name": "Profundidad",
+          "value": "24.2 cm"
+        },
+        {
+          "id": "3166_tarjeta_grafica_especifica",
+          "name": "Tarjeta gráfica específica",
+          "value": "AMD Radeon Graphics"
+        },
+        {
+          "id": "3167_procesador_especifico_txt",
+          "name": "Procesador específico",
+          "value": "AMD Ryzen 7"
+        },
+        {
+          "id": "3168_marca_tarjeta_grafica",
+          "name": "Marca tarjeta gráfica",
+          "value": "AMD"
+        },
+        {
+          "id": "3232_ano_fabricacion",
+          "name": "Año de lanzamiento",
+          "value": "2024"
+        },
+        {
+          "id": "3294_pantalla_touch",
+          "name": "Pantalla touch",
+          "value": "No"
+        },
+        {
+          "id": "4415_tipo_de_portatil",
+          "name": "Tipo de Portátil",
+          "value": "Laptop"
+        },
+        {
+          "id": "3169_marca_procesador",
+          "name": "Procesador",
+          "value": "AMD Ryzen 7"
+        },
+        {
+          "id": "2159_tamano_dela_pantalla",
+          "name": "Tamaño de la pantalla",
+          "value": "15.6"
+        },
+        {
+          "id": "6_model",
+          "name": "Modelo",
+          "value": "15-FC0276LA"
+        },
+        {
+          "id": "11_detalle_de_la_condicion",
+          "name": "Detalle de la Condición",
+          "value": "Producto nuevo, abierto para revision."
+        },
+        {
+          "id": "2054_cantidad_de_puertos_usb",
+          "name": "Cantidad de puertos USB",
+          "value": "3"
+        },
+        {
+          "id": "2061_caracteristicas",
+          "name": "Características",
+          "value": "Cámara Web,Cuenta con bluetooth,Cuenta con parlantes integrados,Cuenta con wifi"
+        },
+        {
+          "id": "2081_dimensiones",
+          "name": "Dimensiones",
+          "value": "1.86 cm x 24.2 cm x 35.85 cm"
+        },
+        {
+          "id": "2056_capacidad_de_almacenamiento",
+          "name": "Capacidad de almacenamiento",
+          "value": "1TB"
+        },
+        {
+          "id": "2882_requiere_serialnumber",
+          "name": "Requiere Serial Number",
+          "value": "Si"
+        },
+        {
+          "id": "2064_color",
+          "name": "Color",
+          "value": "gris"
+        },
+        {
+          "id": "2147_rendimiento",
+          "name": "Rendimiento",
+          "value": "alto rendimiento profesional"
+        },
+        {
+          "id": "8_seller_warranty",
+          "name": "Garantía del proveedor",
+          "value": "1 año"
+        },
+        {
+          "id": "2069_conectividad_conexion",
+          "name": "Conectividad/conexión",
+          "value": "Bluetooth,Wifi"
+        },
+        {
+          "id": "2076_cuenta_con_bluetooth",
+          "name": "Cuenta con bluetooth",
+          "value": "Sí"
+        },
+        {
+          "id": "2053_cantidad_de_puertos_hdmi",
+          "name": "Cantidad de puertos HDMI",
+          "value": "1"
+        },
+        {
+          "id": "2126_nucleos_del_procesador",
+          "name": "Núcleos del procesador",
+          "value": "Octa core"
+        },
+        {
+          "id": "2202_velocidad_de_imagen",
+          "name": "Velocidad de imagen",
+          "value": "60Hz"
+        },
+        {
+          "id": "2082_disco_duro_secundario",
+          "name": "Disco duro secundario",
+          "value": "1TB"
+        },
+        {
+          "id": "2157_sistema_operativo",
+          "name": "Sistema operativo",
+          "value": "Windows 11"
+        },
+        {
+          "id": "2164_tasa_de_refresco_nativa",
+          "name": "Tasa de refresco nativa",
+          "value": "60"
+        },
+        {
+          "id": "2087_duracion_de_la_bateria__hrs_",
+          "name": "Duración de la batería (hrs)",
+          "value": "9"
+        },
+        {
+          "id": "2206_velocidad_de_procesamiento__ghz_",
+          "name": "Velocidad de procesamiento (GHz)",
+          "value": "2.0"
+        },
+        {
+          "id": "2120_memoria_ram",
+          "name": "Memoria RAM",
+          "value": "16GB"
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "sourcePricePEN": 3599.0,
+      "retailPricePEN": 3699.0,
+      "seller": "VICMARK",
+      "sourceUrl": "https://www.falabella.com.pe/falabella-pe/product/155946091/laptop-dell-15-intel-core-i7-1355u-16gb-512gb-ssd-15-6-fhd-touch-dell-15-ldc15250-7427/155946092",
+      "imageUrl": "https://media.falabella.com/falabellaPE/155946092_01/public",
+      "availability": "online_available",
+      "pricePageVerified": true,
+      "notes": "Live HTML supersedes earlier cached notes. Exact configuration checked against productData attributes and name. Supplier availability, not Nova inventory.",
+      "liveHtmlStatus": "200 ordinary curl",
+      "livePriceVerified": true,
+      "isOutOfStock": false,
+      "prices": [
+        {
+          "label": "",
+          "icons": "",
+          "symbol": "S/ ",
+          "crossed": false,
+          "type": "eventPrice",
+          "price": [
+            "3,599"
+          ],
+          "validity": "31/10/2026"
+        },
+        {
+          "label": "",
+          "icons": "",
+          "symbol": "S/ ",
+          "crossed": true,
+          "type": "normalPrice",
+          "price": [
+            "3,999"
+          ]
+        }
+      ],
+      "isPurchaseable": true,
+      "variantId": "155946092",
+      "sourceImageUrls": [
+        "https://media.falabella.com/falabellaPE/155946092_01/public",
+        "https://media.falabella.com/falabellaPE/155946092_02/public",
+        "https://media.falabella.com/falabellaPE/155946092_03/public",
+        "https://media.falabella.com/falabellaPE/155946092_04/public",
+        "https://media.falabella.com/falabellaPE/155946092_05/public",
+        "https://media.falabella.com/falabellaPE/155946092_06/public"
+      ],
+      "imageVerified": true,
+      "imageValidation": "HTTP200, opened pixels and confirmed printed model/configuration.",
+      "publishedPricePEN": 3699.0,
+      "publishedPriceVerified": true,
+      "publishedImage": "/products/product-20.webp",
+      "liveProductTitle": "Laptop Dell 15 Intel Core i7-1355U 16GB 512GB SSD 15.6\" FHD Touch Dell 15 LDC15250-7427",
+      "liveSpecifications": [
+        {
+          "id": "9_product_warranty",
+          "name": "Detalle de la garantía",
+          "value": "OBSERVACION: Si se devolverá el producto se aceptará siempre y cuando se cumplan las siguientes condiciones: Se aceptan devoluciones dentro de los 7 días hábiles de la recepción de su compra, siempre y cuando el producto no haya sido utilizado o presente fallas de fabrica. Si el producto se encuentra en mal estado, incompleto, usado o empaque dañado no se aceptará la devolución. GARANTIA: Presenta con garantía de 12 meses. Si el producto presenta falla de fábrica, presentar con sus accesorios completos para el diagnóstico. Si el producto presenta negligencias, golpes, uso o manipulaciones indebidas, tensión no idónea o desgaste por su uso normal, NO procede por garantía. Garantizada por la misma marca y recomendada por el proveedor."
+        },
+        {
+          "id": "10_condicion_del_producto",
+          "name": "Condicion del producto",
+          "value": "Nuevo"
+        },
+        {
+          "id": "2158_sistema_operativo_especifico",
+          "name": "Sistema operativo específico",
+          "value": "Windows 11 Home"
+        },
+        {
+          "id": "3091_Alto",
+          "name": "alto",
+          "value": "1.89 cm"
+        },
+        {
+          "id": "3092_ancho",
+          "name": "Ancho",
+          "value": "35.85 cm"
+        },
+        {
+          "id": "3093_largo",
+          "name": "Largo",
+          "value": "23.56 cm"
+        },
+        {
+          "id": "3166_tarjeta_grafica_especifica",
+          "name": "Tarjeta gráfica específica",
+          "value": "Intel Iris Xe Graphics"
+        },
+        {
+          "id": "3167_procesador_especifico_txt",
+          "name": "Procesador específico",
+          "value": "Intel Core i7-1355U"
+        },
+        {
+          "id": "3168_marca_tarjeta_grafica",
+          "name": "Marca tarjeta gráfica",
+          "value": "Intel"
+        },
+        {
+          "id": "3232_ano_fabricacion",
+          "name": "Año de lanzamiento",
+          "value": "-"
+        },
+        {
+          "id": "3294_pantalla_touch",
+          "name": "Pantalla touch",
+          "value": "Sí"
+        },
+        {
+          "id": "4415_tipo_de_portatil",
+          "name": "Tipo de Portátil",
+          "value": "Laptop"
+        },
+        {
+          "id": "5132_seller_warranty_in_months",
+          "name": "Garantía del proveedor en meses",
+          "value": "12"
+        },
+        {
+          "id": "3169_marca_procesador",
+          "name": "Procesador",
+          "value": "Intel Core i7"
+        },
+        {
+          "id": "2159_tamano_dela_pantalla",
+          "name": "Tamaño de la pantalla",
+          "value": "15.6"
+        },
+        {
+          "id": "6_model",
+          "name": "Modelo",
+          "value": "LDC15250-7427BLK"
+        },
+        {
+          "id": "11_detalle_de_la_condicion",
+          "name": "Detalle de la Condición",
+          "value": "Producto nuevo sellado"
+        },
+        {
+          "id": "2054_cantidad_de_puertos_usb",
+          "name": "Cantidad de puertos USB",
+          "value": "4"
+        },
+        {
+          "id": "2061_caracteristicas",
+          "name": "Características",
+          "value": "Pantalla touch"
+        },
+        {
+          "id": "2148_resolucion_de_pantalla",
+          "name": "Resolución de pantalla",
+          "value": "FHD"
+        },
+        {
+          "id": "2056_capacidad_de_almacenamiento",
+          "name": "Capacidad de almacenamiento",
+          "value": "512 GB"
+        },
+        {
+          "id": "2882_requiere_serialnumber",
+          "name": "Requiere Serial Number",
+          "value": "Si"
+        },
+        {
+          "id": "2064_color",
+          "name": "Color",
+          "value": "Carbon Black"
+        },
+        {
+          "id": "2147_rendimiento",
+          "name": "Rendimiento",
+          "value": "Intel Core i7-1355U"
+        },
+        {
+          "id": "8_seller_warranty",
+          "name": "Garantía del proveedor",
+          "value": "1 año"
+        },
+        {
+          "id": "2069_conectividad_conexion",
+          "name": "Conectividad/conexión",
+          "value": "Bluetooth,Wifi 6"
+        },
+        {
+          "id": "2076_cuenta_con_bluetooth",
+          "name": "Cuenta con bluetooth",
+          "value": "Sí"
+        },
+        {
+          "id": "2053_cantidad_de_puertos_hdmi",
+          "name": "Cantidad de puertos HDMI",
+          "value": "1"
+        },
+        {
+          "id": "2126_nucleos_del_procesador",
+          "name": "Núcleos del procesador",
+          "value": "Deca core"
+        },
+        {
+          "id": "2156_sistema_de_sonido",
+          "name": "Sistema de sonido",
+          "value": "No incluye"
+        },
+        {
+          "id": "2063_caracteristicas_de_la_pantalla",
+          "name": "Características de la pantalla",
+          "value": "FHD,IPS"
+        },
+        {
+          "id": "2202_velocidad_de_imagen",
+          "name": "Velocidad de imagen",
+          "value": "60Hz"
+        },
+        {
+          "id": "2082_disco_duro_secundario",
+          "name": "Disco duro secundario",
+          "value": "512GB"
+        },
+        {
+          "id": "2060_capacidad_de_la_tarjeta_de_video",
+          "name": "Capacidad de la tarjeta de video",
+          "value": "No aplica"
+        },
+        {
+          "id": "2157_sistema_operativo",
+          "name": "Sistema operativo",
+          "value": "Windows 11"
+        },
+        {
+          "id": "2120_memoria_ram",
+          "name": "Memoria RAM",
+          "value": "16GB"
+        }
+      ]
+    }
+  ],
+  "imagePolicy": "Real supplier/manufacturer photos, hosted locally. No AI-generated product images. Lenovo id11 unresolved variant has an explicit text placeholder. Colors/accessories require confirmation."
+}

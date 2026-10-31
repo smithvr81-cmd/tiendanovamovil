@@ -1,4 +1,4 @@
-// Precios referenciales de la selección de provincias revisados el 04/10/2026. Precio final y envío por WhatsApp.
+// Catálogo revisado el 31/10/2026. Precios referenciales: proveedor + S/100; envío aparte.
 export const products = [
   {
     "id": 2026100401,
@@ -6,83 +6,91 @@ export const products = [
     "category": "Celulares",
     "brand": "Xiaomi",
     "condition": "Nuevo",
-    "price": 1200,
+    "price": 1519,
     "oldPrice": null,
     "badge": "Nova · Cotizar",
-    "image": "/redmi-note-14-pro-product.jpg",
+    "image": "/products/redmi-note-14-pro-plus.png",
     "specs": [
       "Pantalla AMOLED de 6.67” hasta 120 Hz",
       "Procesador Snapdragon 7s Gen 3 · 5G",
       "8GB RAM · 256GB · confirma color y accesorios al cotizar"
     ],
-    "stock": true,
+    "stock": null,
     "priceVerified": true,
     "videoSrc": "/videos/redmi-note-14-pro-nova.mp4",
     "youtubeVideoId": "id6qJ9n0vy0",
     "youtubeUrl": "https://youtube.com/shorts/id6qJ9n0vy0",
-    "sourceUrl": "https://www.efe.com.pe/note-14pro-5g-8gb-256gb-black-14pro-black.html",
+    "sourceUrl": "https://www.falabella.com.pe/falabella-pe/product/154573354/celular-xiaomi-redmi-note-14-pro-plus-6-67-pulg-8gb-ram-256gb-xiaomi-hyperos-azul-escarcha/154573355",
     "publishedAt": "2026-10-04T18:00:00-05:00",
     "warrantyMonths": 12,
     "shippingProvider": "Shalom",
-    "priceCheckedAt": "2026-10-15",
-    "priceConfirmedByStore": true
+    "priceCheckedAt": "2026-10-31",
+    "imageSourceUrl": "https://i02.appmifile.com/399_operator_sg/10/03/2025/5247d417292a5de5b12e18330b648b12.png"
   },
   {
     "id": 2026092201,
     "name": "Motorola moto g67 256GB",
-    "price": 1029,
-    "image": "https://prmoto.vteximg.com.br/arquivos/ids/166509/1%20-2-%20-8-.jpg?v=639233771943000000",
+    "price": 949,
+    "image": "/products/product-2026092201.png",
     "specs": [
-      "Pantalla pOLED 6.7”",
+      "Pantalla de 6.8 pulgadas",
       "Cámara principal de 50 MP",
-      "Batería de 5200 mAh"
+      "Batería de 5200 mAh",
+      "4GB RAM física · 256GB"
     ],
-    "sourceUrl": "https://www.motorola.com.pe/moto-g67/p",
+    "sourceUrl": "https://www.falabella.com.pe/falabella-pe/product/21436257",
     "category": "Celulares",
     "brand": "Motorola",
     "condition": "Nuevo",
     "oldPrice": null,
     "badge": "Gama media · Cotizar",
     "stock": null,
-    "priceVerified": true
+    "priceVerified": true,
+    "priceCheckedAt": "2026-10-31",
+    "imageSourceUrl": "https://prmoto.vtexassets.com/arquivos/ids/167571-800-auto?aspect=true&height=auto&v=639274245761730000&width=800"
   },
   {
     "id": 2026092202,
     "name": "Motorola moto g77 256GB",
-    "price": 1149,
-    "image": "https://prmoto.vteximg.com.br/arquivos/ids/166545/1--3---1-.jpg?v=639233775745670000",
+    "price": 1099,
+    "image": "/products/product-2026092202.png",
     "specs": [
-      "Pantalla pOLED 6.7”",
+      "Pantalla de 6.8 pulgadas",
       "Cámara principal de 108 MP",
-      "Batería de 5200 mAh"
+      "Batería de 5200 mAh",
+      "8GB RAM física · 256GB"
     ],
-    "sourceUrl": "https://www.motorola.com.pe/moto-g77/p",
+    "sourceUrl": "https://www.falabella.com.pe/falabella-pe/product/21436258/celular-motorola-g77-8gb-256gb-negro",
     "category": "Celulares",
     "brand": "Motorola",
     "condition": "Nuevo",
     "oldPrice": null,
     "badge": "Gama media · Cotizar",
     "stock": null,
-    "priceVerified": true
+    "priceVerified": true,
+    "priceCheckedAt": "2026-10-31",
+    "imageSourceUrl": "https://prmoto.vtexassets.com/arquivos/ids/167552-800-auto?aspect=true&height=auto&v=639274245097100000&width=800"
   },
   {
     "id": 2026092203,
     "name": "Motorola moto g86 Power 5G 256GB",
-    "price": 1169,
-    "image": "https://prmoto.vteximg.com.br/arquivos/ids/166272/8--3-.jpg?v=639220018801270000",
+    "price": 1089,
+    "image": "/products/product-2026092203.png",
     "specs": [
       "Pantalla pOLED",
       "Batería de larga duración",
       "Conectividad 5G"
     ],
-    "sourceUrl": "https://www.motorola.com.pe/moto-g86-power-5g/p",
+    "sourceUrl": "https://www.falabella.com.pe/falabella-pe/product/157593683/celular-motorola-g86-power-5g-8256gb",
     "category": "Celulares",
     "brand": "Motorola",
     "condition": "Nuevo",
     "oldPrice": null,
     "badge": "Gama media · Cotizar",
     "stock": null,
-    "priceVerified": true
+    "priceVerified": true,
+    "priceCheckedAt": "2026-10-31",
+    "imageSourceUrl": "https://prmoto.vtexassets.com/arquivos/ids/167536-800-auto?aspect=true&height=auto&v=639274244098200000&width=800"
   },
   {
     "id": 1,
@@ -90,17 +98,20 @@ export const products = [
     "category": "Celulares",
     "brand": "Apple",
     "condition": "Nuevo",
-    "price": 2999,
+    "price": 3099.0,
     "oldPrice": null,
     "badge": "Precio especial",
-    "image": "https://media.falabella.com/falabellaPE/20039958_01/w=800,h=800,fit=contain",
+    "image": "/products/product-1.webp",
     "specs": [
       "Pantalla de 6 pulgadas",
       "Almacenamiento de 128GB",
       "Cámara principal de 48 MP"
     ],
     "stock": null,
-    "priceVerified": false
+    "priceVerified": true,
+    "sourceUrl": "https://www.falabella.com.pe/falabella-pe/product/prod17580066/Iphone-15-128Gb/20039955",
+    "priceCheckedAt": "2026-10-31",
+    "imageSourceUrl": "https://media.falabella.com/falabellaPE/20039955_01/public"
   },
   {
     "id": 2,
@@ -108,17 +119,20 @@ export const products = [
     "category": "Celulares",
     "brand": "Apple",
     "condition": "Nuevo",
-    "price": 2599,
+    "price": 2699.0,
     "oldPrice": null,
     "badge": "Oferta",
-    "image": "https://media.falabella.com/falabellaPE/20977277_1/w=800,h=800,fit=contain",
+    "image": "/products/product-2.webp",
     "specs": [
       "Pantalla de 6.1 pulgadas",
       "Almacenamiento de 128GB",
       "Cámara principal de 48 MP"
     ],
     "stock": null,
-    "priceVerified": false
+    "priceVerified": true,
+    "sourceUrl": "https://www.falabella.com.pe/falabella-pe/product/prod18410446/iPhone-16e-128GB/20977276",
+    "priceCheckedAt": "2026-10-31",
+    "imageSourceUrl": "https://media.falabella.com/falabellaPE/20977276_1/public"
   },
   {
     "id": 3,
@@ -126,17 +140,20 @@ export const products = [
     "category": "Celulares",
     "brand": "Apple",
     "condition": "Nuevo",
-    "price": 2999,
+    "price": 3599.0,
     "oldPrice": null,
     "badge": "Recomendado",
-    "image": "https://media.falabella.com/falabellaPE/20687063_01/w=800,h=800,fit=contain",
+    "image": "/products/product-3.jpg",
     "specs": [
       "Chip A18 y conectividad 5G",
       "Pantalla Super Retina XDR de 6.1”",
       "Cámara principal de 48 MP"
     ],
     "stock": null,
-    "priceVerified": false
+    "priceVerified": true,
+    "sourceUrl": "https://www.falabella.com.pe/falabella-pe/product/prod18120095/iPhone-16-128GB/20687062",
+    "priceCheckedAt": "2026-10-31",
+    "imageSourceUrl": "https://media.falabella.com/falabellaPE/20687062_01/public"
   },
   {
     "id": 4,
@@ -144,17 +161,20 @@ export const products = [
     "category": "Celulares",
     "brand": "Apple",
     "condition": "Nuevo",
-    "price": 4099,
+    "price": 4399.0,
     "oldPrice": null,
     "badge": "Nueva generación",
-    "image": "https://media.falabella.com/falabellaPE/21283538_01/w=800,h=800,fit=contain",
+    "image": "/products/product-4.jpg",
     "specs": [
       "Chip A19 y conectividad 5G",
       "Pantalla de 6.3” a 120Hz",
       "Almacenamiento de 256GB"
     ],
     "stock": null,
-    "priceVerified": false
+    "priceVerified": true,
+    "sourceUrl": "https://www.falabella.com.pe/falabella-pe/product/prod18580269/iPhone-17-256GB/21283539",
+    "priceCheckedAt": "2026-10-31",
+    "imageSourceUrl": "https://media.falabella.com/falabellaPE/21283539_01/public"
   },
   {
     "id": 5,
@@ -162,17 +182,20 @@ export const products = [
     "category": "Celulares",
     "brand": "Apple",
     "condition": "Nuevo",
-    "price": 5599,
+    "price": 5599.0,
     "oldPrice": null,
     "badge": "Pro",
-    "image": "https://media.falabella.com/falabellaPE/21283550_01/w=800,h=800,fit=contain",
+    "image": "/products/product-5.webp",
     "specs": [
       "Pantalla de 6.3 pulgadas",
       "Almacenamiento de 256GB",
       "Cámaras de 48 MP y 18 MP"
     ],
     "stock": null,
-    "priceVerified": false
+    "priceVerified": true,
+    "sourceUrl": "https://www.falabella.com.pe/falabella-pe/product/prod18580271/iPhone-17-Pro-256GB/21283548",
+    "priceCheckedAt": "2026-10-31",
+    "imageSourceUrl": "https://media.falabella.com/falabellaPE/21283548_01/public"
   },
   {
     "id": 6,
@@ -180,35 +203,41 @@ export const products = [
     "category": "Celulares",
     "brand": "Apple",
     "condition": "Nuevo",
-    "price": 6099,
+    "price": 6399.0,
     "oldPrice": null,
     "badge": "Destacado",
-    "image": "https://media.falabella.com/falabellaPE/21283554_01/w=800,h=800,fit=contain",
+    "image": "/products/product-6.jpg",
     "specs": [
       "Chip A19 Pro",
       "Pantalla de 6.9 pulgadas",
       "Almacenamiento de 256GB"
     ],
     "stock": null,
-    "priceVerified": false
+    "priceVerified": true,
+    "sourceUrl": "https://www.falabella.com.pe/falabella-pe/product/prod18580273/iPhone-17-Pro-Max-256GB/21283556",
+    "priceCheckedAt": "2026-10-31",
+    "imageSourceUrl": "https://media.falabella.com/falabellaPE/21283556_01/public"
   },
   {
     "id": 7,
-    "name": "iPad 11” con chip A16 Wi-Fi",
+    "name": "iPad 11” A16 Wi-Fi 128GB",
     "category": "Accesorios",
     "brand": "Apple",
     "condition": "Nuevo",
-    "price": 1699,
+    "price": 2099.0,
     "oldPrice": null,
     "badge": "Tablet",
-    "image": "https://media.falabella.com/falabellaPE/21014911_1/w=800,h=800,fit=contain",
+    "image": "/products/product-7.webp",
     "specs": [
       "Pantalla de 11 pulgadas",
-      "Chip A16 y sistema iPadOS",
+      "Chip A16 · 128GB · Wi-Fi · iPadOS",
       "Cámara principal de 12 MP"
     ],
     "stock": null,
-    "priceVerified": false
+    "priceVerified": true,
+    "sourceUrl": "https://www.falabella.com.pe/falabella-pe/product/prod18440041/iPad-Apple-11-Chip-A16-Wi-Fi/21014911",
+    "priceCheckedAt": "2026-10-31",
+    "imageSourceUrl": "https://media.falabella.com/falabellaPE/21014911_1/public"
   },
   {
     "id": 8,
@@ -216,17 +245,20 @@ export const products = [
     "category": "Laptops",
     "brand": "HP",
     "condition": "Nuevo",
-    "price": 1950,
+    "price": null,
     "oldPrice": null,
     "badge": "Económica",
-    "image": "https://media.falabella.com/falabellaPE/144009752_01/w=800,h=800,fit=contain",
+    "image": "/products/hp-255-g10-ryzen3.webp",
     "specs": [
       "AMD Ryzen 3 7320U",
       "8GB RAM · SSD 256GB",
       "Pantalla 15.6” HD"
     ],
     "stock": null,
-    "priceVerified": false
+    "priceVerified": false,
+    "imageSourceUrl": "https://media.falabella.com/falabellaPE/144009752_01/w=800,h=800,fit=contain",
+    "priceCheckedAt": "2026-10-31",
+    "sourceUrl": "https://www.falabella.com.pe/falabella-pe/product/144009751/LAPTOP-HP-255-G10-RYZEN-3-7320U-RAM-16GB-SSD-256GB-15.6-HD-Windows-11-PRO-./144009752"
   },
   {
     "id": 9,
@@ -234,17 +266,20 @@ export const products = [
     "category": "Laptops",
     "brand": "Lenovo",
     "condition": "Nuevo",
-    "price": 2599,
+    "price": 2850.0,
     "oldPrice": null,
     "badge": "Oficina",
-    "image": "https://media.falabella.com/falabellaPE/136298211_01/w=800,h=800,fit=contain",
+    "image": "/products/product-9.webp",
     "specs": [
       "AMD Ryzen 5 7520U",
       "16GB RAM · SSD 512GB",
       "Pantalla 15.6” FHD · Windows 11"
     ],
     "stock": null,
-    "priceVerified": false
+    "priceVerified": true,
+    "priceCheckedAt": "2026-10-31",
+    "sourceUrl": "https://www.falabella.com.pe/falabella-pe/product/136298210/Laptop-LENOVO-V15-G4-AMN-Ryzen-5-7520U-Pantalla-15.6-FHD-16GB-512GB-Windows-11/136298211",
+    "imageSourceUrl": "https://media.falabella.com/falabellaPE/136298211_01/public"
   },
   {
     "id": 10,
@@ -252,17 +287,20 @@ export const products = [
     "category": "Laptops",
     "brand": "ASUS",
     "condition": "Nuevo",
-    "price": 3139,
+    "price": 3139.0,
     "oldPrice": null,
     "badge": "Multitarea",
-    "image": "https://media.falabella.com/falabellaPE/153350725_01/w=800,h=800,fit=contain",
+    "image": "/products/product-10.webp",
     "specs": [
       "Intel Core 5 120U",
       "16GB RAM · SSD 512GB",
       "Pantalla 15.6” FHD"
     ],
     "stock": null,
-    "priceVerified": false
+    "priceVerified": true,
+    "priceCheckedAt": "2026-10-31",
+    "sourceUrl": "https://www.falabella.com.pe/falabella-pe/product/153350724/laptop-asus-vivobook-15-intel-core-5-120u-x1504va-90nb13y1-m02ea0-ram-16gb-ddr4-ssd-512gb-15-6/153350725",
+    "imageSourceUrl": "https://media.falabella.com/falabellaPE/153350725_01/public"
   },
   {
     "id": 11,
@@ -270,17 +308,19 @@ export const products = [
     "category": "Laptops",
     "brand": "Lenovo",
     "condition": "Nuevo",
-    "price": 2369,
+    "price": null,
     "oldPrice": null,
     "badge": "Estudio y oficina",
-    "image": "https://media.falabella.com/falabellaPE/154903294_01/w=800,h=800,fit=contain",
+    "image": "/products/photo-pending.svg",
     "specs": [
       "Intel Core i5-13420H",
       "8GB RAM · SSD 512GB",
       "Pantalla 15.6” FHD"
     ],
     "stock": null,
-    "priceVerified": false
+    "priceVerified": false,
+    "priceCheckedAt": "2026-10-31",
+    "sourceUrl": "https://www.falabella.com.pe/falabella-pe/product/154903293/laptop-lenovo-intel-core-i5-13420h-ram-8gb-ssd-512gb-15-6-fhd-grey/154903294"
   },
   {
     "id": 12,
@@ -288,17 +328,20 @@ export const products = [
     "category": "Laptops",
     "brand": "Acer",
     "condition": "Nuevo",
-    "price": 3099,
+    "price": null,
     "oldPrice": null,
     "badge": "Alto rendimiento",
-    "image": "https://media.falabella.com/falabellaPE/883746914_01/w=800,h=800,fit=contain",
+    "image": "/products/product-12.jpg",
     "specs": [
       "Intel Core i7-13620H",
       "16GB RAM · SSD 512GB",
       "Pantalla 15.6” FHD IPS"
     ],
     "stock": null,
-    "priceVerified": false
+    "priceVerified": false,
+    "priceCheckedAt": "2026-10-31",
+    "sourceUrl": "https://www.falabella.com.pe/falabella-pe/product/883746914/Laptop-Aspire-Lite-Intel-Core-i7-13620H-16GB-512-GB-15.6-FHD/883746914",
+    "imageSourceUrl": "https://media.falabella.com/falabellaPE/883746914_01/public"
   },
   {
     "id": 13,
@@ -306,17 +349,20 @@ export const products = [
     "category": "Laptops",
     "brand": "Acer",
     "condition": "Nuevo",
-    "price": 2899,
+    "price": null,
     "oldPrice": null,
     "badge": "Profesional",
-    "image": "https://media.falabella.com/falabellaPE/883668657_1/w=800,h=800,fit=contain",
+    "image": "/products/product-13.webp",
     "specs": [
       "Intel Core Ultra 7 155U",
       "16GB RAM · SSD 512GB",
       "Pantalla WUXGA IPS"
     ],
     "stock": null,
-    "priceVerified": false
+    "priceVerified": false,
+    "priceCheckedAt": "2026-10-31",
+    "sourceUrl": "https://www.falabella.com.pe/falabella-pe/product/883668657/Laptop-Acer-Aspire-Lite-Intel-Core-Ultra-7-Processor-155u-16-Gb-512-Gb-Wuxga-(1920-X-1200)/883668657",
+    "imageSourceUrl": "https://media.falabella.com/falabellaPE/883668657_1/public"
   },
   {
     "id": 14,
@@ -324,17 +370,20 @@ export const products = [
     "category": "Laptops",
     "brand": "HP",
     "condition": "Nuevo",
-    "price": 2599,
+    "price": 2789.0,
     "oldPrice": null,
     "badge": "Recomendado",
-    "image": "https://media.falabella.com/falabellaPE/150682492_01/w=800,h=800,fit=contain",
+    "image": "/products/product-14.webp",
     "specs": [
       "Intel Core 5 120U",
       "16GB RAM · SSD 512GB",
       "Pantalla 15.6 pulgadas"
     ],
     "stock": null,
-    "priceVerified": false
+    "priceVerified": true,
+    "priceCheckedAt": "2026-10-31",
+    "sourceUrl": "https://www.falabella.com.pe/falabella-pe/product/150682491/laptop-hp-15-fd0260la-intel-core-5-120u-16gb-ram-512gb-ssd-15-6-b9tx9la",
+    "imageSourceUrl": "https://media.falabella.com/falabellaPE/150682492_01/public"
   },
   {
     "id": 15,
@@ -342,17 +391,20 @@ export const products = [
     "category": "Laptops",
     "brand": "HP",
     "condition": "Nuevo",
-    "price": 3550,
+    "price": 3579.0,
     "oldPrice": null,
     "badge": "Productividad",
-    "image": "https://media.falabella.com/falabellaPE/153698403_01/w=800,h=800,fit=contain",
+    "image": "/products/product-15.jpg",
     "specs": [
       "Intel Core i7-1355U",
       "32GB RAM · SSD 512GB",
       "Pantalla 15.6” HD"
     ],
     "stock": null,
-    "priceVerified": false
+    "priceVerified": true,
+    "priceCheckedAt": "2026-10-31",
+    "sourceUrl": "https://www.falabella.com.pe/falabella-pe/product/153698402/laptop-hp-intel-core-i7-1355u-ram-32gb-ssd-512gb-250-g10-13va-gen-15-6-hd/153698403",
+    "imageSourceUrl": "https://media.falabella.com/falabellaPE/153698403_01/public"
   },
   {
     "id": 16,
@@ -360,17 +412,20 @@ export const products = [
     "category": "Laptops",
     "brand": "Acer",
     "condition": "Nuevo",
-    "price": 2469,
+    "price": null,
     "oldPrice": null,
     "badge": "Uso diario",
-    "image": "https://media.falabella.com/falabellaPE/138989611_01/w=800,h=800,fit=contain",
+    "image": "/products/product-16.jpg",
     "specs": [
       "Intel Core 5 120U",
       "8GB RAM · SSD 512GB",
       "Pantalla 15.6” FHD · Windows 11"
     ],
     "stock": null,
-    "priceVerified": false
+    "priceVerified": false,
+    "priceCheckedAt": "2026-10-31",
+    "sourceUrl": "https://www.falabella.com.pe/falabella-pe/product/138989610/Laptop-Acer-Aspire-15-Intel-Core-5-120U-8GB-LPDDR5-RAM-512GB-SSD-15.6-FHD-WIND-11-A15-51P-57AR/138989611",
+    "imageSourceUrl": "https://media.falabella.com/falabellaPE/138989611_01/public"
   },
   {
     "id": 17,
@@ -378,17 +433,20 @@ export const products = [
     "category": "Laptops",
     "brand": "Lenovo",
     "condition": "Nuevo",
-    "price": 2598,
+    "price": 2699.0,
     "oldPrice": null,
     "badge": "Incluye mochila",
-    "image": "https://media.falabella.com/falabellaPE/153535079_01/w=800,h=800,fit=contain",
+    "image": "/products/product-17.jpg",
     "specs": [
       "Intel Core i5-13420H",
       "8GB RAM · SSD 512GB",
       "Pantalla 15.3” FHD IPS"
     ],
     "stock": null,
-    "priceVerified": false
+    "priceVerified": true,
+    "priceCheckedAt": "2026-10-31",
+    "sourceUrl": "https://www.falabella.com.pe/falabella-pe/product/153535078/laptop-lenovo-ideapad-slim-3-15irh10-intel-core-i5-13420h-8gb-ram-512gb-ssd-15-3-83k100wjlm/153535079",
+    "imageSourceUrl": "https://media.falabella.com/falabellaPE/153535079_01/public"
   },
   {
     "id": 18,
@@ -396,17 +454,20 @@ export const products = [
     "category": "Laptops",
     "brand": "Dell",
     "condition": "Nuevo",
-    "price": 3449,
+    "price": 3599.0,
     "oldPrice": null,
     "badge": "Empresarial",
-    "image": "https://media.falabella.com/falabellaPE/123780095_01/w=800,h=800,fit=contain",
+    "image": "/products/product-18.jpg",
     "specs": [
       "Intel Core i7-1355U",
       "16GB RAM · SSD 512GB",
       "Pantalla 15.6” FHD IPS · Windows 11"
     ],
     "stock": null,
-    "priceVerified": false
+    "priceVerified": true,
+    "imageSourceUrl": "https://media.falabella.com/falabellaPE/125048722_01/public",
+    "priceCheckedAt": "2026-10-31",
+    "sourceUrl": "https://www.falabella.com.pe/falabella-pe/product/125048721/Laptop-Dell-Inspiron-3520-15.6-FHD-IPS%2C-Core-i7-1255U%2C-Ram-16GB%2C-Ssd-512GB%2C-Win-11/125048722"
   },
   {
     "id": 19,
@@ -414,17 +475,20 @@ export const products = [
     "category": "Laptops",
     "brand": "HP",
     "condition": "Nuevo",
-    "price": 3445,
+    "price": 3445.0,
     "oldPrice": null,
     "badge": "Gran capacidad",
-    "image": "https://media.falabella.com/falabellaPE/154116272_01/w=800,h=800,fit=contain",
+    "image": "/products/product-19.jpg",
     "specs": [
       "AMD Ryzen 7",
       "16GB RAM · SSD 1TB",
       "Pantalla 15.6” FHD · Windows 11"
     ],
     "stock": null,
-    "priceVerified": false
+    "priceVerified": true,
+    "priceCheckedAt": "2026-10-31",
+    "sourceUrl": "https://www.falabella.com.pe/falabella-pe/product/154116271/laptop-hp-15-fc0276la-amd-ryzen-7-16-gb-1-tb-ssd-15-6-fhd-windows-11-home/154116272",
+    "imageSourceUrl": "https://media.falabella.com/falabellaPE/154116272_01/public"
   },
   {
     "id": 20,
@@ -432,17 +496,20 @@ export const products = [
     "category": "Laptops",
     "brand": "Dell",
     "condition": "Nuevo",
-    "price": 3699,
+    "price": 3699.0,
     "oldPrice": null,
     "badge": "Pantalla táctil",
-    "image": "https://media.falabella.com/falabellaPE/155946143_01/w=800,h=800,fit=contain",
+    "image": "/products/product-20.webp",
     "specs": [
       "Intel Core i7-1355U",
       "16GB RAM · SSD 512GB",
       "Pantalla 15.6” FHD Touch"
     ],
     "stock": null,
-    "priceVerified": false
+    "priceVerified": true,
+    "priceCheckedAt": "2026-10-31",
+    "sourceUrl": "https://www.falabella.com.pe/falabella-pe/product/155946091/laptop-dell-15-intel-core-i7-1355u-16gb-512gb-ssd-15-6-fhd-touch-dell-15-ldc15250-7427/155946092",
+    "imageSourceUrl": "https://media.falabella.com/falabellaPE/155946092_01/public"
   },
   {
     "id": 2026081701,
@@ -450,24 +517,25 @@ export const products = [
     "category": "Celulares",
     "brand": "HONOR",
     "condition": "Nuevo",
-    "price": 1350,
+    "price": null,
     "oldPrice": null,
     "badge": "Gama media · Cotizar",
-    "image": "https://media.falabella.com/falabellaPE/144040576_04/w%3D1500%2Ch%3D1500%2Cfit%3Dcover",
+    "image": "/products/product-2026081701.jpg",
     "specs": [
       "Pantalla AMOLED 6.7” a 120Hz",
       "MediaTek Dimensity 7025-Ultra · 12GB RAM · 256GB",
       "Cámara principal 108MP · batería 5230mAh · 5G"
     ],
-    "stock": true,
+    "stock": null,
     "youtubeVideoId": "cJbb1VciAKg",
     "youtubeUrl": "https://youtube.com/shorts/cJbb1VciAKg",
     "sourceUrl": "https://www.metro.pe/smartphone-honor-400-lite-12gb-256gb-marrs-green-1040508/p",
     "publishedAt": "2026-08-17T19:43:00+00:00",
-    "priceVerified": true,
+    "priceVerified": false,
     "warrantyMonths": 12,
     "shippingProvider": "Shalom",
-    "priceCheckedAt": "2026-10-14"
+    "priceCheckedAt": "2026-10-31",
+    "imageSourceUrl": "https://metroio.vtexassets.com/arquivos/ids/609051-800-auto?aspect=true&height=auto&v=638948614407430000&width=800"
   },
   {
     "id": 2026091201,
@@ -475,10 +543,10 @@ export const products = [
     "category": "Celulares",
     "brand": "Apple",
     "condition": "Nuevo",
-    "price": 3804.05,
+    "price": 4189,
     "oldPrice": null,
     "badge": "Nuevo",
-    "image": "https://f.fcdn.app/imgs/1ca824/www.alemaniacell.com/acelpy/1d03/original/catalogo/27939_27939_3/1500-1500/iphone-air-256gb-sky-blue-mg1d4ll-a-iphone-air-256gb-sky-blue-mg1d4ll-a.jpg",
+    "image": "/products/product-2026091201.png",
     "specs": [
       "Pantalla Super Retina XDR OLED de 6.5” con ProMotion hasta 120Hz",
       "Chip A19 Pro · 256GB · 5G · eSIM",
@@ -487,9 +555,11 @@ export const products = [
     "stock": null,
     "youtubeVideoId": "-GVgB0YiNMY",
     "youtubeUrl": "https://www.youtube.com/shorts/-GVgB0YiNMY",
-    "sourceUrl": "https://www.mercadolibre.com.pe/iphone-air-256gb-apple--negro/up/MPEU3910127316",
+    "sourceUrl": "https://www.coolbox.pe/iphone-air-5g-256gb-8gb-ram-a19-pro-esim-cloud-white-ps33430472/p",
     "publishedAt": "2026-09-11T20:28:01-05:00",
-    "priceVerified": false
+    "priceVerified": true,
+    "priceCheckedAt": "2026-10-31",
+    "imageSourceUrl": "https://coolboxpe.vtexassets.com/arquivos/ids/583729/358.png?v=639270055983670000"
   },
   {
     "id": 2026091202,
@@ -500,13 +570,13 @@ export const products = [
     "price": 1789,
     "oldPrice": null,
     "badge": "Gama media · Cotizar",
-    "image": "https://media.falabella.com/falabellaPE/128304459_01/public",
+    "image": "/products/product-2026091202.webp",
     "specs": [
       "Pantalla CrystalRes AMOLED 6.67” 1.5K a 120Hz",
       "Dimensity 8400-Ultra · 12GB RAM · 512GB UFS 4.0",
       "Cámara principal 50MP con OIS · batería 6000mAh · carga 90W · IP68"
     ],
-    "stock": true,
+    "stock": null,
     "youtubeVideoId": "4y-vnP8lg0s",
     "youtubeUrl": "https://www.youtube.com/shorts/4y-vnP8lg0s",
     "sourceUrl": "https://movilpro.com.pe/poco-x7-pro-negro-12gb-ram-512gb-rom",
@@ -514,7 +584,8 @@ export const products = [
     "priceVerified": true,
     "warrantyMonths": 12,
     "shippingProvider": "Shalom",
-    "priceCheckedAt": "2026-10-04"
+    "priceCheckedAt": "2026-10-31",
+    "imageSourceUrl": "https://movilpro.com.pe/products/images/poco-x7-pro-negro-movilpro-1743892451811.webp?v=2"
   },
   {
     "id": 2026091501,
@@ -522,10 +593,10 @@ export const products = [
     "category": "Celulares",
     "brand": "Vivo",
     "condition": "Nuevo",
-    "price": 2958.47,
+    "price": null,
     "oldPrice": null,
     "badge": "Visto en YouTube",
-    "image": "/vivo-x300-fe-product.jpg",
+    "image": "/products/product-2026091501.jpg",
     "specs": [
       "Pantalla compacta de 6.31 pulgadas",
       "Snapdragon 8 Gen 5 · 12GB RAM · 256GB",
@@ -536,6 +607,8 @@ export const products = [
     "youtubeUrl": "https://www.youtube.com/shorts/8dfMEdUNa9M",
     "sourceUrl": "https://www.vivo.com/in/products/x300-fe",
     "publishedAt": "2026-09-15T01:56:54+00:00",
-    "priceVerified": false
+    "priceVerified": false,
+    "priceCheckedAt": "2026-10-31",
+    "imageSourceUrl": "https://in-exstatic-vivofs.vivo.com/gdHFRinHEMrj3yPG/Picture_library/1776841080309/zip/img/pc1.jpg"
   }
 ];

@@ -4,7 +4,7 @@ import { products } from '../../../data/products';
 const WHATSAPP = '51935748390';
 
 function currency(value) {
-  return new Intl.NumberFormat('es-PE', { style: 'currency', currency: 'PEN', maximumFractionDigits: 0 }).format(value);
+  return new Intl.NumberFormat('es-PE', { style: 'currency', currency: 'PEN', minimumFractionDigits: 0, maximumFractionDigits: 2 }).format(value);
 }
 
 export async function generateMetadata({ params }) {
@@ -46,6 +46,7 @@ export default async function ProductPage({ params }) {
 
         <div className="productPrice">
           {product.priceVerified ? <strong>{currency(product.price)}</strong> : <strong>Consultar precio</strong>}
+          {product.priceVerified && product.priceCheckedAt && <small>Precio revisado el {product.priceCheckedAt.split('-').reverse().join('/')}. Envío aparte.</small>}
           <p className="priceNotice">{product.priceVerified ? 'Precio referencial del equipo.' : 'Solicita una cotización actualizada.'} Confirma stock, color, costo de envío y condiciones antes de pagar.</p>
         </div>
 
