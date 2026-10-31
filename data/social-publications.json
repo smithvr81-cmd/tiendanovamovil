@@ -6,7 +6,7 @@
   "posts": {
     "1Zu6z5wIuv-FIUjERz-OM8z2D57uY-VUo": {
       "name": "ZTE_Nubia_Focus2_Beneficios_20261022110643.mp4",
-      "status": "processing",
+      "status": "completed",
       "request_id": "8c34336198ee434daf901163b6d8f021",
       "job_id": "ec16f62c9adc4da699c030450dbddc5b",
       "requested_platforms": [
@@ -18,34 +18,52 @@
       "published_platforms": [
         "youtube",
         "facebook",
-        "instagram"
+        "instagram",
+        "tiktok"
       ],
       "results": [
         {
           "platform": "youtube",
           "status": "completed",
           "success": true,
-          "url": "https://www.youtube.com/watch?v=0lm1tHEbG5M"
+          "url": "https://www.youtube.com/watch?v=0lm1tHEbG5M",
+          "platform_post_id": "0lm1tHEbG5M",
+          "upload_timestamp": "2026-10-31T16:18:43.075Z",
+          "error_message": null,
+          "error_code": null
         },
         {
           "platform": "facebook",
           "status": "completed",
           "success": true,
-          "url": "https://www.facebook.com/reel/1687821616018187"
+          "url": "https://www.facebook.com/reel/1687821616018187",
+          "platform_post_id": "1687821616018187",
+          "upload_timestamp": "2026-10-31T16:18:54.530Z",
+          "error_message": null,
+          "error_code": null
         },
         {
           "platform": "instagram",
           "status": "completed",
           "success": true,
-          "url": "https://www.instagram.com/reel/DfKkcUsjYRe/"
+          "url": "https://www.instagram.com/reel/DfKkcUsjYRe/",
+          "platform_post_id": "18133451485684430",
+          "upload_timestamp": "2026-10-31T16:19:17.405Z",
+          "error_message": null,
+          "error_code": null
         },
         {
           "platform": "tiktok",
-          "status": "processing",
-          "success": false,
-          "url": null
+          "status": "completed",
+          "success": true,
+          "url": "https://www.tiktok.com/@tiendanovamovil1/video/7702867170128088341",
+          "platform_post_id": "7702867170128088341",
+          "upload_timestamp": "2026-10-31T16:21:55.780Z",
+          "error_message": null,
+          "error_code": null
         }
-      ]
+      ],
+      "last_update": "2026-10-31T16:21:55.780Z"
     }
   },
   "automation": {
