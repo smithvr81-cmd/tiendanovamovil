@@ -130,17 +130,63 @@
     "1poun0zNh6WJkQpmZk48Xg2dOzRo0ypE2": {
       "name": "ZTE_Nubia_Focus2_Compra_Shalom_20261022110705.mp4",
       "drive_id": "1poun0zNh6WJkQpmZk48Xg2dOzRo0ypE2",
-      "status": "queued",
+      "status": "completed",
       "requested_platforms": [
         "youtube",
         "facebook",
         "instagram",
         "tiktok"
       ],
-      "published_platforms": [],
-      "results": [],
+      "published_platforms": [
+        "youtube",
+        "facebook",
+        "tiktok",
+        "instagram"
+      ],
+      "results": [
+        {
+          "platform": "youtube",
+          "status": "completed",
+          "success": true,
+          "url": "https://www.youtube.com/watch?v=Nq83mxIziPk",
+          "platform_post_id": "Nq83mxIziPk",
+          "upload_timestamp": "2026-11-02T00:25:49.776Z",
+          "error_message": null,
+          "error_code": null
+        },
+        {
+          "platform": "facebook",
+          "status": "completed",
+          "success": true,
+          "url": "https://www.facebook.com/reel/1925654735063456",
+          "platform_post_id": "1925654735063456",
+          "upload_timestamp": "2026-11-02T00:25:59.301Z",
+          "error_message": null,
+          "error_code": null
+        },
+        {
+          "platform": "tiktok",
+          "status": "completed",
+          "success": true,
+          "url": "https://www.tiktok.com/@tiendanovamovil1/video/7703363733845937415",
+          "platform_post_id": "7703363733845937415",
+          "upload_timestamp": "2026-11-02T00:26:29.999Z",
+          "error_message": null,
+          "error_code": null
+        },
+        {
+          "platform": "instagram",
+          "status": "completed",
+          "success": true,
+          "url": "https://www.instagram.com/reel/DfOA-8dDXtX/",
+          "platform_post_id": "18122736283984924",
+          "upload_timestamp": "2026-11-02T00:26:33.063Z",
+          "error_message": null,
+          "error_code": null
+        }
+      ],
       "submitted_at": "2026-11-02T00:25:31.931Z",
-      "last_update": "2026-11-02T00:25:49.052Z",
+      "last_update": "2026-11-02T00:26:47.831Z",
       "review": {
         "visual": "Reviewed frames across full 10-second video; no contact number displayed.",
         "audio": "Audio transcript unavailable.",
