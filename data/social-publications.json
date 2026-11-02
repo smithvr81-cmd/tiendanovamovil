@@ -130,7 +130,7 @@
     "1poun0zNh6WJkQpmZk48Xg2dOzRo0ypE2": {
       "name": "ZTE_Nubia_Focus2_Compra_Shalom_20261022110705.mp4",
       "drive_id": "1poun0zNh6WJkQpmZk48Xg2dOzRo0ypE2",
-      "status": "submitting",
+      "status": "queued",
       "requested_platforms": [
         "youtube",
         "facebook",
@@ -140,7 +140,7 @@
       "published_platforms": [],
       "results": [],
       "submitted_at": "2026-11-02T00:25:31.931Z",
-      "last_update": "2026-11-02T00:25:31.931Z",
+      "last_update": "2026-11-02T00:25:49.052Z",
       "review": {
         "visual": "Reviewed frames across full 10-second video; no contact number displayed.",
         "audio": "Audio transcript unavailable.",
@@ -152,7 +152,9 @@
         "facebook": "PUBLISHED",
         "instagram": "REELS"
       },
-      "ai_generated": true
+      "ai_generated": true,
+      "request_id": "bf9918051be94972b062c4d6de7d163b",
+      "job_id": "dafdfd2dd08641649df5d87d8e04b9cd"
     }
   },
   "automation": {
