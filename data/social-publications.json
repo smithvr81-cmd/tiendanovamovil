@@ -267,7 +267,7 @@
     "1vtIaXdFQaCXnL5YZIVdftEg-IOWSkCvN": {
       "name": "ZTE_Nubia_Focus2_Promocion_20261022110630.mp4",
       "drive_id": "1vtIaXdFQaCXnL5YZIVdftEg-IOWSkCvN",
-      "status": "submitting",
+      "status": "queued",
       "requested_platforms": [
         "youtube",
         "facebook",
@@ -277,7 +277,7 @@
       "published_platforms": [],
       "results": [],
       "submitted_at": "2026-11-03T00:19:20.420Z",
-      "last_update": "2026-11-03T00:19:20.420Z",
+      "last_update": "2026-11-03T00:19:32.215Z",
       "review": {
         "visual": "Frames reviewed across 10-second video; identifiable ZTE Nubia Focus 2 promotion; no contact number displayed.",
         "audio": "Audio transcript unavailable.",
@@ -289,7 +289,9 @@
         "facebook": "PUBLISHED",
         "instagram": "REELS"
       },
-      "ai_generated": true
+      "ai_generated": true,
+      "request_id": "d3d12a805ac949e88397748d58cf76fc",
+      "job_id": "66f8630df43f4c4c87800b701ac1e373"
     }
   },
   "automation": {
