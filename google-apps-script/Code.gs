@@ -37,6 +37,7 @@ function doPost(e) {
   let locked = false;
   try {
     const data = JSON.parse(e.postData.contents || '{}');
+    if (data.source === 'reclamaciones') return saveComplaint(data);
     const sheet = SpreadsheetApp.openById(SPREADSHEET_ID).getSheetByName(SHEET_NAME);
 
     if (!sheet) {
@@ -105,7 +106,7 @@ function doPost(e) {
 }
 
 function doGet() {
-  return ContentService.createTextOutput(JSON.stringify({ ok: true, service: 'Tiendanovamovil Leads' }))
+  return ContentService.createTextOutput(JSON.stringify({ ok: true, service: 'Tiendanovamovil Leads', complaints: complaintStoreHealth() }))
     .setMimeType(ContentService.MimeType.JSON);
 }
 
