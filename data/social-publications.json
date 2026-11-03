@@ -267,7 +267,7 @@
     "1vtIaXdFQaCXnL5YZIVdftEg-IOWSkCvN": {
       "name": "ZTE_Nubia_Focus2_Promocion_20261022110630.mp4",
       "drive_id": "1vtIaXdFQaCXnL5YZIVdftEg-IOWSkCvN",
-      "status": "processing",
+      "status": "completed",
       "requested_platforms": [
         "youtube",
         "facebook",
@@ -276,7 +276,9 @@
       ],
       "published_platforms": [
         "youtube",
-        "facebook"
+        "facebook",
+        "tiktok",
+        "instagram"
       ],
       "results": [
         {
@@ -284,32 +286,44 @@
           "status": "completed",
           "success": true,
           "url": "https://www.youtube.com/watch?v=j5mmMZOkxaE",
-          "platform_post_id": "j5mmMZOkxaE"
+          "platform_post_id": "j5mmMZOkxaE",
+          "upload_timestamp": "2026-11-03T00:19:38.740Z",
+          "error_message": null,
+          "error_code": null
         },
         {
           "platform": "facebook",
           "status": "completed",
           "success": true,
           "url": "https://www.facebook.com/reel/1796098751674113",
-          "platform_post_id": "1796098751674113"
-        },
-        {
-          "platform": "instagram",
-          "status": "processing",
-          "success": false,
-          "url": null,
-          "platform_post_id": null
+          "platform_post_id": "1796098751674113",
+          "upload_timestamp": "2026-11-03T00:19:49.586Z",
+          "error_message": null,
+          "error_code": null
         },
         {
           "platform": "tiktok",
-          "status": "processing",
-          "success": false,
-          "url": null,
-          "platform_post_id": null
+          "status": "completed",
+          "success": true,
+          "url": "https://www.tiktok.com/@tiendanovamovil1/video/7703732293977869569",
+          "platform_post_id": "7703732293977869569",
+          "upload_timestamp": "2026-11-03T00:20:49.945Z",
+          "error_message": null,
+          "error_code": null
+        },
+        {
+          "platform": "instagram",
+          "status": "completed",
+          "success": true,
+          "url": "https://www.instagram.com/reel/DfQlLYLjQrx/",
+          "platform_post_id": "17928839169203383",
+          "upload_timestamp": "2026-11-03T00:21:01.686Z",
+          "error_message": null,
+          "error_code": null
         }
       ],
       "submitted_at": "2026-11-03T00:19:20.420Z",
-      "last_update": "2026-11-03T00:20:37.256Z",
+      "last_update": "2026-11-03T00:21:31.034Z",
       "review": {
         "visual": "Frames reviewed across 10-second video; identifiable ZTE Nubia Focus 2 promotion; no contact number displayed.",
         "audio": "Audio transcript unavailable.",
