@@ -267,17 +267,49 @@
     "1vtIaXdFQaCXnL5YZIVdftEg-IOWSkCvN": {
       "name": "ZTE_Nubia_Focus2_Promocion_20261022110630.mp4",
       "drive_id": "1vtIaXdFQaCXnL5YZIVdftEg-IOWSkCvN",
-      "status": "queued",
+      "status": "processing",
       "requested_platforms": [
         "youtube",
         "facebook",
         "instagram",
         "tiktok"
       ],
-      "published_platforms": [],
-      "results": [],
+      "published_platforms": [
+        "youtube",
+        "facebook"
+      ],
+      "results": [
+        {
+          "platform": "youtube",
+          "status": "completed",
+          "success": true,
+          "url": "https://www.youtube.com/watch?v=j5mmMZOkxaE",
+          "platform_post_id": "j5mmMZOkxaE"
+        },
+        {
+          "platform": "facebook",
+          "status": "completed",
+          "success": true,
+          "url": "https://www.facebook.com/reel/1796098751674113",
+          "platform_post_id": "1796098751674113"
+        },
+        {
+          "platform": "instagram",
+          "status": "processing",
+          "success": false,
+          "url": null,
+          "platform_post_id": null
+        },
+        {
+          "platform": "tiktok",
+          "status": "processing",
+          "success": false,
+          "url": null,
+          "platform_post_id": null
+        }
+      ],
       "submitted_at": "2026-11-03T00:19:20.420Z",
-      "last_update": "2026-11-03T00:19:32.215Z",
+      "last_update": "2026-11-03T00:20:37.256Z",
       "review": {
         "visual": "Frames reviewed across 10-second video; identifiable ZTE Nubia Focus 2 promotion; no contact number displayed.",
         "audio": "Audio transcript unavailable.",
