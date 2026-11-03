@@ -201,6 +201,95 @@
       "ai_generated": true,
       "request_id": "bf9918051be94972b062c4d6de7d163b",
       "job_id": "dafdfd2dd08641649df5d87d8e04b9cd"
+    },
+    "1IEzN5nFpSZvltvAshl4l0nvZ2fW0dKP6": {
+      "name": "Tienda_Nova_Movil_A17_20261101.mp4",
+      "status": "completed",
+      "request_id": "952c6d30989943d3ab5425deba9d4bfe",
+      "job_id": "7f61a22bb8bb46d1adea7cae5b36ede5",
+      "requested_platforms": [
+        "youtube",
+        "facebook",
+        "instagram",
+        "tiktok"
+      ],
+      "published_platforms": [
+        "tiktok",
+        "instagram",
+        "facebook",
+        "youtube"
+      ],
+      "results": [
+        {
+          "platform": "tiktok",
+          "status": "completed",
+          "success": true,
+          "url": "https://www.tiktok.com/@tiendanovamovil1/video/7703388318225927442",
+          "platform_post_id": "7703388318225927442",
+          "upload_timestamp": "2026-11-02T02:02:17.831Z",
+          "error_message": null,
+          "error_code": null
+        },
+        {
+          "platform": "instagram",
+          "status": "completed",
+          "success": true,
+          "url": "https://www.instagram.com/reel/DfOL3wNDvFe/",
+          "platform_post_id": "17914136622480094",
+          "upload_timestamp": "2026-11-02T02:01:39.477Z",
+          "error_message": null,
+          "error_code": null
+        },
+        {
+          "platform": "facebook",
+          "status": "completed",
+          "success": true,
+          "url": "https://www.facebook.com/reel/1429641128709301",
+          "platform_post_id": "1429641128709301",
+          "upload_timestamp": "2026-11-02T02:01:30.350Z",
+          "error_message": null,
+          "error_code": null
+        },
+        {
+          "platform": "youtube",
+          "status": "completed",
+          "success": true,
+          "url": "https://www.youtube.com/watch?v=GbDALrgBG7I",
+          "platform_post_id": "GbDALrgBG7I",
+          "upload_timestamp": "2026-11-02T02:01:06.974Z",
+          "error_message": null,
+          "error_code": null
+        }
+      ],
+      "last_update": "2026-11-03T00:19:20.419Z",
+      "reconciled_from": "Upload-Post history; exact media size 27413755 and Samsung A17 model match Drive file"
+    },
+    "1vtIaXdFQaCXnL5YZIVdftEg-IOWSkCvN": {
+      "name": "ZTE_Nubia_Focus2_Promocion_20261022110630.mp4",
+      "drive_id": "1vtIaXdFQaCXnL5YZIVdftEg-IOWSkCvN",
+      "status": "submitting",
+      "requested_platforms": [
+        "youtube",
+        "facebook",
+        "instagram",
+        "tiktok"
+      ],
+      "published_platforms": [],
+      "results": [],
+      "submitted_at": "2026-11-03T00:19:20.420Z",
+      "last_update": "2026-11-03T00:19:20.420Z",
+      "review": {
+        "visual": "Frames reviewed across 10-second video; identifiable ZTE Nubia Focus 2 promotion; no contact number displayed.",
+        "audio": "Audio transcript unavailable.",
+        "history": "No matching file size in complete 35-entry Upload-Post history. No in-progress uploads."
+      },
+      "visibility": {
+        "youtube": "public",
+        "tiktok": "PUBLIC_TO_EVERYONE",
+        "facebook": "PUBLISHED",
+        "instagram": "REELS"
+      },
+      "ai_generated": true
     }
   },
   "automation": {
