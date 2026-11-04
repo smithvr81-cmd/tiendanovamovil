@@ -342,17 +342,63 @@
     "1W3UQ3XJqG3FLz0s9guUx_xjFoB4IsKwQ": {
       "name": "Samsung_A16_128GB_Beneficios_Tienda_Movil_20261022094630.mp4",
       "drive_id": "1W3UQ3XJqG3FLz0s9guUx_xjFoB4IsKwQ",
-      "status": "queued",
+      "status": "completed",
       "requested_platforms": [
         "youtube",
         "facebook",
         "instagram",
         "tiktok"
       ],
-      "published_platforms": [],
-      "results": [],
+      "published_platforms": [
+        "youtube",
+        "facebook",
+        "instagram",
+        "tiktok"
+      ],
+      "results": [
+        {
+          "platform": "youtube",
+          "status": "completed",
+          "success": true,
+          "url": "https://www.youtube.com/watch?v=sppcr1CoOmY",
+          "platform_post_id": "sppcr1CoOmY",
+          "upload_timestamp": "2026-11-04T00:23:23.660Z",
+          "error_message": null,
+          "error_code": null
+        },
+        {
+          "platform": "facebook",
+          "status": "completed",
+          "success": true,
+          "url": "https://www.facebook.com/reel/1755302012205002",
+          "platform_post_id": "1755302012205002",
+          "upload_timestamp": "2026-11-04T00:23:37.256Z",
+          "error_message": null,
+          "error_code": null
+        },
+        {
+          "platform": "instagram",
+          "status": "completed",
+          "success": true,
+          "url": "https://www.instagram.com/reel/DfTKSvVAZcc/",
+          "platform_post_id": "18078353444741536",
+          "upload_timestamp": "2026-11-04T00:24:02.190Z",
+          "error_message": null,
+          "error_code": null
+        },
+        {
+          "platform": "tiktok",
+          "status": "completed",
+          "success": true,
+          "url": "https://www.tiktok.com/@tiendanovamovil1/video/7704105266995924232",
+          "platform_post_id": "7704105266995924232",
+          "upload_timestamp": "2026-11-04T00:24:04.630Z",
+          "error_message": null,
+          "error_code": null
+        }
+      ],
       "submitted_at": "2026-11-04T00:22:59.357Z",
-      "last_update": "2026-11-04T00:23:18.955Z",
+      "last_update": "2026-11-04T00:24:21.399Z",
       "review": {
         "visual": "Frames reviewed across 10-second video; Samsung phone and Tienda Móvil branding; no contact number displayed.",
         "audio": "Audio transcript unavailable.",
