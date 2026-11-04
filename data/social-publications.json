@@ -342,7 +342,7 @@
     "1W3UQ3XJqG3FLz0s9guUx_xjFoB4IsKwQ": {
       "name": "Samsung_A16_128GB_Beneficios_Tienda_Movil_20261022094630.mp4",
       "drive_id": "1W3UQ3XJqG3FLz0s9guUx_xjFoB4IsKwQ",
-      "status": "submitting",
+      "status": "queued",
       "requested_platforms": [
         "youtube",
         "facebook",
@@ -352,7 +352,7 @@
       "published_platforms": [],
       "results": [],
       "submitted_at": "2026-11-04T00:22:59.357Z",
-      "last_update": "2026-11-04T00:22:59.357Z",
+      "last_update": "2026-11-04T00:23:18.955Z",
       "review": {
         "visual": "Frames reviewed across 10-second video; Samsung phone and Tienda Móvil branding; no contact number displayed.",
         "audio": "Audio transcript unavailable.",
@@ -364,7 +364,9 @@
         "facebook": "PUBLISHED",
         "instagram": "REELS"
       },
-      "ai_generated": true
+      "ai_generated": true,
+      "request_id": "f80056e758a74d469ad879b9e135d029",
+      "job_id": "14766dcd4ecd47e4aa327789143f11ef"
     }
   },
   "automation": {
