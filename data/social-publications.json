@@ -413,6 +413,33 @@
       "ai_generated": true,
       "request_id": "f80056e758a74d469ad879b9e135d029",
       "job_id": "14766dcd4ecd47e4aa327789143f11ef"
+    },
+    "1A7UfWObBB-dN037JcKBbxmdKe8TynlVq": {
+      "name": "Samsung_A16_Envio_Shalom_Garantia_Compra_Tienda_Movil_20261022094649.mp4",
+      "drive_id": "1A7UfWObBB-dN037JcKBbxmdKe8TynlVq",
+      "status": "submitting",
+      "requested_platforms": [
+        "youtube",
+        "facebook",
+        "instagram",
+        "tiktok"
+      ],
+      "published_platforms": [],
+      "results": [],
+      "submitted_at": "2026-11-05T00:42:53.234Z",
+      "last_update": "2026-11-05T00:42:53.235Z",
+      "review": {
+        "visual": "Frames reviewed across 10-second video; Samsung phone and shipment box; final caption asks city and states warranty subject to conditions; no contact number displayed.",
+        "audio": "Audio transcript unavailable.",
+        "history": "No matching 2604499-byte file or specific shipment video in complete 43-entry Upload-Post history. No in-progress uploads."
+      },
+      "visibility": {
+        "youtube": "public",
+        "tiktok": "PUBLIC_TO_EVERYONE",
+        "facebook": "PUBLISHED",
+        "instagram": "REELS"
+      },
+      "ai_generated": true
     }
   },
   "automation": {
