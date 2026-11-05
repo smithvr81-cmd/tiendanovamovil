@@ -417,7 +417,7 @@
     "1A7UfWObBB-dN037JcKBbxmdKe8TynlVq": {
       "name": "Samsung_A16_Envio_Shalom_Garantia_Compra_Tienda_Movil_20261022094649.mp4",
       "drive_id": "1A7UfWObBB-dN037JcKBbxmdKe8TynlVq",
-      "status": "submitting",
+      "status": "queued",
       "requested_platforms": [
         "youtube",
         "facebook",
@@ -427,7 +427,7 @@
       "published_platforms": [],
       "results": [],
       "submitted_at": "2026-11-05T00:42:53.234Z",
-      "last_update": "2026-11-05T00:42:53.235Z",
+      "last_update": "2026-11-05T00:43:10.584Z",
       "review": {
         "visual": "Frames reviewed across 10-second video; Samsung phone and shipment box; final caption asks city and states warranty subject to conditions; no contact number displayed.",
         "audio": "Audio transcript unavailable.",
@@ -439,7 +439,9 @@
         "facebook": "PUBLISHED",
         "instagram": "REELS"
       },
-      "ai_generated": true
+      "ai_generated": true,
+      "request_id": "5ecba1244ebe4941bf85f0cdf94507d6",
+      "job_id": "8f3070eef33c46e2aa5013be3aa24129"
     }
   },
   "automation": {
