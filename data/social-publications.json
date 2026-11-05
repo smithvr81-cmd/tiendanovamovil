@@ -417,17 +417,63 @@
     "1A7UfWObBB-dN037JcKBbxmdKe8TynlVq": {
       "name": "Samsung_A16_Envio_Shalom_Garantia_Compra_Tienda_Movil_20261022094649.mp4",
       "drive_id": "1A7UfWObBB-dN037JcKBbxmdKe8TynlVq",
-      "status": "queued",
+      "status": "completed",
       "requested_platforms": [
         "youtube",
         "facebook",
         "instagram",
         "tiktok"
       ],
-      "published_platforms": [],
-      "results": [],
+      "published_platforms": [
+        "youtube",
+        "facebook",
+        "instagram",
+        "tiktok"
+      ],
+      "results": [
+        {
+          "platform": "youtube",
+          "status": "completed",
+          "success": true,
+          "url": "https://www.youtube.com/watch?v=7R4iDaJ_VFM",
+          "platform_post_id": "7R4iDaJ_VFM",
+          "upload_timestamp": "2026-11-05T00:43:16.239Z",
+          "error_message": null,
+          "error_code": null
+        },
+        {
+          "platform": "facebook",
+          "status": "completed",
+          "success": true,
+          "url": "https://www.facebook.com/reel/1670214221184715",
+          "platform_post_id": "1670214221184715",
+          "upload_timestamp": "2026-11-05T00:43:28.038Z",
+          "error_message": null,
+          "error_code": null
+        },
+        {
+          "platform": "instagram",
+          "status": "completed",
+          "success": true,
+          "url": "https://www.instagram.com/reel/DfVxXOAgI0R/",
+          "platform_post_id": "18120217057950213",
+          "upload_timestamp": "2026-11-05T00:43:48.402Z",
+          "error_message": null,
+          "error_code": null
+        },
+        {
+          "platform": "tiktok",
+          "status": "completed",
+          "success": true,
+          "url": "https://www.tiktok.com/@tiendanovamovil1/video/7704481507590688020",
+          "platform_post_id": "7704481507590688020",
+          "upload_timestamp": "2026-11-05T00:43:56.105Z",
+          "error_message": null,
+          "error_code": null
+        }
+      ],
       "submitted_at": "2026-11-05T00:42:53.234Z",
-      "last_update": "2026-11-05T00:43:10.584Z",
+      "last_update": "2026-11-05T00:44:12.135Z",
       "review": {
         "visual": "Frames reviewed across 10-second video; Samsung phone and shipment box; final caption asks city and states warranty subject to conditions; no contact number displayed.",
         "audio": "Audio transcript unavailable.",
